@@ -22,8 +22,8 @@ var drawAccumulatedCasesIncidenceRangeSlider = new google.visualization.ControlW
 });
 drawAccumulatedCasesIncidenceRangeSlider.setState({
   range: {
-    start: new Date(2020, 8, 8),
-    end: new Date(2020, 9, 8),
+    start: new Date(2020, 8, 10),
+    end: new Date(2020, 9, 10),
   }
 });var drawAccumulatedCasesIncidenceData = new google.visualization.DataTable();
 drawAccumulatedCasesIncidenceData.addColumn("date", "fecha");
@@ -303,8 +303,8 @@ var drawHospitalizedRangeSlider = new google.visualization.ControlWrapper({
 });
 drawHospitalizedRangeSlider.setState({
   range: {
-    start: new Date(2020, 8, 8),
-    end: new Date(2020, 9, 18),
+    start: new Date(2020, 8, 10),
+    end: new Date(2020, 9, 20),
   }
 });var drawHospitalizedData = new google.visualization.DataTable();
 drawHospitalizedData.addColumn("date", "fecha");
@@ -447,6 +447,9 @@ drawHospitalizedData.addRows([[new Date(2020, 4, 29),0.30984033457456794,],
 [new Date(2020, 9, 11),1.6752746365962847,],
 [new Date(2020, 9, 12),2.029988398936825,],
 [new Date(2020, 9, 13),2.0663145071283258,],
+[new Date(2020, 9, 14),2.1468017664545926,],
+[new Date(2020, 9, 15),2.2272890257808595,],
+[new Date(2020, 9, 16),2.307776285107127,],
 ]);
 var drawHospitalizedChart = new google.visualization.ChartWrapper({
   'chartType': 'LineChart',
@@ -477,8 +480,8 @@ var drawDeceasedRangeSlider = new google.visualization.ControlWrapper({
 });
 drawDeceasedRangeSlider.setState({
   range: {
-    start: new Date(2020, 8, 8),
-    end: new Date(2020, 9, 8),
+    start: new Date(2020, 8, 10),
+    end: new Date(2020, 9, 10),
   }
 });var drawDeceasedData = new google.visualization.DataTable();
 drawDeceasedData.addColumn("date", "fecha");
@@ -687,21 +690,21 @@ drawDeceasedData.addRows([[new Date(2020, 1, 16),0.0,],
 [new Date(2020, 8, 4),0.26283007691497834,],
 [new Date(2020, 8, 5),0.28206154595753774,],
 [new Date(2020, 8, 6),0.26924056659583145,],
-[new Date(2020, 8, 7),0.2649669068085961,],
-[new Date(2020, 8, 8),0.26924056659583145,],
-[new Date(2020, 8, 9),0.3205244840426565,],
-[new Date(2020, 8, 10),0.35044010255330443,],
-[new Date(2020, 8, 11),0.3525769324469222,],
-[new Date(2020, 8, 12),0.37394523138309926,],
-[new Date(2020, 8, 13),0.40172402000012947,],
-[new Date(2020, 8, 14),0.4166818292554535,],
+[new Date(2020, 8, 7),0.26710373670221377,],
+[new Date(2020, 8, 8),0.27137739648944914,],
+[new Date(2020, 8, 9),0.32266131393627423,],
+[new Date(2020, 8, 10),0.3525769324469222,],
+[new Date(2020, 8, 11),0.3547137623405399,],
+[new Date(2020, 8, 12),0.37608206127671695,],
+[new Date(2020, 8, 13),0.4038608498937472,],
+[new Date(2020, 8, 14),0.4188186591490712,],
 [new Date(2020, 8, 15),0.4465974477661014,],
 [new Date(2020, 8, 16),0.4658289168086608,],
 [new Date(2020, 8, 17),0.4701025765958962,],
 [new Date(2020, 8, 18),0.4957445353193088,],
 [new Date(2020, 8, 19),0.5107023445746327,],
 [new Date(2020, 8, 20),0.5256601538299567,],
-[new Date(2020, 8, 21),0.5513021125533691,],
+[new Date(2020, 8, 21),0.5491652826597515,],
 [new Date(2020, 8, 22),0.5491652826597515,],
 [new Date(2020, 8, 23),0.5513021125533691,],
 [new Date(2020, 8, 24),0.5534389424469869,],
@@ -712,17 +715,20 @@ drawDeceasedData.addRows([[new Date(2020, 1, 16),0.0,],
 [new Date(2020, 8, 29),0.5961755403193411,],
 [new Date(2020, 8, 30),0.5662599218086931,],
 [new Date(2020, 9, 1),0.5427547929788983,],
-[new Date(2020, 9, 2),0.5320706435108098,],
+[new Date(2020, 9, 2),0.5342074734044275,],
 [new Date(2020, 9, 3),0.5192496641491036,],
 [new Date(2020, 9, 4),0.4957445353193088,],
 [new Date(2020, 9, 5),0.508565514681015,],
-[new Date(2020, 9, 6),0.5042918548937796,],
-[new Date(2020, 9, 7),0.45514476734057224,],
-[new Date(2020, 9, 8),0.4658289168086608,],
-[new Date(2020, 9, 9),0.4359132982980129,],
-[new Date(2020, 9, 10),0.4038608498937472,],
-[new Date(2020, 9, 11),0.34189278297883363,],
-[new Date(2020, 9, 12),0.2735142263830669,],
+[new Date(2020, 9, 6),0.5064286847873972,],
+[new Date(2020, 9, 7),0.5107023445746327,],
+[new Date(2020, 9, 8),0.5192496641491036,],
+[new Date(2020, 9, 9),0.4871972157448378,],
+[new Date(2020, 9, 10),0.4636920869150431,],
+[new Date(2020, 9, 11),0.40172402000012947,],
+[new Date(2020, 9, 12),0.34189278297883363,],
+[new Date(2020, 9, 13),0.2585564171277429,],
+[new Date(2020, 9, 14),0.19231469042559393,],
+[new Date(2020, 9, 15),0.13889394308515116,],
 ]);
 var drawDeceasedChart = new google.visualization.ChartWrapper({
   'chartType': 'LineChart',
@@ -740,7 +746,12 @@ drawDeceasedDashboard.draw(drawDeceasedData);
     </script>
   </head>
   <body>
-<p><a href="../">Menu</a></p><p>Informe generado el día: 18-10-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 9903</p><p>Una de cada 675 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
+<p><a href="../">Menu</a></p><p>Informe generado el día: 20-10-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 9937</p><p>Una de cada 673 personas han fallecido en esta comunidad autónoma.</p><p>Número medio de hospitalizaciones por cien mil habitantes (media de 7 días). Datos obtenidos a partir de las cifras acumuladas que aparecen en los informes diarios del ministerio.</p>
+<div id="hospitalized_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
+  <div id="hospitalized_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
+  <div id="hospitalized_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>
+</div>
+<p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
 <div id="accumulated_cases_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
   <div id="accumulated_cases_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
   <div id="accumulated_cases_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>
@@ -749,11 +760,6 @@ drawDeceasedDashboard.draw(drawDeceasedData);
 <div id="deceased_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
   <div id="deceased_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
   <div id="deceased_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>
-</div>
-<p>Número medio de hospitalizaciones por cien mil habitantes (media de 7 días). Datos obtenidos a partir de las cifras acumuladas que aparecen en los informes diarios del ministerio.</p>
-<div id="hospitalized_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
-  <div id="hospitalized_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
-  <div id="hospitalized_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>
 </div>
   </body>
 </html>

@@ -22,8 +22,8 @@ var drawAccumulatedCasesIncidenceRangeSlider = new google.visualization.ControlW
 });
 drawAccumulatedCasesIncidenceRangeSlider.setState({
   range: {
-    start: new Date(2020, 8, 8),
-    end: new Date(2020, 9, 8),
+    start: new Date(2020, 8, 10),
+    end: new Date(2020, 9, 10),
   }
 });var drawAccumulatedCasesIncidenceData = new google.visualization.DataTable();
 drawAccumulatedCasesIncidenceData.addColumn("date", "fecha");
@@ -303,8 +303,8 @@ var drawHospitalizedRangeSlider = new google.visualization.ControlWrapper({
 });
 drawHospitalizedRangeSlider.setState({
   range: {
-    start: new Date(2020, 8, 8),
-    end: new Date(2020, 9, 18),
+    start: new Date(2020, 8, 10),
+    end: new Date(2020, 9, 20),
   }
 });var drawHospitalizedData = new google.visualization.DataTable();
 drawHospitalizedData.addColumn("date", "fecha");
@@ -447,6 +447,9 @@ drawHospitalizedData.addRows([[new Date(2020, 4, 29),0.2380968720933799,],
 [new Date(2020, 9, 11),1.3025299473343726,],
 [new Date(2020, 9, 12),1.4425869309187138,],
 [new Date(2020, 9, 13),1.5686382161446208,],
+[new Date(2020, 9, 14),1.8067350882380004,],
+[new Date(2020, 9, 15),2.0448319603313805,],
+[new Date(2020, 9, 16),2.2829288324247603,],
 ]);
 var drawHospitalizedChart = new google.visualization.ChartWrapper({
   'chartType': 'LineChart',
@@ -477,8 +480,8 @@ var drawDeceasedRangeSlider = new google.visualization.ControlWrapper({
 });
 drawDeceasedRangeSlider.setState({
   range: {
-    start: new Date(2020, 8, 8),
-    end: new Date(2020, 9, 8),
+    start: new Date(2020, 8, 10),
+    end: new Date(2020, 9, 10),
   }
 });var drawDeceasedData = new google.visualization.DataTable();
 drawDeceasedData.addColumn("date", "fecha");
@@ -723,6 +726,9 @@ drawDeceasedData.addRows([[new Date(2020, 1, 16),0.0,],
 [new Date(2020, 9, 10),0.14005698358434113,],
 [new Date(2020, 9, 11),0.18207407865964348,],
 [new Date(2020, 9, 12),0.15406268194277523,],
+[new Date(2020, 9, 13),0.16806838030120932,],
+[new Date(2020, 9, 14),0.18207407865964348,],
+[new Date(2020, 9, 15),0.2100854753765117,],
 ]);
 var drawDeceasedChart = new google.visualization.ChartWrapper({
   'chartType': 'LineChart',
@@ -740,7 +746,12 @@ drawDeceasedDashboard.draw(drawDeceasedData);
     </script>
   </head>
   <body>
-<p><a href="../">Menu</a></p><p>Informe generado el día: 18-10-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 365</p><p>Una de cada 2795 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
+<p><a href="../">Menu</a></p><p>Informe generado el día: 20-10-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 371</p><p>Una de cada 2749 personas han fallecido en esta comunidad autónoma.</p><p>Número medio de hospitalizaciones por cien mil habitantes (media de 7 días). Datos obtenidos a partir de las cifras acumuladas que aparecen en los informes diarios del ministerio.</p>
+<div id="hospitalized_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
+  <div id="hospitalized_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
+  <div id="hospitalized_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>
+</div>
+<p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
 <div id="accumulated_cases_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
   <div id="accumulated_cases_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
   <div id="accumulated_cases_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>
@@ -749,11 +760,6 @@ drawDeceasedDashboard.draw(drawDeceasedData);
 <div id="deceased_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
   <div id="deceased_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
   <div id="deceased_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>
-</div>
-<p>Número medio de hospitalizaciones por cien mil habitantes (media de 7 días). Datos obtenidos a partir de las cifras acumuladas que aparecen en los informes diarios del ministerio.</p>
-<div id="hospitalized_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
-  <div id="hospitalized_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
-  <div id="hospitalized_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>
 </div>
   </body>
 </html>
