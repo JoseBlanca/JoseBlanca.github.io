@@ -15,15 +15,15 @@ var drawAccumulatedCasesIncidenceRangeSlider = new google.visualization.ControlW
 'options': {
   'filterColumnLabel': 'fecha',
   'minValue': new Date(2020, 1, 14),
-  'maxValue': new Date(2020, 9, 20),
+  'maxValue': new Date(2020, 9, 21),
   'width': 600,
   'height': 50
   },
 });
 drawAccumulatedCasesIncidenceRangeSlider.setState({
   range: {
-    start: new Date(2020, 8, 11),
-    end: new Date(2020, 9, 11),
+    start: new Date(2020, 8, 12),
+    end: new Date(2020, 9, 12),
   }
 });var drawAccumulatedCasesIncidenceData = new google.visualization.DataTable();
 drawAccumulatedCasesIncidenceData.addColumn("date", "fecha");
@@ -262,22 +262,23 @@ drawAccumulatedCasesIncidenceData.addRows([[new Date(2020, 1, 14),2.368714025155
 [new Date(2020, 9, 2),328.0668924840704,],
 [new Date(2020, 9, 3),325.69817845891464,],
 [new Date(2020, 9, 4),332.8043205343819,],
-[new Date(2020, 9, 5),354.12274676078357,],
-[new Date(2020, 9, 6),351.75403273562785,],
+[new Date(2020, 9, 5),352.9383897482057,],
+[new Date(2020, 9, 6),350.56967572304995,],
 [new Date(2020, 9, 7),352.9383897482057,],
 [new Date(2020, 9, 8),373.07245896202954,],
 [new Date(2020, 9, 9),377.809887012341,],
 [new Date(2020, 9, 10),386.1003861003861,],
 [new Date(2020, 9, 11),377.809887012341,],
 [new Date(2020, 9, 12),375.44117298718527,],
-[new Date(2020, 9, 13),363.59760286140653,],
-[new Date(2020, 9, 14),361.2288888362508,],
-[new Date(2020, 9, 15),364.7819598739844,],
-[new Date(2020, 9, 16),342.2791766350049,],
-[new Date(2020, 9, 17),323.3294644337589,],
-[new Date(2020, 9, 18),304.379752232513,],
-[new Date(2020, 9, 19),285.430040031267,],
-[new Date(2020, 9, 20),253.4524006916645,],
+[new Date(2020, 9, 13),364.7819598739844,],
+[new Date(2020, 9, 14),364.7819598739844,],
+[new Date(2020, 9, 15),368.33503091171804,],
+[new Date(2020, 9, 16),349.3853187104721,],
+[new Date(2020, 9, 17),332.8043205343819,],
+[new Date(2020, 9, 18),316.2233223582917,],
+[new Date(2020, 9, 19),300.8266811947794,],
+[new Date(2020, 9, 20),273.58646990548834,],
+[new Date(2020, 9, 21),252.26804367908662,],
 ]);
 var drawAccumulatedCasesIncidenceChart = new google.visualization.ChartWrapper({
   'chartType': 'LineChart',
@@ -301,15 +302,15 @@ var drawHospitalizedRangeSlider = new google.visualization.ControlWrapper({
 'options': {
   'filterColumnLabel': 'fecha',
   'minValue': new Date(2020, 1, 14),
-  'maxValue': new Date(2020, 9, 20),
+  'maxValue': new Date(2020, 9, 21),
   'width': 600,
   'height': 50
   },
 });
 drawHospitalizedRangeSlider.setState({
   range: {
-    start: new Date(2020, 8, 11),
-    end: new Date(2020, 9, 21),
+    start: new Date(2020, 8, 12),
+    end: new Date(2020, 9, 22),
   }
 });var drawHospitalizedData = new google.visualization.DataTable();
 drawHospitalizedData.addColumn("date", "fecha");
@@ -456,6 +457,7 @@ drawHospitalizedData.addRows([[new Date(2020, 4, 29),0.1691938589396959,],
 [new Date(2020, 9, 15),1.691938589396959,],
 [new Date(2020, 9, 16),1.691938589396959,],
 [new Date(2020, 9, 17),1.5227447304572628,],
+[new Date(2020, 9, 18),0.8459692946984795,],
 ]);
 var drawHospitalizedChart = new google.visualization.ChartWrapper({
   'chartType': 'LineChart',
@@ -479,15 +481,15 @@ var drawDeceasedRangeSlider = new google.visualization.ControlWrapper({
 'options': {
   'filterColumnLabel': 'fecha',
   'minValue': new Date(2020, 1, 14),
-  'maxValue': new Date(2020, 9, 20),
+  'maxValue': new Date(2020, 9, 21),
   'width': 600,
   'height': 50
   },
 });
 drawDeceasedRangeSlider.setState({
   range: {
-    start: new Date(2020, 8, 11),
-    end: new Date(2020, 9, 11),
+    start: new Date(2020, 8, 12),
+    end: new Date(2020, 9, 12),
   }
 });var drawDeceasedData = new google.visualization.DataTable();
 drawDeceasedData.addColumn("date", "fecha");
@@ -736,6 +738,7 @@ drawDeceasedData.addRows([[new Date(2020, 1, 16),0.0,],
 [new Date(2020, 9, 14),0.1691938589396959,],
 [new Date(2020, 9, 15),0.1691938589396959,],
 [new Date(2020, 9, 16),0.1691938589396959,],
+[new Date(2020, 9, 17),0.1691938589396959,],
 ]);
 var drawDeceasedChart = new google.visualization.ChartWrapper({
   'chartType': 'LineChart',
@@ -753,7 +756,7 @@ drawDeceasedDashboard.draw(drawDeceasedData);
     </script>
   </head>
   <body>
-<p><a href="../">Menu</a></p><p>Informe generado el día: 21-10-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 13</p><p>Una de cada 6495 personas han fallecido en esta comunidad autónoma.</p><p>Número medio de hospitalizaciones por cien mil habitantes (media de 7 días). Datos obtenidos a partir de las cifras acumuladas que aparecen en los informes diarios del ministerio.</p>
+<p><a href="../">Menu</a></p><p>Informe generado el día: 22-10-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 13</p><p>Una de cada 6495 personas han fallecido en esta comunidad autónoma.</p><p>Número medio de hospitalizaciones por cien mil habitantes (media de 7 días). Datos obtenidos a partir de las cifras acumuladas que aparecen en los informes diarios del ministerio.</p>
 <div id="hospitalized_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
   <div id="hospitalized_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
   <div id="hospitalized_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>
