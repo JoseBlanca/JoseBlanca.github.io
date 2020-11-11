@@ -22,8 +22,8 @@ var drawAccumulatedCasesIncidenceRangeSlider = new google.visualization.ControlW
 });
 drawAccumulatedCasesIncidenceRangeSlider.setState({
   range: {
-    start: new Date(2020, 9, 1),
-    end: new Date(2020, 9, 31),
+    start: new Date(2020, 9, 2),
+    end: new Date(2020, 10, 1),
   }
 });var drawAccumulatedCasesIncidenceData = new google.visualization.DataTable();
 drawAccumulatedCasesIncidenceData.addColumn("date", "fecha");
@@ -354,8 +354,8 @@ var drawDeceasedRangeSlider = new google.visualization.ControlWrapper({
 });
 drawDeceasedRangeSlider.setState({
   range: {
-    start: new Date(2020, 9, 1),
-    end: new Date(2020, 9, 31),
+    start: new Date(2020, 9, 2),
+    end: new Date(2020, 10, 1),
   }
 });var drawDeceasedData = new google.visualization.DataTable();
 drawDeceasedData.addColumn("date", "fecha");
@@ -608,22 +608,23 @@ drawDeceasedData.addRows([[new Date(2020, 1, 16),0.0,],
 [new Date(2020, 9, 18),0.3013508929797857,],
 [new Date(2020, 9, 19),0.3153672135834966,],
 [new Date(2020, 9, 20),0.33639169448906303,],
-[new Date(2020, 9, 21),0.3854488166020514,],
-[new Date(2020, 9, 22),0.4064732975076179,],
-[new Date(2020, 9, 23),0.4204896181113288,],
-[new Date(2020, 9, 24),0.5115957020354501,],
-[new Date(2020, 9, 25),0.5256120226391611,],
-[new Date(2020, 9, 26),0.49057122112988366,],
-[new Date(2020, 9, 27),0.47655490052617266,],
+[new Date(2020, 9, 21),0.3924569769039069,],
+[new Date(2020, 9, 22),0.4134814578094734,],
+[new Date(2020, 9, 23),0.42749777841318426,],
+[new Date(2020, 9, 24),0.5186038623373055,],
+[new Date(2020, 9, 25),0.5326201829410165,],
+[new Date(2020, 9, 26),0.4975793814317391,],
+[new Date(2020, 9, 27),0.48356306082802814,],
 [new Date(2020, 9, 28),0.44151409901689526,],
 [new Date(2020, 9, 29),0.4204896181113288,],
 [new Date(2020, 9, 30),0.4064732975076179,],
 [new Date(2020, 9, 31),0.3994651372057624,],
-[new Date(2020, 10, 1),0.37143249599834044,],
-[new Date(2020, 10, 2),0.3924569769039069,],
-[new Date(2020, 10, 3),0.37143249599834044,],
-[new Date(2020, 10, 4),0.33639169448906303,],
-[new Date(2020, 10, 5),0.30835905328164115,],
+[new Date(2020, 10, 1),0.4204896181113288,],
+[new Date(2020, 10, 2),0.4485222593187508,],
+[new Date(2020, 10, 3),0.42749777841318426,],
+[new Date(2020, 10, 4),0.4064732975076179,],
+[new Date(2020, 10, 5),0.3924569769039069,],
+[new Date(2020, 10, 6),0.37844065630019597,],
 ]);
 var drawDeceasedChart = new google.visualization.ChartWrapper({
   'chartType': 'LineChart',
@@ -641,7 +642,7 @@ drawDeceasedDashboard.draw(drawDeceasedData);
     </script>
   </head>
   <body>
-<p><a href="../">Menu</a></p><p>Informe generado el día: 10-11-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 3380</p><p>Una de cada 603 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
+<p><a href="../">Menu</a></p><p>Informe generado el día: 11-11-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 3396</p><p>Una de cada 600 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
 <div id="accumulated_cases_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
   <div id="accumulated_cases_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
   <div id="accumulated_cases_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>
