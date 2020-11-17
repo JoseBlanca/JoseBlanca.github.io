@@ -22,8 +22,8 @@ var drawAccumulatedCasesIncidenceRangeSlider = new google.visualization.ControlW
 });
 drawAccumulatedCasesIncidenceRangeSlider.setState({
   range: {
-    start: new Date(2020, 9, 7),
-    end: new Date(2020, 10, 6),
+    start: new Date(2020, 9, 8),
+    end: new Date(2020, 10, 7),
   }
 });var drawAccumulatedCasesIncidenceData = new google.visualization.DataTable();
 drawAccumulatedCasesIncidenceData.addColumn("date", "fecha");
@@ -361,8 +361,8 @@ var drawDeceasedRangeSlider = new google.visualization.ControlWrapper({
 });
 drawDeceasedRangeSlider.setState({
   range: {
-    start: new Date(2020, 9, 7),
-    end: new Date(2020, 10, 6),
+    start: new Date(2020, 9, 8),
+    end: new Date(2020, 10, 7),
   }
 });var drawDeceasedData = new google.visualization.DataTable();
 drawDeceasedData.addColumn("date", "fecha");
@@ -634,7 +634,10 @@ drawDeceasedData.addRows([[new Date(2020, 1, 16),0.0,],
 [new Date(2020, 10, 6),0.4583121554924816,],
 [new Date(2020, 10, 7),0.37319704090102074,],
 [new Date(2020, 10, 8),0.33391314185880805,],
-[new Date(2020, 10, 9),0.274987293295489,],
+[new Date(2020, 10, 9),0.28808192630955987,],
+[new Date(2020, 10, 10),0.2291560777462408,],
+[new Date(2020, 10, 11),0.18332486219699265,],
+[new Date(2020, 10, 12),0.10475706411256722,],
 ]);
 var drawDeceasedChart = new google.visualization.ChartWrapper({
   'chartType': 'LineChart',
@@ -652,7 +655,7 @@ drawDeceasedDashboard.draw(drawDeceasedData);
     </script>
   </head>
   <body>
-<p><a href="../">Menu</a></p><p>Informe generado el día: 16-11-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 2242</p><p>Una de cada 973 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
+<p><a href="../">Menu</a></p><p>Informe generado el día: 17-11-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 2245</p><p>Una de cada 972 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
 <div id="accumulated_cases_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
   <div id="accumulated_cases_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
   <div id="accumulated_cases_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>
