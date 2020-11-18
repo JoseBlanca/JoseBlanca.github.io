@@ -15,15 +15,15 @@ var drawAccumulatedCasesIncidenceRangeSlider = new google.visualization.ControlW
 'options': {
   'filterColumnLabel': 'fecha',
   'minValue': new Date(2020, 0, 15),
-  'maxValue': new Date(2020, 10, 12),
+  'maxValue': new Date(2020, 10, 16),
   'width': 600,
   'height': 50
   },
 });
 drawAccumulatedCasesIncidenceRangeSlider.setState({
   range: {
-    start: new Date(2020, 9, 8),
-    end: new Date(2020, 10, 7),
+    start: new Date(2020, 9, 9),
+    end: new Date(2020, 10, 8),
   }
 });var drawAccumulatedCasesIncidenceData = new google.visualization.DataTable();
 drawAccumulatedCasesIncidenceData.addColumn("date", "fecha");
@@ -296,41 +296,45 @@ drawAccumulatedCasesIncidenceData.addRows([[new Date(2020, 0, 15),0.0,],
 [new Date(2020, 9, 6),725.1818318350533,],
 [new Date(2020, 9, 7),744.6446578373889,],
 [new Date(2020, 9, 8),765.6399898241604,],
-[new Date(2020, 9, 9),803.4928876397262,],
-[new Date(2020, 9, 10),832.4572507455642,],
-[new Date(2020, 9, 11),868.6243919782506,],
-[new Date(2020, 9, 12),910.6150559517934,],
-[new Date(2020, 9, 13),939.1196672623007,],
-[new Date(2020, 9, 14),980.6505794405127,],
-[new Date(2020, 9, 15),1015.438465287207,],
-[new Date(2020, 9, 16),1044.8625801883757,],
-[new Date(2020, 9, 17),1075.5126998770932,],
-[new Date(2020, 9, 18),1113.0590964957719,],
-[new Date(2020, 9, 19),1177.2710972436348,],
-[new Date(2020, 9, 20),1207.4614651370214,],
-[new Date(2020, 9, 21),1236.5790788413028,],
-[new Date(2020, 9, 22),1239.0310884164003,],
-[new Date(2020, 9, 23),1246.3871171416924,],
-[new Date(2020, 9, 24),1255.8886542451949,],
-[new Date(2020, 9, 25),1255.122401252977,],
-[new Date(2020, 9, 26),1261.712176986051,],
-[new Date(2020, 9, 27),1252.057389284105,],
-[new Date(2020, 9, 28),1241.329847393054,],
-[new Date(2020, 9, 29),1228.3035465253492,],
-[new Date(2020, 9, 30),1216.80975164208,],
-[new Date(2020, 9, 31),1200.7184388055034,],
-[new Date(2020, 10, 1),1194.4351642693166,],
-[new Date(2020, 10, 2),1174.0528346763194,],
-[new Date(2020, 10, 3),1111.0668387160051,],
-[new Date(2020, 10, 4),1066.4709145689214,],
-[new Date(2020, 10, 5),1016.6644700747556,],
-[new Date(2020, 10, 6),978.8115722591896,],
-[new Date(2020, 10, 7),934.5221493089931,],
-[new Date(2020, 10, 8),873.9881629237763,],
-[new Date(2020, 10, 9),823.1089642405053,],
-[new Date(2020, 10, 10),762.421727256845,],
-[new Date(2020, 10, 11),707.7112636124843,],
-[new Date(2020, 10, 12),635.3769811471113,],
+[new Date(2020, 9, 9),803.6461382381698,],
+[new Date(2020, 9, 10),832.6105013440077,],
+[new Date(2020, 9, 11),868.7776425766942,],
+[new Date(2020, 9, 12),910.7683065502371,],
+[new Date(2020, 9, 13),939.4261684591879,],
+[new Date(2020, 9, 14),980.9570806373999,],
+[new Date(2020, 9, 15),1015.7449664840942,],
+[new Date(2020, 9, 16),1045.1690813852626,],
+[new Date(2020, 9, 17),1075.8192010739801,],
+[new Date(2020, 9, 18),1113.3655976926589,],
+[new Date(2020, 9, 19),1177.577598440522,],
+[new Date(2020, 9, 20),1207.7679663339086,],
+[new Date(2020, 9, 21),1236.88558003819,],
+[new Date(2020, 9, 22),1239.3375896132875,],
+[new Date(2020, 9, 23),1246.6936183385797,],
+[new Date(2020, 9, 24),1256.0419048436386,],
+[new Date(2020, 9, 25),1255.2756518514207,],
+[new Date(2020, 9, 26),1262.0186781829382,],
+[new Date(2020, 9, 27),1252.5171410794358,],
+[new Date(2020, 9, 28),1241.6363485899412,],
+[new Date(2020, 9, 29),1229.0697995175672,],
+[new Date(2020, 9, 30),1217.7292552327417,],
+[new Date(2020, 9, 31),1201.7911929946085,],
+[new Date(2020, 10, 1),1195.6611690568652,],
+[new Date(2020, 10, 2),1176.045092456086,],
+[new Date(2020, 10, 3),1113.9786000864333,],
+[new Date(2020, 10, 4),1071.068432522229,],
+[new Date(2020, 10, 5),1023.2542458078299,],
+[new Date(2020, 10, 6),987.2403551735869,],
+[new Date(2020, 10, 7),945.7094429953748,],
+[new Date(2020, 10, 8),889.6197239650221,],
+[new Date(2020, 10, 9),845.3303010148254,],
+[new Date(2020, 10, 10),792.1523433549007,],
+[new Date(2020, 10, 11),755.5254503268835,],
+[new Date(2020, 10, 12),710.6230249829126,],
+[new Date(2020, 10, 13),654.9930577478905,],
+[new Date(2020, 10, 14),603.8073578677324,],
+[new Date(2020, 10, 15),548.9436436249283,],
+[new Date(2020, 10, 16),485.03814407395265,],
 ]);
 var drawAccumulatedCasesIncidenceChart = new google.visualization.ChartWrapper({
   'chartType': 'LineChart',
@@ -354,15 +358,15 @@ var drawDeceasedRangeSlider = new google.visualization.ControlWrapper({
 'options': {
   'filterColumnLabel': 'fecha',
   'minValue': new Date(2020, 0, 15),
-  'maxValue': new Date(2020, 10, 12),
+  'maxValue': new Date(2020, 10, 16),
   'width': 600,
   'height': 50
   },
 });
 drawDeceasedRangeSlider.setState({
   range: {
-    start: new Date(2020, 9, 8),
-    end: new Date(2020, 10, 7),
+    start: new Date(2020, 9, 9),
+    end: new Date(2020, 10, 8),
   }
 });var drawDeceasedData = new google.visualization.DataTable();
 drawDeceasedData.addColumn("date", "fecha");
@@ -636,8 +640,9 @@ drawDeceasedData.addRows([[new Date(2020, 1, 16),0.0,],
 [new Date(2020, 10, 8),0.9413965332963198,],
 [new Date(2020, 10, 9),0.8757177053919253,],
 [new Date(2020, 10, 10),0.7005741643135401,],
-[new Date(2020, 10, 11),0.7443600495831364,],
-[new Date(2020, 10, 12),0.7005741643135401,],
+[new Date(2020, 10, 11),0.7662529922179346,],
+[new Date(2020, 10, 12),0.7224671069483384,],
+[new Date(2020, 10, 13),0.7005741643135401,],
 ]);
 var drawDeceasedChart = new google.visualization.ChartWrapper({
   'chartType': 'LineChart',
@@ -655,7 +660,7 @@ drawDeceasedDashboard.draw(drawDeceasedData);
     </script>
   </head>
   <body>
-<p><a href="../">Menu</a></p><p>Informe generado el día: 17-11-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 800</p><p>Una de cada 816 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
+<p><a href="../">Menu</a></p><p>Informe generado el día: 18-11-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 803</p><p>Una de cada 813 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
 <div id="accumulated_cases_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
   <div id="accumulated_cases_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
   <div id="accumulated_cases_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>
