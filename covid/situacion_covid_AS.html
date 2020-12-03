@@ -15,15 +15,15 @@ var drawAccumulatedCasesIncidenceRangeSlider = new google.visualization.ControlW
 'options': {
   'filterColumnLabel': 'fecha',
   'minValue': new Date(2020, 0, 15),
-  'maxValue': new Date(2020, 10, 30),
+  'maxValue': new Date(2020, 11, 1),
   'width': 600,
   'height': 50
   },
 });
 drawAccumulatedCasesIncidenceRangeSlider.setState({
   range: {
-    start: new Date(2020, 9, 23),
-    end: new Date(2020, 10, 22),
+    start: new Date(2020, 9, 24),
+    end: new Date(2020, 10, 23),
   }
 });var drawAccumulatedCasesIncidenceData = new google.visualization.DataTable();
 drawAccumulatedCasesIncidenceData.addColumn("date", "fecha");
@@ -331,24 +331,25 @@ drawAccumulatedCasesIncidenceData.addRows([[new Date(2020, 0, 15),0.0,],
 [new Date(2020, 10, 10),654.7103754633611,],
 [new Date(2020, 10, 11),657.161372676087,],
 [new Date(2020, 10, 12),652.9456574701983,],
-[new Date(2020, 10, 13),662.0633671015389,],
-[new Date(2020, 10, 14),675.6909116042954,],
-[new Date(2020, 10, 15),691.6714134312687,],
-[new Date(2020, 10, 16),681.1811453608015,],
+[new Date(2020, 10, 13),662.161406990048,],
+[new Date(2020, 10, 14),675.5928717157863,],
+[new Date(2020, 10, 15),691.5733735427596,],
+[new Date(2020, 10, 16),681.0831054722925,],
 [new Date(2020, 10, 17),657.8476518956503,],
-[new Date(2020, 10, 18),635.8867168696255,],
-[new Date(2020, 10, 19),632.0631612177731,],
-[new Date(2020, 10, 20),608.5335879756038,],
-[new Date(2020, 10, 21),617.5532577184354,],
-[new Date(2020, 10, 22),591.2785675980128,],
-[new Date(2020, 10, 23),561.180321825738,],
+[new Date(2020, 10, 18),635.9847567581346,],
+[new Date(2020, 10, 19),632.1612011062821,],
+[new Date(2020, 10, 20),608.6316278641128,],
+[new Date(2020, 10, 21),617.4552178299264,],
+[new Date(2020, 10, 22),591.0824878209949,],
+[new Date(2020, 10, 23),561.082281937229,],
 [new Date(2020, 10, 24),520.2976883174689,],
-[new Date(2020, 10, 25),456.37568100957554,],
-[new Date(2020, 10, 26),431.66962910529776,],
-[new Date(2020, 10, 27),408.2380957516375,],
-[new Date(2020, 10, 28),379.6104483069982,],
-[new Date(2020, 10, 29),342.2572507850544,],
-[new Date(2020, 10, 30),297.9432211789689,],
+[new Date(2020, 10, 25),456.6698006751027,],
+[new Date(2020, 10, 26),432.25786843635206,],
+[new Date(2020, 10, 27),421.4734807003577,],
+[new Date(2020, 10, 28),393.4340725867727,],
+[new Date(2020, 10, 29),356.6691143958831,],
+[new Date(2020, 10, 30),312.55116456681566,],
+[new Date(2020, 11, 1),280.39408113585097,],
 ]);
 var drawAccumulatedCasesIncidenceChart = new google.visualization.ChartWrapper({
   'chartType': 'LineChart',
@@ -372,15 +373,15 @@ var drawDeceasedRangeSlider = new google.visualization.ControlWrapper({
 'options': {
   'filterColumnLabel': 'fecha',
   'minValue': new Date(2020, 0, 15),
-  'maxValue': new Date(2020, 10, 30),
+  'maxValue': new Date(2020, 11, 1),
   'width': 600,
   'height': 50
   },
 });
 drawDeceasedRangeSlider.setState({
   range: {
-    start: new Date(2020, 9, 23),
-    end: new Date(2020, 10, 22),
+    start: new Date(2020, 9, 24),
+    end: new Date(2020, 10, 23),
   }
 });var drawDeceasedData = new google.visualization.DataTable();
 drawDeceasedData.addColumn("date", "fecha");
@@ -675,7 +676,7 @@ drawDeceasedDashboard.draw(drawDeceasedData);
     </script>
   </head>
   <body>
-<p><a href="../">Menu</a></p><p>Informe generado el día: 2-12-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 755</p><p>Una de cada 1351 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
+<p><a href="../">Menu</a></p><p>Informe generado el día: 3-12-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 755</p><p>Una de cada 1351 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
 <div id="accumulated_cases_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
   <div id="accumulated_cases_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
   <div id="accumulated_cases_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>
