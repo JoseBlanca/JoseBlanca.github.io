@@ -15,15 +15,15 @@ var drawAccumulatedCasesIncidenceRangeSlider = new google.visualization.ControlW
 'options': {
   'filterColumnLabel': 'fecha',
   'minValue': new Date(2020, 0, 15),
-  'maxValue': new Date(2020, 11, 1),
+  'maxValue': new Date(2020, 11, 2),
   'width': 600,
   'height': 50
   },
 });
 drawAccumulatedCasesIncidenceRangeSlider.setState({
   range: {
-    start: new Date(2020, 9, 24),
-    end: new Date(2020, 10, 23),
+    start: new Date(2020, 9, 25),
+    end: new Date(2020, 10, 24),
   }
 });var drawAccumulatedCasesIncidenceData = new google.visualization.DataTable();
 drawAccumulatedCasesIncidenceData.addColumn("date", "fecha");
@@ -339,17 +339,18 @@ drawAccumulatedCasesIncidenceData.addRows([[new Date(2020, 0, 15),0.0,],
 [new Date(2020, 10, 18),613.4969325153374,],
 [new Date(2020, 10, 19),572.0444370751119,],
 [new Date(2020, 10, 20),530.5919416348864,],
-[new Date(2020, 10, 21),486.77073216950515,],
-[new Date(2020, 10, 22),453.6087358173247,],
-[new Date(2020, 10, 23),427.55288154061157,],
-[new Date(2020, 10, 24),401.4970272638984,],
-[new Date(2020, 10, 25),367.15067389914014,],
-[new Date(2020, 10, 26),355.30710377336146,],
-[new Date(2020, 10, 27),328.0668924840704,],
-[new Date(2020, 10, 28),313.85460833313596,],
-[new Date(2020, 10, 29),288.98311106900064,],
-[new Date(2020, 10, 30),265.2959708174432,],
-[new Date(2020, 11, 1),220.2904043394841,],
+[new Date(2020, 10, 21),487.95508918208304,],
+[new Date(2020, 10, 22),454.79309282990266,],
+[new Date(2020, 10, 23),428.73723855318946,],
+[new Date(2020, 10, 24),402.6813842764763,],
+[new Date(2020, 10, 25),368.33503091171804,],
+[new Date(2020, 10, 26),358.8601748110951,],
+[new Date(2020, 10, 27),332.8043205343819,],
+[new Date(2020, 10, 28),318.5920363834474,],
+[new Date(2020, 10, 29),294.90489613189,],
+[new Date(2020, 10, 30),274.7708269180662,],
+[new Date(2020, 11, 1),236.8714025155743,],
+[new Date(2020, 11, 2),198.9719781130824,],
 ]);
 var drawAccumulatedCasesIncidenceChart = new google.visualization.ChartWrapper({
   'chartType': 'LineChart',
@@ -373,15 +374,15 @@ var drawDeceasedRangeSlider = new google.visualization.ControlWrapper({
 'options': {
   'filterColumnLabel': 'fecha',
   'minValue': new Date(2020, 0, 15),
-  'maxValue': new Date(2020, 11, 1),
+  'maxValue': new Date(2020, 11, 2),
   'width': 600,
   'height': 50
   },
 });
 drawDeceasedRangeSlider.setState({
   range: {
-    start: new Date(2020, 9, 24),
-    end: new Date(2020, 10, 23),
+    start: new Date(2020, 9, 25),
+    end: new Date(2020, 10, 24),
   }
 });var drawDeceasedData = new google.visualization.DataTable();
 drawDeceasedData.addColumn("date", "fecha");
@@ -676,7 +677,7 @@ drawDeceasedDashboard.draw(drawDeceasedData);
     </script>
   </head>
   <body>
-<p><a href="../">Menu</a></p><p>Informe generado el día: 3-12-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 45</p><p>Una de cada 1876 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
+<p><a href="../">Menu</a></p><p>Informe generado el día: 4-12-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 45</p><p>Una de cada 1876 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
 <div id="accumulated_cases_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
   <div id="accumulated_cases_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
   <div id="accumulated_cases_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>
