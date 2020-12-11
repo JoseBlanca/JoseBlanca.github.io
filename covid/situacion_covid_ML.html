@@ -15,15 +15,15 @@ var drawAccumulatedCasesIncidenceRangeSlider = new google.visualization.ControlW
 'options': {
   'filterColumnLabel': 'fecha',
   'minValue': new Date(2020, 0, 15),
-  'maxValue': new Date(2020, 11, 7),
+  'maxValue': new Date(2020, 11, 8),
   'width': 600,
   'height': 50
   },
 });
 drawAccumulatedCasesIncidenceRangeSlider.setState({
   range: {
-    start: new Date(2020, 9, 31),
-    end: new Date(2020, 10, 30),
+    start: new Date(2020, 10, 1),
+    end: new Date(2020, 11, 1),
   }
 });var drawAccumulatedCasesIncidenceData = new google.visualization.DataTable();
 drawAccumulatedCasesIncidenceData.addColumn("date", "fecha");
@@ -349,13 +349,14 @@ drawAccumulatedCasesIncidenceData.addRows([[new Date(2020, 0, 15),0.0,],
 [new Date(2020, 10, 28),395.0834064969272,],
 [new Date(2020, 10, 29),365.42249009325394,],
 [new Date(2020, 10, 30),363.0496167809601,],
-[new Date(2020, 11, 1),347.62594025105,],
-[new Date(2020, 11, 2),325.08364378425836,],
-[new Date(2020, 11, 3),296.60916403673207,],
-[new Date(2020, 11, 4),276.4397408822343,],
-[new Date(2020, 11, 5),246.7788244785611,],
-[new Date(2020, 11, 6),230.1687112925041,],
-[new Date(2020, 11, 7),214.745034762594,],
+[new Date(2020, 11, 1),348.81237690719695,],
+[new Date(2020, 11, 2),326.2700804404053,],
+[new Date(2020, 11, 3),300.16847400517287,],
+[new Date(2020, 11, 4),281.185487506822,],
+[new Date(2020, 11, 5),251.52457110314882,],
+[new Date(2020, 11, 6),239.66020454167952,],
+[new Date(2020, 11, 7),226.60940132406333,],
+[new Date(2020, 11, 8),201.6942315449778,],
 ]);
 var drawAccumulatedCasesIncidenceChart = new google.visualization.ChartWrapper({
   'chartType': 'LineChart',
@@ -379,15 +380,15 @@ var drawDeceasedRangeSlider = new google.visualization.ControlWrapper({
 'options': {
   'filterColumnLabel': 'fecha',
   'minValue': new Date(2020, 0, 15),
-  'maxValue': new Date(2020, 11, 7),
+  'maxValue': new Date(2020, 11, 8),
   'width': 600,
   'height': 50
   },
 });
 drawDeceasedRangeSlider.setState({
   range: {
-    start: new Date(2020, 9, 31),
-    end: new Date(2020, 10, 30),
+    start: new Date(2020, 10, 1),
+    end: new Date(2020, 11, 1),
   }
 });var drawDeceasedData = new google.visualization.DataTable();
 drawDeceasedData.addColumn("date", "fecha");
@@ -682,7 +683,7 @@ drawDeceasedDashboard.draw(drawDeceasedData);
     </script>
   </head>
   <body>
-<p><a href="../">Menu</a></p><p>Informe generado el día: 10-12-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 34</p><p>Una de cada 2479 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
+<p><a href="../">Menu</a></p><p>Informe generado el día: 11-12-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 34</p><p>Una de cada 2479 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
 <div id="accumulated_cases_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
   <div id="accumulated_cases_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
   <div id="accumulated_cases_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>

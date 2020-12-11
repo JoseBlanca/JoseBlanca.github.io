@@ -15,15 +15,15 @@ var drawAccumulatedCasesIncidenceRangeSlider = new google.visualization.ControlW
 'options': {
   'filterColumnLabel': 'fecha',
   'minValue': new Date(2020, 0, 15),
-  'maxValue': new Date(2020, 11, 7),
+  'maxValue': new Date(2020, 11, 8),
   'width': 600,
   'height': 50
   },
 });
 drawAccumulatedCasesIncidenceRangeSlider.setState({
   range: {
-    start: new Date(2020, 9, 31),
-    end: new Date(2020, 10, 30),
+    start: new Date(2020, 10, 1),
+    end: new Date(2020, 11, 1),
   }
 });var drawAccumulatedCasesIncidenceData = new google.visualization.DataTable();
 drawAccumulatedCasesIncidenceData.addColumn("date", "fecha");
@@ -314,21 +314,21 @@ drawAccumulatedCasesIncidenceData.addRows([[new Date(2020, 0, 15),0.0,],
 [new Date(2020, 9, 24),118.39049004819051,],
 [new Date(2020, 9, 25),124.89821254555406,],
 [new Date(2020, 9, 26),138.49768391824966,],
-[new Date(2020, 9, 27),149.5107527599418,],
-[new Date(2020, 9, 28),160.52382160163393,],
-[new Date(2020, 9, 29),169.45108195058137,],
-[new Date(2020, 9, 30),178.8789363377875,],
-[new Date(2020, 9, 31),183.80144438066506,],
-[new Date(2020, 10, 1),200.98850636088156,],
-[new Date(2020, 10, 2),225.51761423555953,],
-[new Date(2020, 10, 3),244.37332300997184,],
-[new Date(2020, 10, 4),258.05622672237723,],
-[new Date(2020, 10, 5),265.8988666550974,],
-[new Date(2020, 10, 6),268.31840450668125,],
-[new Date(2020, 10, 7),271.7391304347826,],
-[new Date(2020, 10, 8),268.81899854494003,],
-[new Date(2020, 10, 9),274.6592623246252,],
-[new Date(2020, 10, 10),271.57226575536305,],
+[new Date(2020, 9, 27),149.427320420232,],
+[new Date(2020, 9, 28),160.44038926192414,],
+[new Date(2020, 9, 29),169.36764961087155,],
+[new Date(2020, 9, 30),178.79550399807772,],
+[new Date(2020, 9, 31),183.71801204095527,],
+[new Date(2020, 10, 1),200.9050740211718,],
+[new Date(2020, 10, 2),225.43418189584975,],
+[new Date(2020, 10, 3),244.28989067026203,],
+[new Date(2020, 10, 4),257.9727943826674,],
+[new Date(2020, 10, 5),265.81543431538756,],
+[new Date(2020, 10, 6),268.23497216697143,],
+[new Date(2020, 10, 7),271.65569809507286,],
+[new Date(2020, 10, 8),268.7355662052302,],
+[new Date(2020, 10, 9),274.5758299849154,],
+[new Date(2020, 10, 10),271.48883341565323,],
 [new Date(2020, 10, 11),270.9882393773945,],
 [new Date(2020, 10, 12),271.1551040568141,],
 [new Date(2020, 10, 13),274.99299168346437,],
@@ -346,16 +346,17 @@ drawAccumulatedCasesIncidenceData.addRows([[new Date(2020, 0, 15),0.0,],
 [new Date(2020, 10, 25),291.0954332474536,],
 [new Date(2020, 10, 26),296.5185353285899,],
 [new Date(2020, 10, 27),297.0191293668487,],
-[new Date(2020, 10, 28),291.84632430484174,],
-[new Date(2020, 10, 29),283.6699550132824,],
-[new Date(2020, 10, 30),276.4947737982406,],
-[new Date(2020, 11, 1),283.6699550132824,],
-[new Date(2020, 11, 2),291.92975664455156,],
-[new Date(2020, 11, 3),289.3433541135481,],
-[new Date(2020, 11, 4),279.2480410086636,],
-[new Date(2020, 11, 5),262.64500540641563,],
-[new Date(2020, 11, 6),246.7928608615557,],
-[new Date(2020, 11, 7),224.43299381933227,],
+[new Date(2020, 10, 28),291.92975664455156,],
+[new Date(2020, 10, 29),283.7533873529922,],
+[new Date(2020, 10, 30),276.6616384776602,],
+[new Date(2020, 11, 1),285.0883047883488,],
+[new Date(2020, 11, 2),295.3504825726529,],
+[new Date(2020, 11, 3),296.01794129033124,],
+[new Date(2020, 11, 4),291.0954332474536,],
+[new Date(2020, 11, 5),281.2504171616985,],
+[new Date(2020, 11, 6),272.5734538318805,],
+[new Date(2020, 11, 7),256.2207152487619,],
+[new Date(2020, 11, 8),231.1075809961154,],
 ]);
 var drawAccumulatedCasesIncidenceChart = new google.visualization.ChartWrapper({
   'chartType': 'LineChart',
@@ -379,15 +380,15 @@ var drawDeceasedRangeSlider = new google.visualization.ControlWrapper({
 'options': {
   'filterColumnLabel': 'fecha',
   'minValue': new Date(2020, 0, 15),
-  'maxValue': new Date(2020, 11, 7),
+  'maxValue': new Date(2020, 11, 8),
   'width': 600,
   'height': 50
   },
 });
 drawDeceasedRangeSlider.setState({
   range: {
-    start: new Date(2020, 9, 31),
-    end: new Date(2020, 10, 30),
+    start: new Date(2020, 10, 1),
+    end: new Date(2020, 11, 1),
   }
 });var drawDeceasedData = new google.visualization.DataTable();
 drawDeceasedData.addColumn("date", "fecha");
@@ -682,7 +683,7 @@ drawDeceasedDashboard.draw(drawDeceasedData);
     </script>
   </head>
   <body>
-<p><a href="../">Menu</a></p><p>Informe generado el día: 10-12-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 397</p><p>Una de cada 3019 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
+<p><a href="../">Menu</a></p><p>Informe generado el día: 11-12-2020</p><p>Este informe está generado para uso personal por <a href="https://twitter.com/jblanca42">@jblanca42</a>, pero lo sube a la web por si le pudiese ser de utilidad a alguien más.</p><p>El código utilizado para generarlo se encuentra en <a href="https://github.com/JoseBlanca/seguimiento_covid">github</a>, si encuentras algún fallo o quieres mejorar algo envía un mensaje o haz un pull request.</p><p>Número total de fallecidos: 397</p><p>Una de cada 3019 personas han fallecido en esta comunidad autónoma.</p><p>Número de casos informados en los 15 días anteriores por cien mil habitantes. Datos obtenidos de los informes del Carlos III.</p>
 <div id="accumulated_cases_dashboard" style="padding=0;margin:0; text-align: center; height: 850px;  width: 900px;">
   <div id="accumulated_cases_chart" style="padding=0;margin:0; style="display: inline-block; height: 800px;  width: 900px;"></div>
   <div id="accumulated_cases_rangeslider" style="padding=0;margin:0; display: inline-block; height: 50px;  width: 600px;""></div>
