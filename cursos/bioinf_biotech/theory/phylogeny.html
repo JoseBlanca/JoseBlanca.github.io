@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Phylogeny and evolution</title>
+  <meta name="description" content="Introduction to Bioinformatics for the Biotechnology degree.">
+
+  <link rel="stylesheet" href="/courses/biotech3/css/main.css">
+  <link rel="canonical" href="https://bioinf.comav.upv.es/courses/biotech3/theory/phylogeny.html">
+  <link rel="alternate" type="application/rss+xml" title="Bioinformatics" href="https://bioinf.comav.upv.es/courses/biotech3/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/courses/biotech3/">Bioinformatics</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/alignment.html">Sequence Alignment Practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/assembly.html">Assembly</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/blast.html">Blast</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/blast.html">Blast Practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/covid.html">COVID19</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/databases.html">Biological Databases</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/emboss.html">Introduction to EMBOSS</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/entrez.html">Entrez and NCBI databases Practice</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/">Home</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/linux.html">Unix CLI</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/multiple.html">Multiple Sequence Alignment Practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/multiple.html">Multiple Sequence Alignment</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/norms.html">Norms</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/phylogeny.html">Phylogeny practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/phylogeny.html">Phylogeny and evolution</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/prev_knowledge.html">Previous Knowledge</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/sequence_alignment.html">Sequence Alignment</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/structural_annotation.html">Structural Annotation</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/structural_annotation.html">Structural Annotation</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Phylogeny and evolution</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="speciation">Speciation</h1>
+
+<p><a href="https://en.wikipedia.org/wiki/Speciation">Speciation</a> is the evolutionary process by which reproductively isolated biological populations evolve to become distinct species.
+Two populations from the same species that are reproductively isolated, that do not have gene flow between them, can end up with time creating two new species incapable of having sexual reproduction between them.</p>
+
+<h2 id="speciation-mechanisms">Speciation mechanisms</h2>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Population">population</a> is a group of individuals that live in the same greographical area and are capable of interbreeding mixing their genetic information.</p>
+
+<p>Individuals will interbreed more usually with other individuals from their same populations than from individuls from other populations.
+Selection, genetic drift, mutation and migration will affect in different ways to different populations and therefore different populations will have different genetic characteristics.
+Allelic frequencies will differ between populations.</p>
+
+<p><img src="../static/phylogeny/poblacion.png" alt="Evolution forces" /></p>
+
+<p>A species is usually composed by different populations which have different characteristics.
+The species is maintained integrated by the genetic flow that goes from one population to another.
+If the genetic flow is low the populations will tend to differ with time.
+Different selective pressures acting in different populations will also make them became different.
+If the isolation between the populations is maintained they will create races, subpopulations and finally species.</p>
+
+<p>The isolation between different populations can be due to different causes.
+One common cause is the geographical isolation.
+The populations are split because of the geography (mountain ranges or rivers for example) or by distance (like South and North America). The speciation cause by this reason is called <a href="https://en.wikipedia.org/wiki/Speciation#Allopatric">alopatric</a>.</p>
+
+<p><img src="../static/phylogeny/speciation.png" alt="speciation" /></p>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Speciation#Sympatric">sympatric</a> speciation happens when the isolation between the species happens despite living in the same geographical region.
+These could be different reasons for a sympatric speciation like:</p>
+
+<ul>
+  <li>
+    <p>Habitat or seasonal isolation. One species can reach the sexual maturation in a different species than other or might inhabit different ecological niches.</p>
+  </li>
+  <li>
+    <p>Sexual or behavioral isolation. Both species have a sexual incompatible behavior.</p>
+  </li>
+  <li>
+    <p>Mechanical isolation. The reproductive organs are not compatible any more.</p>
+  </li>
+  <li>
+    <p>Postzigotic isolation. The zygote is formed but is not viable due to genetic or other causes. It might also be possible that the hybrid is viable, but it is sterile.</p>
+  </li>
+</ul>
+
+<h1 id="microevolutive-processes">Microevolutive processes</h1>
+
+<p><a href="https://en.wikipedia.org/wiki/Microevolution">Microevolution</a> is the change in allele frequencies that occurs over time within a population.</p>
+
+<p>The processes that underlie microevolution are: <a href="https://en.wikipedia.org/wiki/Mutation">mutation</a>, selection (<a href="https://en.wikipedia.org/wiki/Natural_selection">natural</a> and <a href="https://en.wikipedia.org/wiki/Artificial_selection">artificial</a>), <a href="https://en.wikipedia.org/wiki/Gene_flow">gene flow</a> and <a href="https://en.wikipedia.org/wiki/Genetic_drift">genetic drift</a>.</p>
+
+<h2 id="mutation">Mutation</h2>
+
+<p>Genetic variability is the pre-requisite for evolution.
+The other microevolutive processes will act upon the variability created by the mutation.</p>
+
+<p>The mutations are:</p>
+
+<ul>
+  <li>random and non-directional towards a goal.</li>
+  <li>They create variation. Mutation is the only process that creates new variation.</li>
+</ul>
+
+<p>Types:</p>
+
+<ul>
+  <li>Point mutations, nucleotide substitutions.</li>
+  <li>Small insertion and deletions</li>
+  <li>Structural variants</li>
+</ul>
+
+<p>Causes:</p>
+
+<ul>
+  <li>Spontaneous</li>
+  <li>replication errors</li>
+  <li>DNA repair errors</li>
+  <li>mutagens</li>
+</ul>
+
+<h2 id="genetic-drift">Genetic drift</h2>
+
+<p><a href="https://en.wikipedia.org/wiki/Genetic_drift">Genetic drift</a> is the change in the allelic frequencies due to the random sampling  of alleles to create a new generation. There wouldn’t be any genetic drift in an infinite population.</p>
+
+<p>You can <a href="http://www.radford.edu/~rsheehy/Gen_flash/popgen/">simulate</a> the random drift.</p>
+
+<p>Try simulate what happens when you create smaller and larger populations.
+Simulate what happens with different starting allele frequencies.</p>
+
+<p>Characteristics:</p>
+
+<ul>
+  <li>It removes variability</li>
+  <li>It is neutral</li>
+  <li>Mechanism that controls most of the genetic variation</li>
+</ul>
+
+<h2 id="selection">Selection</h2>
+
+<p><a href="https://en.wikipedia.org/wiki/Natural_selection">Selection</a> is due to the differential reproductive success of different genotypes.</p>
+
+<p>Selection removes variation created by mutation.
+It could be compared with a sculptor that removes fragments from a stone to create a statue.</p>
+
+<p>Mutations can be with respect to selection:</p>
+
+<ul>
+  <li>beneficial</li>
+  <li>deletereous</li>
+  <li>neutral</li>
+</ul>
+
+<p>The fitness is the quantitative representation of the selection, it measures the contribution of an individual to the genetic pool of the next generation.</p>
+
+<p>It has no sense to think on the fitness without taking into account the environment.
+One trait could be beneficial in one environment and deletereous in another.</p>
+
+<p>Selection adapts the species to the environment and improves the fitness overtime.</p>
+
+<h1 id="species">Species</h1>
+
+<h2 id="variation-within-and-between-species">Variation within and between species</h2>
+
+<p>There could be genetic variation within and between species.
+When the genetic variation is dominated by the intraspecific variation it is advisable to do genetic population analyses and not phylogeny.</p>
+
+<p>Phylogeny assumes that the variation within species compared with the variation between the species is negligible.</p>
+
+<h2 id="species-concept">Species concept</h2>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Species">species</a> can be defined as the group of individuals capable of breeding and have fertile offspring.
+This standard definition focuses on the genetic flow because the lack of genetic flow will make populations differentiate over time creating new species.
+But there are different problems with this definition:</p>
+
+<ul>
+  <li>
+    <p>The capacity of breeding fertile offspring ranges from impossible to completely compatible in a continuos variation. Where should we trace the line that split the species.</p>
+  </li>
+  <li>
+    <p>If two groups can potentially breed but they live in different continents do they belong to the same species?</p>
+  </li>
+  <li>
+    <p>It does not account for the amount of morphological, physiological and ecological differences. What happens if we have two distinct groups that do not breed because of a geographical barrier and that are ecologically very distinct? Even if they could potentially breed are they different species?</p>
+  </li>
+  <li>
+    <p>If the species has asexual reproduction, how does the gene flow definition applies?</p>
+  </li>
+  <li>
+    <p>If the species had sexual reproduction but we only have fossils how can we determine if two individuals belong to the same species?</p>
+  </li>
+  <li>
+    <p>If we study a species that has derived from an extant old species when shold we split the two species?</p>
+  </li>
+</ul>
+
+<h2 id="trees-and-networks">Trees and networks</h2>
+
+<p>Phylogenetic analyses assume that species evolve into new species and that there is no gene flow between those species once they have split.
+There can be some exceptions to this assumptions:</p>
+
+<ul>
+  <li>Very close species can have gene flow between those because they can still produce fertile hybrids.</li>
+  <li>There is horizontal transfer. Some genes can jump from one species to another without being transmitted by sexual interbreeding. This is specially the case in bacteria.</li>
+</ul>
+
+<p>When there is gene flow between species the evolution is better represented by a network than by a tree.</p>
+
+<p>These networks a typical of the populations that after they are split they can still have gene flow between them.
+In this case we could consider using population genetic analyses instead of phylogenetics.</p>
+
+<p>A clear case of a network is the endosymbiosis of the mitocondria and the chloroplast. In this case the genes will have bifurcating trees, but the species evolution will be a network.</p>
+
+<h1 id="introduction-to-phylogeny">Introduction to phylogeny</h1>
+
+<p>Phylogenetic analyses try to infer the evolutive relationships between species.
+They try to build the correct topology, the order of splits in the ancestral species that created the extant species, and the genetic distances, that are related to the time passed since the splits.</p>
+
+<p>The phylogenetic methods usually assume that the extant species analyzed were created by splits of the ancestral species in a bifurcating fashion.
+If this assumption is not met the result of the phylogenetic analysis might be misleading.
+For instance, if we are analyzing populations within a species there could be gene flow due to migration and that won’t be reflected in the tree build by the phylogenetic analysis.</p>
+
+<p>Phylogenetic analyses create the phylogenetic trees using the experimental evidences available.
+Some kinds of evidences are:</p>
+
+<ul>
+  <li>Morphological data</li>
+  <li>Genotypes</li>
+  <li>DNA or protein sequences</li>
+</ul>
+
+<h2 id="taxonomy-vs-phylogeny">Taxonomy vs phylogeny</h2>
+
+<p><a href="https://en.wikipedia.org/wiki/Taxonomy_(biology)">Taxonomy</a> is the science of defining groups, classifying, on the bases of similarity and shared characteristics.
+<a href="https://en.wikipedia.org/wiki/Phylogenetics">Phylogenetics</a> is the study of the evolutionary history of the living beings.
+Both concepts are related, but they are not the same.
+In biology, <a href="https://en.wikipedia.org/wiki/Cladistics">Cladistics</a>, we try to classify the species using their evolutionary history.
+We could create the biological groups based on characteristics not related with its history.
+We could classify according to morphological or ecological similarities not because of their history.
+For instance, <a href="https://en.wikipedia.org/wiki/Herpetology">herpetology</a> is the study of amphibians and reptiles, despite the fact that cladistics would classify them in distinct groups.
+Some methodologies traditionally used in phylogenetics, like UPGMA trees, are also commonly used in taxonomy, even in non-biological taxonomies.</p>
+
+<h2 id="nomenclature">Nomenclature</h2>
+
+<h3 id="taxon-and-clade">Taxon and clade</h3>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Taxon">taxon</a> is a group of organisms defined in a taxonomical analysis.
+The taxa can be families, genera, species, etc.
+Examples of taxa are: mammals, reptiles, insects or fishes.</p>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Clade">clade</a> is a branch in a phylogenetic tree.
+It can be a group of species with their common ancestors.</p>
+
+<p>All clades could be taxa, if somebody name them, but not all taxa can be clades.
+Only the monophyletic taxa are clades.
+For instance, the <a href="https://en.wikipedia.org/wiki/Vertebrate">vertebrates</a> are a taxon and a clade.
+But the taxa <a href="https://en.wikipedia.org/wiki/Reptile">reptiles</a> and <a href="https://en.wikipedia.org/wiki/Reptile">fishes</a> are not clades.</p>
+
+<h3 id="monophyly-polyphyly-and-paraphyly">Monophyly, polyphyly and paraphyly</h3>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Monophyly">monophyletic</a> group is a taxon which forms a clade, meaning that it consists of an ancestral species and all its descendants.</p>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Polyphyly">polyphyletic</a> taxon is comprised by branches that do not originated from a common ancestor.
+For instance, worms would be a polyphyletic taxon.</p>
+
+<p>In a <a href="https://en.wikipedia.org/wiki/Paraphyly">paraphyletic</a> taxon all their members originated from a common ancestor, but not all the descendants of that ancestor are included in the taxon.
+Reptiles or fishes are examples of paraphyletic taxa.</p>
+
+<h3 id="trees-dendograms-and-cladogram">Trees, dendograms and cladogram</h3>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Phylogenetic_tree">phylogenetic tree</a> is a representation of the inferred evolutive relationships, the phylogeny, of a group of clades.
+If you follow the diagram from one species in the tip to the ancestor species you will follow the evolutionary history of the species.</p>
+
+<p>Phylogenetic trees depict two kinds of information, the topology, the pattern of the branching, and the length of the branches.
+The topology is related with the order in which the species split in the evolutionary history and the branches with the time or amount of change between the species.</p>
+
+<p>A a phylogram is a phylogenetic tree in which the branch length should be taken into account.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+  |    -------------- A
+  | |--|
+  | |  --------- B
+  | |
+  | -------------------------C
+
+</code></pre>
+</div>
+
+<p>By contrast, in a <a href="https://en.wikipedia.org/wiki/Cladogram">cladogram</a> only the topology is relevant.</p>
+
+<p>In an ultrametic tree of the branches from the common ancestor to the extant species have the same length.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+|    ----------- A
+| |--|
+| |  ----------- B
+| |
+| -------------- C
+
+</code></pre>
+</div>
+
+<p>If all genetic distances were proportional to the time since the split of the species all phylogenetic trees would be ultrametric, but this is seldom the case.
+This is known as the <a href="https://en.wikipedia.org/wiki/Molecular_clock">molecular clock hypothesis</a>.
+Usually some branches evolve at a faster or slower pace.
+Some possible reasons for these changes are: selection or genetic drift.
+For instance, small populations will change faster due to drift and species in new ecological niches will suffer a stronger selection pressure and will change faster.</p>
+
+<h2 id="equivalent-topologies">Equivalent topologies</h2>
+
+<p>We can create alternative, but equivalent, graphical representations of a tree.
+We have to be cautious when judging which trees have different topologies because we can have different representation of the same underlying tree.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+|         --------- A
+|   ------|
+|   |     --------- B
+|   |
+|   |       --------C
+|   --------|
+|           --------D
+|
+|         --------- B
+|   ------|
+|   |     --------- A
+|   |
+|   |       --------C
+|   --------|
+|           --------D
+|
+|         --------- B
+|   ------|
+|   |     --------- A
+|   |
+|   |       --------D
+|   --------|
+|           --------C
+
+</code></pre>
+</div>
+
+<h2 id="rooted-and-unrooted-trees">Rooted and unrooted trees</h2>
+
+<p>A phylogenetic tree can be represented with or without a root.
+In a rooted tree the there is a node that corresponds to the common ancestor of all the leaves of the tree.
+In this case all nodes represent the most recent common ancestor of the clade that derived from that ancestor.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+|       --------- A
+| ------|
+| |     --------- B
+| |
+| ----------------C
+
+
+|         --------- A
+|   ------|
+|   |     --------- B
+| --|
+|   |
+|   ----------------C
+|
+|         --------- A
+|   ------|
+|   |     --------- B
+|   |
+|   |
+|   ----------------C
+
+</code></pre>
+</div>
+
+<p>Phylogenetic reconstruction methods do not create rooted trees.
+We have to determine which is the ancestor node.
+We could do it by assuming the molecular clock hypothesis
+In this case the most distant node of the extant nodes will be the most ancient one.
+The problem with this approach is that we can not be sure that the molecular clock hypothesis is true for all phylogenies.</p>
+
+<p>So the most common way of creating rooted trees is to include some taxon in the phylogenetic reconstruction that we are sure that is the most distant and unrelated one.
+For instance, if we would root a tree of the mammals we could use a crocodile.</p>
+
+<h2 id="polytomy">Polytomy</h2>
+
+<p>A polytomy is a unresolved node in which several branches appear.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+|     --------------- A
+|     |
+|  |--|-------------- B
+|  |  |
+|  |  ----------------C
+|  |
+|  -----------D
+
+</code></pre>
+</div>
+
+<p>The phylogenetic reconstruction methods assume that all splits are in two, so all polytomies would be due to lacking phylogenetic signal or to lacking reconstruction methods.
+To solve a polytomy we need evidence that correspond to mutations that appeared in the period in which the species related to the polytomy split.</p>
+
+<h1 id="phylogenetic-inference-based-on-sequences">Phylogenetic inference based on sequences</h1>
+
+<p>Phylogenies can be inferred using different kinds of evidence like:</p>
+
+<ul>
+  <li>Morphology</li>
+  <li>Molecular markers</li>
+  <li>Presence and absence of genes.</li>
+  <li>DNA or protein sequences</li>
+</ul>
+
+<p>But the most common approach is to use sequences when they are available.</p>
+
+<p>In any case we need characters that are similar because they have a common ancestor, not the characters that are similar because they were selected to adapt the organisms to a similar ecosystem niche.
+For instance, if we consider dolphins and sharks to be closely related because they share a similar shape we would be mistaken.
+The problem lies in the character chosen.
+We evaluate the phylogenetic relationships taking into account the similarities in some characters.
+If those similarities are due to a common ancestor, for instance we have for limbs like the cats because we have a common ancestors.
+Those characters that are similar because they originated from a common ancestor are called <a href="https://en.wikipedia.org/wiki/Homology_%28biology%29">homologous</a> characters.
+The characters that are similar, but not because they have a common ancestor are said to be <a href="https://en.wikipedia.org/wiki/Convergent_evolution">analogous</a>.</p>
+
+<p>For morphological characters can be difficult to know if a character is similar between two species because it is homologous or analogous because selection can create analogous structures in organism that face the same ecological problems.
+For the sequences this is seldom the case.
+Two sequences that are similar are similar in most of the cases because they are homologous.
+The molecular function is not so directly tied with the sequence.
+Different sequences can have the same function, so it is unlikely that selection creates molecules with the same sequence, even if it creates sequences with the same function.</p>
+
+<p>When we are using sequences to build a species tree we assume:</p>
+
+<ul>
+  <li>Each sequence is correct and it belongs to the organism that we are studying.</li>
+  <li>Sequences are homologous, they evolved from a common ancestor.</li>
+  <li>Each position in the multiple sequence alignment is homologous in all sequences.</li>
+  <li>All sequences correspond to extant species and no extant species originated another extant species. All extant species will be leaves in the tree.</li>
+  <li>Mutations happened at random</li>
+  <li>Different positions evolved independently.</li>
+  <li>There is no genetic flow between the different species after their split. Evolutionary history is a tree, not a network.</li>
+</ul>
+
+<p>The sequences used can have enough phylogentic signal to infer the phylogeny in every detail, but that can be not true.
+We have to check using some statistical method which features of the phylogeny are statistically significant and which are not.</p>
+
+<p>Usually when we interpret a species phylogeny we assume that the sequence variation within species is very small compared with the variation between species.
+This won’t be true for populations.</p>
+
+<h2 id="uses">Uses</h2>
+
+<p>Phylogenies can be used to study the species evolution or the evolution of genes.</p>
+
+<p>One common use case is to use sequences of extant species to infer their evolutionary history.</p>
+
+<p>Evolutionary history can be studied for the broad taxonomic ranks or within species.
+We can be interested in build a tree for all metazooans of just for the HIV viruses.</p>
+
+<p>We can also use phylogenies to study the evolution of genes and their functions in different organims.</p>
+
+<h2 id="species-tree-vs-gene-tree">Species tree vs gene tree</h2>
+
+<p>The phylogenetic history of the species and the genes of those species should be the same in general, but there might be differences.
+Sometimes we can find genes that have a different history than the species that host them.</p>
+
+<p>When we are building a species tree we assume that the sequences used are representative of the species evolution.</p>
+
+<p>When we are studying very close species it is common to have incomplete lineage sorting.</p>
+
+<p><img src="../static/phylogeny/incomplete_lineage_sorting.png" alt="Incomplete lineage sorting" /></p>
+
+<p>Imagine that you have two alleles for one gene in one ancestral species.
+Those alleles will have differences between them.
+If we sequence only one allele from the extant species and this allele is chosen at random in those species the final tree will depend on the alleles chosen for each species.
+This case is only relevant in very close species because if the species are different enough the number of mutations since the split from the original species will be much larger than the differences between the two original alleles and those differences will be irrelevant for the phylogenetic reconstruction.
+This case is, for instance, relevant in the tree of chimpanzee, gorilla and human.
+Depending on the region of the genome chosen the gorilla might appear to be closer to human than the chimpanzee.</p>
+
+<p>Another common phenomenon that differentiates the species and the gene tree is <a href="https://en.wikipedia.org/wiki/Horizontal_gene_transfer">horizontal transfer</a>.
+Usually genes move from parents to offspring, but in some cases they can move horizontally from one species to another.
+This is common, for instance, within transposable elements.
+One example is the case of the mariner element.
+The transposable element mariner has been transfered between insect and mammal species and there are insect and mammalian sequence with identities higher than 95%.</p>
+
+<p><img src="../static/phylogeny/mariner_horizontal_transfer.png" alt="mariner horizontal tranfer" /></p>
+
+<p>In the figure it is show the location of different subfamilies of the mariner element: Mariner_TbeI, Mariner-28_sln, Mariner1_BT and Mariner-N1-CPe.
+Mariner_TbeI is found in the Tree shrew and in a couple of ant species.</p>
+
+<p>Horizontal gene transfer is also very common in prokaryotes.</p>
+
+<p>Another case in which there are discrepancies between the species tree and the gene trees is when species interchange genetic material.
+This can happen when species are very closely related and they still produce fertile offspring.
+Another case happened when the <a href="https://en.wikipedia.org/wiki/Eukaryote">eukariotes</a> evolved from a fusion of an archea and a bacteria.</p>
+
+<p><img src="../static/phylogeny/Tree_of_Living_Organisms.png" alt="tree of life" /></p>
+
+<p>You also have to take into account that when there is genetic interchange between species recombination might happen and you can end up having sequences that have stretches that have had different evolutionary histories.
+Phylogenetic methods assume that there is no recombination.</p>
+
+<p><img src="../static/phylogeny/recombination_phylo.svg" alt="Recombination in phylogenetics" /></p>
+
+<p>Nowadays it is common to build thousands of gene trees from many genes of the genome and infer the species tree from those trees.
+This is the area of <a href="https://en.wikipedia.org/wiki/Phylogenomics">phylogenomics</a>.</p>
+
+<h3 id="gene-families">Gene families</h3>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Gene_family">gene family</a> is a set of similar genes created by <a href="https://en.wikipedia.org/wiki/Gene_duplication">ancestral duplications</a>.</p>
+
+<p><img src="../static/phylogeny/gene_duplication.png" alt="Gene families and phylogenies" /></p>
+
+<p>All genes that originated from the ancestral copy are <a href="https://en.wikipedia.org/wiki/Sequence_homology">homologous</a>, but we can further classify them:</p>
+
+<ul>
+  <li>Homologous sequences are <a href="https://en.wikipedia.org/wiki/Sequence_homology#Ohnology">orthologous</a> if they are inferred to be descended from the same ancestral sequence separated by a speciation event</li>
+  <li>Homologous sequences are <a href="https://en.wikipedia.org/wiki/Sequence_homology#Paralogy">paralogous</a> if they were created by a duplication event within the genome.</li>
+  <li>Homologs resulting from horizontal gene transfer between two organisms are termed <a href="https://en.wikipedia.org/wiki/Sequence_homology#Xenology">xenologs</a>.</li>
+</ul>
+
+<h2 id="multiple-alignment-as-evidence-for-phylogenetic-inference">Multiple alignment as evidence for phylogenetic inference</h2>
+
+<p>Phylogenetic trees are usually build from multiple sequence alignments.</p>
+
+<p>We asume that aligned positions for each sequence correspond to homologous positions and the the differences are due to mutation that occurred along the evolutionary history.</p>
+
+<p><img src="../static/phylogeny/phylo_msa.png" alt="Phylogeny and MSA" /></p>
+
+<p>The higher the quality of the multiple sequence alignment the better will be our phylogenetic reconstruction.
+If we suspect that there are misaligned regions it is better to remove them before doing the phylogenetic analysis.
+We can check manually the multiple sequence alignment to remove suspicious regions.
+In general the regions that accumulate more mutations will be more difficult to align and more prone to misalignments.</p>
+
+<p>This pruning of misaligned regions can also be done automatically with specialized software like <a href="http://molevol.cmima.csic.es/castresana/Gblocks.html">Gblocks</a> or <a href="https://github.com/scapella/trimal">TrimAl</a>.
+These programs remove regions according to its level of conservation, number of gaps, etc.</p>
+
+<h2 id="models-of-nucleotide-substitutions">Models of nucleotide substitutions</h2>
+
+<p>Sequences accumulate mutations with time, so differences between homologous sequences inform us about the evolutionary distance and the time since those sequences begun their split.
+The more different two sequences are, the more time should have passed since their split, but there are several confounding factors for this simple assumption.</p>
+
+<h3 id="mutations-vs-observed-changes">Mutations vs observed changes</h3>
+
+<p>We could think that counting the number of differences between two sequences we are counting the number of mutations between them, but that is not the case.
+The several mutations can occurred at the same position and we would count just one difference or maybe even none if the mutation reverted the sequence to the original sequence.
+This problem has to be corrected if we want to account for the real number of mutations.</p>
+
+<p><img src="../static/phylogeny/mutations_changes.png" alt="Mutations vs observed changes" /></p>
+
+<h3 id="transitions-vs-transversions">Transitions vs transversions</h3>
+
+<p>A <a href="https://en.wikipedia.org/wiki/Transition_%28genetics%29">transition</a> is a change of one purine nucleotide by another one: A to G or G to A or a pirimidine nucleotide by another one: C to G or G to C.
+So a transition is a change of one nucleotide by another chemically similar.
+A <a href="https://en.wikipedia.org/wiki/Transversion">transversion</a> is a change of purine by a pirimidine or viceversa.</p>
+
+<p><img src="../static/phylogeny/transitions_vs_transversions.png" alt="transitions and transversions" /></p>
+
+<p>Transitions and transversions do not occur with the same frequency, transitions are more likely.
+Substituting a ring structure for another single ring structure of the same type is more likely than mutations between different rings.
+Also, transitions are less likely to result in amino acid substitutions (due to <a href="https://en.wikipedia.org/wiki/Wobble_base_pair">wobble base pair</a>), and are therefore more likely to persist as “silent substitutions”
+So, if we are interested in accounting for the time since the split of one species it would be better to count transversions ans transitions independently because they accumulate at a different rate.</p>
+
+<h3 id="models-of-nucleotide-substitution">Models of nucleotide substitution</h3>
+
+<p>The <a href="https://en.wikipedia.org/wiki/Models_of_DNA_evolution">models of nucleotide substitution</a> account for the process in which one sequence is changed into another.
+These models account for the relative frequencies of the different possible changes.
+They correct for as many confounding factors as possible to account for the true time since the split of the species.</p>
+
+<p>These models usually assume that different positions in the sequence alignment evolved independently.
+This is true for sites evolving neutrally and it could be not true for some selective pressures.</p>
+
+<p>These models differ in the assumptions that they made:</p>
+
+<ul>
+  <li>All mutations are equally probable or not.</li>
+  <li>All sites evolve at the same rate or not.</li>
+  <li>All nucleotides are found at the same frequency or not.</li>
+</ul>
+
+<h3 id="popular-substitutions-models">Popular substitutions models</h3>
+
+<p>The <a href="https://en.wikipedia.org/wiki/Models_of_DNA_evolution#JC69_model_.28Jukes_and_Cantor.2C_1969.29.5B1.5D">Jukes and Cantor</a> model is the simplest substitution model.
+It assumes that all mutations are equally probable, that all nucleotides are found at the same frequency and that all sites evolve at the same rate.
+In this model there is only one parameter, the substitution rate at which the mutations occur.</p>
+
+<p>The <a href="https://en.wikipedia.org/wiki/Models_of_DNA_evolution#K80_model_.28Kimura.2C_1980.29.5B2.5D">kimura</a> model distinguishes between the substitution rate for transitions and transversions.
+It assumes that all bases are found at the same frequency and that all sites evolve at the same rate.</p>
+
+<p>There is a generalised time reversible model that allows for different mutation rates between all nucleotides and different frequencies for the nucleotides.</p>
+
+<p>There are also models that assume different mutation rates for different positions in the alignment.
+This account for sites that are more conserved than others due to selection.</p>
+
+<h3 id="choosing-between-models">Choosing between models</h3>
+
+<p>The best model for our phylogeny depends on the sequences that we are using.</p>
+
+<p>The evolution of different sequences can be best modeled by one substitution model than other. For instance, if there are sites strongly selected and sites that are neutral it might be better to use a model that allows for different mutation rates across positions.</p>
+
+<p>There is also another factor to take into account.
+The phylogenetic signal contained in the sequence alignment that we are using is limited and the more parameters a model has the more signal we need if we don’t want to overfit the model.
+An <a href="https://en.wikipedia.org/wiki/Overfitting">overfitted</a> model would describe our data by adjusting the noise in it as if it was the reality.</p>
+
+<p>Thus, the model to use would be the model that best fit our data, but taking into account the amount of phylogenetic signal to avoid overfitting.
+So the model will depend on the sequence alignment and it has been shown that the model choice might influence the result of the phylogeny.</p>
+
+<p>There are different programs to calculate which is the model for our data.
+They create a rough first tree and from that they try all the models and check how the fit the data.
+One of such programs <a href="https://github.com/ddarriba/jmodeltest2">jmodeltest</a>.</p>
+
+<h2 id="methods-of-phylogenetic-reconstruction">Methods of phylogenetic reconstruction</h2>
+
+<p>We can divide the methods in:</p>
+
+<ul>
+  <li>heuristic methods based on distances</li>
+  <li>Maximum parsimony methods</li>
+  <li>Maximum likelihood</li>
+  <li>Bayesian</li>
+</ul>
+
+<h2 id="phylogenetic-reconstruction-based-on-distances">Phylogenetic reconstruction based on distances</h2>
+
+<h3 id="genetic-distance">Genetic distance</h3>
+
+<p>The <a href="https://en.wikipedia.org/wiki/Genetic_distance">genetic distance</a> is a measure of the degree of difference between to sequences.</p>
+
+<p>There are different statistical measures to calculate the distance between two sequences.
+In theory we could just use the number of differences between sequences divided by the length of the alignment, but as we have seen we have to account for the number of mutations not for the number of differences.
+Many sites will have had several mutations and by counting the number of differences we are underestimating the genetic distance.
+So, we have to use a method to estimate the genetic distance that uses a nucleotide substitution model.</p>
+
+<p>If we have several sequences aligned we can calculate the distances between any pair of them.
+These will be the pairwise distances and with them we can calculate a matrix.</p>
+
+<p><img src="../static/phylogeny/pairwise_distances.png" alt="Pairwise genetic distances" /></p>
+
+<h3 id="tree-generation-from-distance-matrices">Tree generation from distance matrices</h3>
+
+<p>There are several methods to generate trees from a pairwise distance matrix.
+They are general statistical methods used in different fields, not just in phylogenetics.
+They might be used for any problem that involve creating hierarchical classifications.
+The most common of these methods in phylogenetics are UPGMA and Neighbor-joining.</p>
+
+<p>These heuristic methods are very fast.
+They can be used with huge distance matrices and they do not depend directly on the sequence length because all they take is the pairwise genetic distance and they do not consider the alignment per se.
+They run very fast without much memory.</p>
+
+<p>We can generate a tree from any distance matrix, but not all distance matrices are equally well described by a tree.
+Some matrices, for instance, might be better described by networks than by trees.</p>
+
+<p>Once we have generated a tree it is advisable to check how well the tree matches the original distance matrix.
+One way of doing that is to calculate a <a href="https://en.wikipedia.org/wiki/Cophenetic_correlation">cophenetic correlation</a> index.
+To do it we calculate a new distance matrix from the tree and we calculate the original distance matrix with the new matrix generated from the tree.
+A high correlation would indicate that the tree is a good representation of the original matrix.</p>
+
+<h3 id="upgma">UPGMA</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/UPGMA">UPGMA</a> is a clustering method based on looking for the most similar pairs.
+One the most similar pair is found the distance matrix is recalculated with this pair as an entity.</p>
+
+<p>This method will generate ultrametric trees so it is advisable to use it only if we are sure that the <a href="https://en.wikipedia.org/wiki/Molecular_clock">molecular clock</a> hypothesis is a good match for our data.</p>
+
+<h3 id="neighbor-joining">Neighbor-joining</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Neighbor_joining">Neighbor joining</a> is very commonly used because is fast and it has no restriction regarding the molecular clock.
+It will generate non ultrametic trees with branches that span different lengths.</p>
+
+<h2 id="maximum-parsimony">Maximum parsimony</h2>
+
+<p>The <a href="https://en.wikipedia.org/wiki/Maximum_parsimony_%28phylogenetics%29">maximum parsimony</a> approach tries to obtain the tree that requires the least number of changes to explain the character matrix given, e.g. the multiple sequence alignment.
+The idea behind it is that the simplest explanation should be the correct one.</p>
+
+<p><img src="../static/phylogeny/arboles_parsimonia.png" alt="Ejemplo arboles parsimonia" /></p>
+
+<p>To chose the most parsimonious tree the method should, in theory, evaluate all possible trees.
+For each tree should calculate how many mutations need to account for the given character matrix.
+After having that information it should chose the trees with the least number of mutation.
+It could be one tree or several that have the same number of mutations.</p>
+
+<p>In practice it is not possible to evaluate all trees because the number of trees grow very fast with the number of taxa.
+Only with few taxa would it be possible to check them all.
+So the parsimony methods use a heuristic to chose the most likely trees and to evaluate the number of mutations only on those.</p>
+
+<p>For the purpose of a maximum parsimony analysis not all characters are informative.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+   A   aat tcg ctt cta gga atc tgc cta atc ctg
+   B   ... ..a ..g ... .t. ... ... t.. ... ..a
+   C   ... ..a ..c ... ... ..t ... ... ... t.a
+   D   ... ..a ..a ... ..g ..t ... t.t ..t t..
+       1     2   3           4               5
+
+</code></pre>
+</div>
+
+<p>Position 1 is not informative for parsimony because it is invariant and it would add zero mutations to any possible tree.
+So it won’t differentiate between trees.</p>
+
+<p>Position 2 does change, but only in one sequence.
+It is not informative for parsimony because it would add one mutation for any possible tree.
+These characters are called <a href="https://en.wikipedia.org/wiki/Autapomorphy">autapomorhies</a>.</p>
+
+<p>Position 3 is to variable because it changes in all individuals and it will contribute with 3 mutations to any tree.</p>
+
+<p>Other methods do use these non-informative sites for parsimony and they have an influence in the genetic distances that they calculate.</p>
+
+<p>Positions 4 and 5 are informative for parsimony because they are shared by some species and not by others and they would contribute with different numbers of mutations to different trees.
+These positions are called <a href="https://en.wikipedia.org/wiki/Synapomorphy">synaptomorphies</a>.</p>
+
+<p>The maximum parsimony method was very popular in the past, but nowadays it seldom used because it has been shown that it has some <a href="https://en.wikipedia.org/wiki/Maximum_parsimony_(phylogenetics)#Problems_with_maximum_parsimony_phylogeny_estimation">statistical problems</a>.
+There are cases in which this method won’t give us the correct topology.
+Moreover, the more phylogenetic data that we have the worse it will behave in these cases.
+These problems arise, for instance, when we have a tree in which some taxa have evolved faster than other and the problem is called <a href="https://en.wikipedia.org/wiki/Long_branch_attraction">long branch attraction</a>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+|      ----A
+| -----|
+| |    ----------------------------B
+| |
+| |    --------------------------C
+| -----|
+|      ----D
+|
+
+</code></pre>
+</div>
+
+<p>If we try to reconstruct this phylogeny using maximum parsimony it will create a tree in which the taxa B and C are together in the base of the tree.</p>
+
+<h2 id="maximum-likelihood">Maximum likelihood</h2>
+
+<p>Maximum likelihood is not used just for phylogeny, it is a very useful concept with wide application.</p>
+
+<h3 id="likelihood">likelihood</h3>
+
+<p>In common language probability and likelihood are used as synonymous, but they are not in technical language.</p>
+
+<p>Imagine that we are throwing a coin 10 times.
+If we assume that there is a probability <em>p</em> of landing heads we can calculate the probability of observing a particular outcome, like having 5 heads and 5 tails or 6 heads and 4 tails and so on.
+So we have a process with some observed outcomes, than we can name as <em>O</em> and some parameters that influence those outcomes that we can call <em>M</em> (M for model).
+Thus we can calculate the probability of the outcome given the parameters is P(<em>O</em>|<em>M</em>).</p>
+
+<p>In real life we usually don’t know the values for the parameters that define <em>M</em>.
+For instance, in the case of the coin we do not know the value for the probability of landing heads <em>p</em>.
+All we know is that we can do some observations, throwing the coin, and obtain some outcomes <em>O</em>.
+So we have to estimate <em>M</em> from our observations <em>O</em>.
+A natural way of estimating <em>M</em> is to find the parameters that maximize the probability of having observed <em>O</em>.
+So, we can define a function that has <em>O</em> as a given and has the parameters of <em>M</em> as variables.
+This is called the <a href="https://en.wikipedia.org/wiki/Likelihood_function">likelihood function</a>, or just likelihood: L.</p>
+
+<p>We can maximize L and in that way we calculate the parameters of the model that maximize the probability of having observed our data.</p>
+
+<h3 id="example-with-a-coin">Example with a coin</h3>
+
+<p>We have a coin with a probability <em>p</em> of landing heads and 1 - <em>p</em> of landing tails.
+For a perfect coin <em>p</em> should be 0.5, but we want to check if our coin is perfect and we want to infer <em>p</em> from the observations that we have done.</p>
+
+<p>We throw the coin n times and we get x heads and (n - x) tails.
+We want to calculate <em>p</em> from those observations.</p>
+
+<p>The probability of having observed x heads and (n - x) tails is related to <em>p</em> by the following function:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>P(x</td>
+      <td>p, n) = n! / (x! * (n-k)!) * p^x * (1 -p) ^(n - x)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>We can maximize this function for the variable <em>p</em> and thus we can calculate which value of <em>p</em> gives the maximum likelihood of observing x.
+To do it we can derive the function and ask for the derivative to be zero and to the second derivative to be negative.
+If we do just that we get:</p>
+
+<p>p = x/n</p>
+
+<p>You can also read the full <a href="https://tamino.wordpress.com/2011/01/19/mle/">demonstration</a>.</p>
+
+<p>To this estimation of the value of p we call it maximum likelihood estimation.</p>
+
+<h3 id="maximum-likelihood-and-phylogeny">Maximum likelihood and phylogeny</h3>
+
+<p>We can use the maximum likelihood approach to look for the most likelihood phylogenetic tree.
+This would be the tree that makes the data that we have observed more probable.</p>
+
+<p>To do it we need some observation, the multiple alignment.
+We also have to chose beforehand the some mutation model that we want to assume.</p>
+
+<p>For each possible tree we will calculate the probability of the data being generated by the different trees and we will chose the tree that makes the data most probable.
+For each tree it will also calculate the parameters of the model that makes the data most probable.</p>
+
+<p>It is not possible to inspect every possible tree because the number of trees grows very fast with the number of taxa so these programs use heuristics to inspect only the most likely trees.</p>
+
+<p>This method uses the phylogenetic information present in our data in a more efficient way than the distance based methods and the maximum parsimony method.
+So given an alignment it might generate a better tree than the other ones.</p>
+
+<p>The main problem of the method compared with the distance based methods is that it is computationally more costly.
+We can use it now for moderately big alignments because the computers are now quite powerful.</p>
+
+<h2 id="bayes">Bayes</h2>
+
+<p><a href="https://en.wikipedia.org/wiki/Bayesian_statistics">Bayesian statistics</a> based in <a href="https://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes theorem</a>.
+The theorem allows us to calculate <a href="https://en.wikipedia.org/wiki/Conditional_probability">conditional probabilities</a>, the probability of an event A given that other event B has happened.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>p(A|B) = p(A) * p(B|A) / p(B)
+</code></pre>
+</div>
+
+<p>This theorem is the base of the <a href="https://en.wikipedia.org/wiki/Bayesian_inference">bayesian inference</a>.
+We calculate the probability of an hypothesis or model (<em>M</em>) given some observations (<em>O</em>).</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>p(model|observations) = p(model) * p(observations|model) / p(observations)
+
+p(M|O) = p(M) * p(O|M) / p(O)
+</code></pre>
+</div>
+
+<p>p(observations|model) is the probability that we used in the maximum likelihood approach.
+It was the probability of having those observations given the model and the parameters that we had assumed.
+The probability that we calculate in the bayesian approach is the probability of the model given the observations.
+The interpretations of this probability is more straightforward, it is just the probability of the model or hypothesis given the data that we have observed.</p>
+
+<h3 id="example-with-a-coin-toss">Example with a coin toss</h3>
+
+<p>In the movie <a href="https://en.wikipedia.org/wiki/The_Dark_Knight_%28film%29">The Dark Knight</a> Harvey Dent before becoming Batman’s enemy Two-Face picks between different paths by tossing a coin.
+It tosses the coin several times in the movie and it always the result is heads, never tails.
+The question is: when are we allow to suspect that there is something funny with Dent’s coin?</p>
+
+<p>We can think of two hypotheses: the coin is fair and has a head and a tail (H&amp;T) or the coin just has just two heads (2H).</p>
+
+<p>After Dent has tossed the coin for the first time we have 1 observation, one head, and we can calculate the probability of the coin having a head an a tail or just two heads using Bayes’ theorem.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>P(2H|1 observation) = p(2H) * p(1 observation|2H) / p(1 observation)
+P(H&amp;T|1 observation) = p(H&amp;T) * p(1 observation|H&amp;T) / p(1 observation)
+</code></pre>
+</div>
+
+<p>The probabilities of having observed 1 head in 1 toss are easy to calculate for both models:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>   p(1 observation | 2H) = 1
+   p(1 observation | H&amp;T) = 0.5
+</code></pre>
+</div>
+
+<p>p(2H) and p(H&amp;T) are the probabilities of the models without taking into account the observation, the probabilities of the models prior to the observation, and they are called prior probabilities.
+These probabilities can not be calculated from the data available.
+We have to assume values for the prior probabilities that look reasonable to us.
+For instance, in this case we could assume that having a coin with two faces is very weird.
+Alternatively we could assume that since we are watching a movie based on a comic in which a character named two-head appears we might assume that p(2H) is quite high.
+We could also assume different prior probabilities and we could check what happens in any case.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    Case 1: p(2C) = 0.0000000001
+    Case 2: p(2C) = 0.5
+</code></pre>
+</div>
+
+<p>Finally, we have to calculate the probability ob ser observation independently of the models.
+That means, the probability of the observation under any model considered being true.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>p(1 observation) = p(2H) * p(1observation|2H) + p(H&amp;T) * p(1observation|H&amp;T)
+</code></pre>
+</div>
+
+<p>Given the prior probabilities we can calculate everything</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>p(2H|1observation) = p(2H) * p(1observation|2H) /(p(2H) * p(1observation|2H) + p(H&amp;T) * p(1 observation|H&amp;T))
+
+Case 1 (p(2H)=1e-10): P(2H|1observation) = 2e-10
+Case 2 (p(2H)=0.5): P(2H|1observation) = 0.6666666666666666
+</code></pre>
+</div>
+
+<p>In both cases we have updated the probability of both hypotheses, but both posterior probabilities are very different.
+Posterior probabilities depend on our observation and on the prior probabilities.</p>
+
+<p>What would happen if Havery Dent would continue tossing the coin and getting heads all the time?
+In that case the posterior probabilities would converge on very close posterior probabilities no matter what prior probabilities we start with.
+So, with enough observations posterior probabilities can be independent on the prior probabilities.</p>
+
+<h3 id="epistemological-implications-of-bayesian-inference">Epistemological implications of bayesian inference</h3>
+
+<p>We can think about bayesian inference as a way of learning.
+Every time we do an observation we update our prior knowledge (pior probabilities about the models and hypotheses) with the new evidence/observations and we get new knowledge (new posterior probabilites).</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>knowledge = prior knowledge + new evidence
+</code></pre>
+</div>
+
+<p>Different evidences should update your knowledge in different degrees.
+Imagine that somebody tells you that is capable of curing your influenza infection by treating you with a magical sleight of hand.
+So he does the trick and you get cured after a couple of days.
+Would you think that the infection was cured by his magic?
+No, because you would had been cured anyway by your own means.
+Most influenza infections are cured even if no treatment is given.
+It would be a very different kind of evidence if you could treat 100 people with the magic sleight of hand and cured them in a mean time of one day while other 100 people untreated are cured in a mean time of 3 days.
+That would be a much stronger evidence because the treatment is doing something that we do not see in the people that was not treated.</p>
+
+<p>This is reflected in bayesian inference in the power of the evidence.
+The power of an evidence depends on the probability of having observed the evidence if the hypothesis is true <em>and</em> on the probability of having observed the evidence even if the hypothesis is <em>not</em> true.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>p(O|M) / p(O)
+</code></pre>
+</div>
+
+<p>Imagine that we want to detect the expression of a gene and we design a pair of primers located in the first exon of a gene.
+We do an RNA extraction, we retrotranscribe and we do the PCR.
+We get the in an agarose gel the band that we were expecting.
+Could we conclude that the gene is being expressed? No. Why?
+Because that band could be due to a contamination of genomic DNA of the RNA.
+So the band would appear even if the gene is not expressed.
+To be sure that the gene is expressed we have to set proper controls in the experiment.
+For instance, we could carry out two experiment one treating with DNAase the RNA before doing the retrotranscription and another treating with RNAase.
+If in the RNAase case the band disappears and in the DNAase case the band is still there we might conclude that the expression is real.
+This evidence is difficult to explain if the gene is not expressed.
+To avoid these problems the primers used to detect gene expression are usually designed in different exons to use the intron in the middle to avoid the expression due to genomic DNA contamination.</p>
+
+<p>Every time we do a PCR reaction we include a negative control to be sure that our band is not due to a contamination but to our samples.
+It is also a good idea to include a positive control to be able to interpret the case in which we get no band.
+Has the PCR reaction failed?</p>
+
+<p>A doctor does an inmonulogical tuberculosis detection test to you.
+The result is positive.
+Are you infected with tuberculosis? Probably not.
+If the analysis is well done they have detected antibodies in you.
+That suggests that you have had contact with the bacteria at some point, but not necessary that you are infected now.
+This test would be just a preliminar evidence, but to reach a solid conclusion we would have to do other analyses.</p>
+
+<p>Prior probabilities affect our conclusions and should be taken into account.</p>
+
+<p>You participate in a program to evaluate the prevalence of HIV in the standard population.
+The doctor informs you that the test for HIV presence was positive in your case.
+Are you infected?
+The doctor explains to you that the false positive rate of the test is 5%.
+That means that for every 100 analysis in non-infected people 5 turn out to be positive.
+Which is the probability that you are really infected?
+No, it is not 95% and you can not calculate that probability unless you know the prevalence of the HIV infection in your population (the prevalence).
+This is the <a href="https://en.wikipedia.org/wiki/Base_rate">base rate</a>.
+Let’s assume that in your population 2 out of 100 people are infected.
+Imagine that we do 1000 analyses to 1000 different people.
+How many analyses will be positive and how many negative?</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>True positives = 1000 * 2 / 100 = 20 people
+False positives = 1000 * (100 - 2) / 100 * 0.05 = 49 people
+</code></pre>
+</div>
+
+<p>If we do not have any other evidence and we take into account the base rate (as we should) we have to conclude that even after being a positive in the HIV detection analysis it is easier not to be infected than to be infected.
+This is know as the <a href="https://en.wikipedia.org/wiki/False_positive_paradox">false positive paradox</a> and it has implications in very different fields like health or antiterrorist prevention.
+This is one of the motive why there are no widespread campaigns to detect some medical conditions in the population at large.
+The health, physiological and monetary costs of the false positives should be taken into account.
+We have a tendency of forgetting about the base rates and prior probabilities.
+This is a logical fallacy named as <a href="https://en.wikipedia.org/wiki/Base_rate_fallacy">base rate fallacy</a>.</p>
+
+<h3 id="extraordinary-claims">Extraordinary claims</h3>
+
+<p>If in our research we reach an extraordinary conclusion, one far fetch result given the prior knowledge we have to provide also extraordinary evidences to back it up.</p>
+
+<p>“Extraordinary claims require extraordinary evidence.” Carl Sagan</p>
+
+<p>The case of Barry Marshall provides an example of an extraordinary claim back up by extraordinary evidences.
+He is a doctor that infected himself with <em>Helicobacter pylori</em> to show that, despite previous knowledge, this bacterium could case the peptic ulcer.
+If <em>H. pylori</em> was not capable of causing the ulcer he would not get peptic ulcer, but he did develop peptic ulcer one week after being infected.
+After the onset of the disease we was treated with antibiotics capable of killing <em>H. pylori</em>.
+After taking them he was cured.
+This evidence did also baked up the claim that <em>H. pylori</em> could cause a peptic ulcer despite the previous knowledge.
+After that first test clinical tests were set up to check if the peptic ulcer could be cured with antibiotics and they also backed up the hypothesis.
+So the conclusion was clear: <em>H. pylori</em> was capable of causing peptic ulcers.
+Marshall proposed an extraordinary hypothesis and provided extraordinary evidence to back it up and he was given the Nobel price for its contribution to medicine.</p>
+
+<h3 id="prior-probabilities-criticisms">Prior probabilities criticisms</h3>
+
+<p>The main criticism to bayesian inference is directed against the evaluation of the prior probabilities.
+This evaluation is somewhat subjective.
+Two researchers can propose different prior probabilities for the same hypotheses because the judge different prior evidence in a different way.
+But trying to ignore the problem by not using prior probabilities in an explicit way just sweeps the problem under the carpet.
+The alternative of not using the previous knowledge is not to use it, to start always to the start of the research.
+We have to be aware of the dependence of the scientific inquiry on our previous knowledge.
+We have to make an effort of evaluating that previous knowledge as rigorously as possible.
+Besides, we have to be explicit about why we have considered some previous studies and not others.
+It is reasonable that even after this effort differences of opinion regarding the previous knowledge might remain between different researchers, but at least the reasons for these disagreements would be public and explicit.</p>
+
+<p>Besides, even if the prior probabilities are not agreed upon we can reach an agreement after taking into account the new evidences.
+With time, as new evidences are accumulated and agreed upon the different prior points of view will converge.
+To have an efficient research system we have to make an effort of being aware of our prior knowledge and biases and we have to evaluate the new evidences independently of our interests and prior ideas.
+If we ignore the evidence that contradict our hypotheses and use only the ones that favor us we won’t reach knowledge but opinion.</p>
+
+<h2 id="bayesian-methods-in-phylogeny">Bayesian methods in phylogeny</h2>
+
+<p>In the case of <a href="http://en.wikipedia.org/wiki/Bayesian_inference_in_phylogeny">bayesian phylogenetic inferece</a> given the data that we have observed, usually a set of sequences, and some a priori probabilities, we calculate the posterior probabilities for all the possible trees and for all the parameters of the mutations models.
+The mutation model should be chosen before doing the analyses.</p>
+
+<p>In this method we should evaluate the posterior probabilities for every parameter of every tree.
+This is computationally impossible for almost any phylogenetic problem.
+The alternative used is to use <a href="https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo">Markov chains Monte Carlo (MCMC) methods</a> to sample the parameters and trees.
+The problem with the MCMC methods is that this chains tend to get stuck in local minima.
+To solve it the MCMC Metropolis-coupled algorithm is used (MCMCMC).</p>
+
+<p>The most common software in bayesian phylogenetics is <a href="http://mrbayes.sourceforge.net/">MrBayes</a>.</p>
+
+<p>This is the phylogenetic method that is more expensive computationally, but it is regarded as the one that best extracts the phylogenetic information located in a set of observations (usually sequences).</p>
+
+<p><img src="../static/phylogeny/bayesiano.png" alt="bayesian landscape" /></p>
+
+<h1 id="phylogenetic-tree-statistical-validation">Phylogenetic tree statistical validation</h1>
+
+<p>A tree is of not much use if we do not evaluate its statistical significance.
+A phylogenetic algorithm will always create a phylogenetic tree regardless of the data that we feed it, but that do not imply that the tree is meaningful.
+We have to evaluate what nodes of a tree can be believe, according to the evidence that we have, and which were generated at random.</p>
+
+<p>In the bayesian methods every node of every tree has a posterior probability associated that we can use to evaluate their confidence, but in the other methods we do not have any direct indication of the reliability of the nodes.</p>
+
+<p>An ideal way to evaluate the reliability of the tree would be to create different trees using independent evidences, for instance sequences from different genes.
+After building one tree for every gene we could compare which clades are shared by every tree and which are not.
+The ones shared would be more reliable.
+The problem with this method is that required different sets of data (although this problem has been alleviated in the genomic era).</p>
+
+<p>A way of generating different alternative trees from one dataset is to do <a href="https://en.wikipedia.org/wiki/Bootstrapping_%28statistics%29">boostrapping</a>.
+We can do boostraping using any phylogenetic reconstruction method: distance, maximum parsimony and maximum likelihood.
+The method consists of generating different multiple sequences alignments by replacing columns in the original alignment.
+For each replica some columns are chosen at random to be replaced and they are replaced by copying other columns.
+It is a replacement that keeps the number of columns in the alignment invariant.
+After creating these new alignments we calculate one tree for each of them using the phylogenetic method that we prefer.
+Finally, we count the number of times in which every clade appears in the boostraped trees and we use that measure as our reliability measure.
+The clades with high bootstrap values are to be trusted if the assumptions used to construct the tree are true.</p>
+
+<p>There have been a lot of discussion and no consensus about which would be a good threshold to trust a node.
+It is clear that a clade with a 95% support it is more reliable than a clade with a 50% support, but the intermediate cases are more difficult to evaluate.
+It is quite common to use 70% as a threshold.</p>
+
+<h1 id="phylogenetic-software">Phylogenetic software</h1>
+
+<p>There are different programs to do phylogenies: <a href="http://www.megasoftware.net/">MEGA</a>, <a href="http://www.atgc-montpellier.fr/phyml/">phyml</a>, <a href="http://mrbayes.sourceforge.net/">MrBayes</a>, <a href="http://sco.h-its.org/exelixis/software.html">RAxML</a> and others.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    
+
+  </body>
+
+</html>

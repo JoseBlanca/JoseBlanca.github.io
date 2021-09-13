@@ -1,0 +1,140 @@
+
+We have to annotate the sequences:
+	structural: promoter, exons, introns, CDS, transposons
+	functional.
+
+From evidences (e.g. ESTs) we annotate
+
+Different degrees of support
+	- like in a crime investigation (bird killed by a cat: blood in floor, corpse without head, happy cat cleaning itself, blood stains in cat)
+	- ORFs, similar proteins in database, ESTs, etc.
+
+RESTRICTION MAP
+
+physical map with restriction sites
+
+Very useful for cloning
+
+Rebase: database with sites
+
+With a restriction site sequence we can do the map
+
+Small sequences are all over the place at random
+	prob depends on length and nucleotide composition
+
+
+TRANSLATING DNA
+
+Genetic code almost universal
+
+Six possible frames
+
+BACKTRANSLATION
+
+Not possible without uncertainty
+
+
+ORF
+
+a strech of reading frame with no stop codon. Usually starts with AUG
+
+ORFs can be random, specially if short
+
+CDS PREDICTION
+
+Which ORF is the CDS?
+
+Longer ORF is the CDS?
+
+Problems:
+	- introns
+	- start codon outside available sequence
+	- sequencing error:
+		stop
+		frame shift
+
+CODON USAGE TABLE
+
+codon usage bias.
+	Not all synonymous codons are used with the same frequency
+
+codon usage table vary between different species
+
+The ORF that corresponds with the real CDS should use the typical codon of the species
+
+PROTEIN CONSERVATION
+
+Using Blast using the six translated frames with a protein database
+
+INTRONS
+
+codon acceptor and donor sites
+
+ESTs
+
+GENE STRUCTURE PREDICTION
+
+Evidences:
+	ORFs
+	codon usage bias
+	splice sites
+	ESTs
+	protein conservation
+
+Limitations of ESTs:
+	low expressed gene
+	mRNAs not completely covered. 5' UTR
+	infering isoforms is not easy
+	spurios ESTS from: non-mature mRNA, intergenic regions
+
+Limitations of protein conservation:
+	No similarity in database
+	pseudogenes
+
+NON CODING REGIONS AND GENES ARE PROBLEMATIC
+
+e.g. antisense genes
+
+No ORF, no protein database similarity
+
+ESTs are the main evidence
+
+5' UTRs are problematic
+	due to cDNA library construction
+
+EVIDENCE AND CONFIDENCE
+
+No evidence is ironclad, they increase or decrease the probability
+
+An annotation for a gene is a model:
+	- We'll be more confident of genes with more evidences
+	- The real real gene is more complex (This is not a pipe)
+	- The model should be similar to the reality to be useful, but the map is not the territory
+
+
+PROMOTER PREDICTION
+
+Bacteria: Pribnow box
+	consensus TATAAT -10
+
+Archea and eucariots:
+	TAT box: TATAAA -20 to -35
+	CCAAT box GGCCAATCT -60 to -100
+	GC box GGGCGG -110
+
+Transcription factor sites
+	different for each transcription factor
+	usually small
+	variable
+	Each gene will have different transcription factor sites
+
+DESCRIBING VARIABLE MOTIFS
+
+Consensus
+	They miss the variation
+
+Sequence patters with all possibilities like: TATAA(A/T) TATAAW
+	They miss the frequencies
+
+Possition specific scoring matrices
+

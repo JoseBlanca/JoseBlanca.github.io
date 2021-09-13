@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Blast</title>
+  <meta name="description" content="Introduction to Bioinformatics for the Biotechnology degree.">
+
+  <link rel="stylesheet" href="/courses/biotech3/css/main.css">
+  <link rel="canonical" href="https://bioinf.comav.upv.es/courses/biotech3/theory/blast.html">
+  <link rel="alternate" type="application/rss+xml" title="Bioinformatics" href="https://bioinf.comav.upv.es/courses/biotech3/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/courses/biotech3/">Bioinformatics</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/alignment.html">Sequence Alignment Practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/assembly.html">Assembly</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/blast.html">Blast</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/blast.html">Blast Practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/covid.html">COVID19</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/databases.html">Biological Databases</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/emboss.html">Introduction to EMBOSS</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/entrez.html">Entrez and NCBI databases Practice</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/">Home</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/linux.html">Unix CLI</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/multiple.html">Multiple Sequence Alignment Practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/multiple.html">Multiple Sequence Alignment</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/norms.html">Norms</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/phylogeny.html">Phylogeny practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/phylogeny.html">Phylogeny and evolution</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/prev_knowledge.html">Previous Knowledge</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/sequence_alignment.html">Sequence Alignment</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/structural_annotation.html">Structural Annotation</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/structural_annotation.html">Structural Annotation</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Blast</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="sequence-database-search">Sequence database search</h1>
+
+<p>One very common bioinfomatic problem is to look for a sequence in a sequence database by comparing it with a query sequence of our own.
+For instance, we could have a sequence isolated from a virus and we could look in the database for similar sequences in other to assign the species.
+We can also look for similar genes in other species having the sequence of the gene in one species.</p>
+
+<p>One way to search for the sequences in the database is to align our query sequence with all the sequences in the database and to keep the good enough matches.
+We could try to do it by using the pair-wise alignment algorithms that we studied in the alignment lesson.
+The problem with those algorithms is the speed.
+We need a very fast a aligner becase the sequence databases are commonly comprised by many millions of sequences.</p>
+
+<h1 id="blast">BLAST</h1>
+
+<p><a href="https://en.wikipedia.org/wiki/BLAST">BLAST</a> is one of the most used algorithms in bioinformatics.</p>
+
+<p>BLAST includes a family of related algorithms capable of aligning a query sequence against all the sequences in a database in a very fast way.</p>
+
+<p>BLAST will produce local alignments of the query sequence against the sequences in the database.</p>
+
+<p>BLAST also generates a expect value that is related with the statistical significance of the alignment.</p>
+
+<p>BLAST can refer to the family of algorithms, to the NCBI <a href="https://www.ncbi.nlm.nih.gov/books/NBK279690/">BLAST</a> implementation and to the NCBI <a href="http://blast.ncbi.nlm.nih.gov/Blast.cgi">BLAST</a> server.</p>
+
+<h2 id="algorithm">Algorithm</h2>
+
+<p>BLAST uses a very fast algorithm based on words (also known as k-tuples or kmers).</p>
+
+<p>BLAST is many orders of magnitude faster than any Smith &amp; Waterman implementation.
+To achive that speed it will create less acurate alignments and it will be somewhat less sentitive.
+The Smith &amp; Waterman algorithm is guaranteed to get always the best alignment, the best scoring one, but it will be much, much slower.</p>
+
+<p>BLAST uses an index of the sequence database in which the positions for all words presents in the sequences are stored.
+Let’s suppose that our database includes only one protein sequence: DSFASPUIVH.
+If we create the database index with all the three letter words we would have:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sequence: DSFASPUIVH
+words:    DSF
+           SFA
+            FAS
+             ASP
+              SPU
+               PUI
+                UIV
+                 IVH
+</code></pre>
+</div>
+
+<p>To do the BLAST search the words for the query sequence are generated and those words are looked for in the database index.
+This process will be very fast because we have very fast indexing algorithms.</p>
+
+<p>The sequence regions in the database in which the query words are found are known as seeds and will be the seed from which the alignments will be build.
+One drawback of this algorithm is that if the query and the database do not share words, if they do not share regions with exact matches BLAST won’t be able to detect any similiarity at all.
+That could be well the case with very different sequences.
+If the sequences are different enough to have no words in common BLAST won’t be able to find the alignment.
+This is the main reason why BLAST is less sentitive than Smith &amp; Waterman.
+But this word indexing approach is much faster.</p>
+
+<p>The word length will influence the BLAST sensitivity.
+The shorter the word length the more sentitive will be the search, but the slower will be the process.</p>
+
+<p>Once the seeds have been generated BLAST looks for diagonals in the similiarity matrix.
+From the seeds the alignments are extended.
+A query sequence and a single database sequence can generate several alignments.
+BLAST won’t force to join all these alignments into one single alignment.
+The alignment created by BLAST will not be optimal in most cases.
+Each alignmed is a High Scoring Pair (HSP) in the BLAST nomenclature.
+A database sequence and the query sequence can have several HSPs.</p>
+
+<h2 id="e-value">e-value</h2>
+
+<p>Once we have the alignments we should ask: are the alignments statistically significative?</p>
+
+<p>Let’s try to align to random sequences:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Query= unknown
+  	         (207 letters)
+</code></pre>
+</div>
+
+  	unknown
+  	          Length = 333
+
+  	 Score = 14.2 bits (25), Expect = 2.9
+  	 Identities = 4/16 (25%), Positives = 8/16 (50%)
+
+  	Query: 160 PKRYDWTGKNWVYSHD 175
+  	           P ++ W      +SH+
+  	Sbjct: 146 PTKHAWQEIGKEFSHE 161
+
+<p>So, we can obtain an alignmnet between two random sequences.
+That is even more problematic for the blast case because we are trying to align a query sequence to millions of sequences in a sequence database.
+In this case we could obtain many alignments just by chance.</p>
+
+<p>One way to check if an alignment that we obtain has been obtained just by chance or if it is really a significative alignment is to compare its score with the scores of alignments between random sequences.
+Let’s supposee that the alignment of random sequences tend to give scores between 0 and 30.
+If we obtain an alignment between the query sequence and the database of 15 we might think that is just a random fluke, but if we get a score of 70 we might be quite sure that the alignment is truly significative.
+You expect to get lots of random alignments with low scores, but few with high scores.
+This is the approach followed by BLAST to assertain the significance of its alignments.</p>
+
+<p>BLAST creates the distribution of scores between random sequences in the database.
+For every alignment (HSP) it compares its score to the distribution of the random sequence alignments.
+The e-value (expect) is the number of hits that one can expect to see by chance in a database.
+The higher the score for an HSP the lower the e-value will be.
+For example, an E value of 1 assigned to a hit can be interpreted as meaning that in a database of the current size one might expect to see 1 match with a similar score simply by chance.</p>
+
+<p>The BLAST e-value depends of the database queried.
+We can not compare e-values obtained for different databases.</p>
+
+<p>It is not possible to set a general threshold for e-values, but in real searches it is usual to find that significant alignments have e-values between 1e-5 and 0.</p>
+
+<h1 id="blast-example">BLAST example</h1>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Blast of sequence c15d_01-D10-M13R_c against database arabidopsis
+BLASTX 2.2.10 [Oct-19-2004]
+
+
+Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer,
+Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997),
+"Gapped BLAST and PSI-BLAST: a new generation of protein database search
+programs",  Nucleic Acids Res. 25:3389-3402.
+
+Query= c15d_01-D10-M13R_c
+       (892 letters)
+
+Database: tair6
+           30,690 sequences; 12,653,157 total letters
+
+Searching..................................................done
+
+                                                                 Score    E
+Sequences producing significant alignments:                      (bits) Value
+
+AT3G28480.1 | Symbol: None | oxidoreductase, 2OG-Fe(II) oxygenas...   280   6e-76
+AT3G28490.1 | Symbol: None | oxidoreductase, 2OG-Fe(II) oxygenas...   258   3e-69
+AT5G18900.1 | Symbol: None | oxidoreductase, 2OG-Fe(II) oxygenas...   244   4e-65
+AT3G06300.1 | Symbol: AT-P4H-2 | Encodes a prolyl-4 hydroxylase ...   234   4e-62
+AT1G20270.1 | Symbol: None | oxidoreductase, 2OG-Fe(II) oxygenas...   213   1e-55
+AT4G35810.1 | Symbol: None | oxidoreductase, 2OG-Fe(II) oxygenas...   201   4e-52
+AT2G17720.1 | Symbol: None | oxidoreductase, 2OG-Fe(II) oxygenas...   192   2e-49
+AT5G66060.1 | Symbol: None | oxidoreductase, 2OG-Fe(II) oxygenas...   186   2e-47
+AT4G35820.1 | Symbol: None | oxidoreductase, 2OG-Fe(II) oxygenas...   159   2e-39
+AT4G33910.1 | Symbol: None | oxidoreductase, 2OG-Fe(II) oxygenas...   149   3e-36
+AT2G43080.1 | Symbol: AT-P4H-1 | Encodes a prolyl-4 hydroxylase ...   147   1e-35
+AT2G23096.1 | Symbol: None | oxidoreductase, 2OG-Fe(II) oxygenas...   137   7e-33
+AT4G25600.1 | Symbol: None | ShTK domain-containing protein, sim...   131   6e-31
+
+&gt;AT3G28480.1 | Symbol: None | oxidoreductase, 2OG-Fe(II) oxygenase family
+           protein, similar to prolyl 4-hydroxylase, alpha subunit,
+           from Gallus gallus (GI:212530), Rattus norvegicus
+           (GI:474940), Mus musculus (SP:Q60715); contains PF03171
+           2OG-Fe(II) oxygenase superfamily domain |
+           chr3:10677275-10679525 REVERSE | Aliases: MFJ20.16
+          Length = 316
+
+ Score =  280 bits (717), Expect = 6e-76
+ Identities = 141/235 (60%), Positives = 174/235 (74%), Gaps = 1/235 (0%)
+ Frame = +2
+
+Query: 191 NRFPKMLLHNNDMYESVIRMKTGGSAITIDPTRVIQLSSKPRAFLYEGFLSYEECQHLIH 370
+           NRF  +   +N    SVI+MKT  S+   DPTRV QLS  PR FLYEGFLS EEC H I
+Sbjct: 25  NRF--LTRSSNTRDGSVIKMKTSASSFGFDPTRVTQLSWTPRVFLYEGFLSDEECDHFIK 82
+
+Query: 371 LAKGKLRQSLVAAG-TGESVASKERTSTGMFLRKAQGKIVARIESRIAAWTFLPLDNGEP 547
+           LAKGKL +S+VA   +GESV S+ RTS+GMFL K Q  IV+ +E+++AAWTFLP +NGE
+Sbjct: 83  LAKGKLEKSMVADNDSGESVESEVRTSSGMFLSKRQDDIVSNVEAKLAAWTFLPEENGES 142
+
+Query: 548 IQILRYENGQKYEPHFDFFQDPGNIAIGGHRIATILMYLSDVEKGGETVFPNSPVKLSEE 727
+           +QIL YENGQKYEPHFD+F D  N+ +GGHRIAT+LMYLS+VEKGGETVFP    K ++
+Sbjct: 143 MQILHYENGQKYEPHFDYFHDQANLELGGHRIATVLMYLSNVEKGGETVFPMWKGKATQL 202
+
+Query: 728 EKGDLSECAXVGYGVRPKLGDALLFFSMNPNVTPDATSYHGSCPVIEGEKMVCTK 892
+                +ECA  GY V+P+ GDALLFF+++PN T D+ S HGSCPV+EGEK   T+
+Sbjct: 203 KDDSWTECAKQGYAVKPRKGDALLFFNLHPNATTDSNSLHGSCPVVEGEKWSATR 257
+
+
+&gt;AT3G28490.1 | Symbol: None | oxidoreductase, 2OG-Fe(II) oxygenase family
+           protein, similar to prolyl 4-hydroxylase, alpha subunit,
+           from Caenorhabditis elegans (GI:607947), Mus musculus
+           (SP:Q60715), Homo sapiens (GI:18073925); contains
+           PF03171 2OG-Fe(II) oxygenase superfamily domain |
+           chr3:10680286-10681891 REVERSE | Aliases: MFJ20.17
+          Length = 288
+
+ Score =  258 bits (659), Expect = 3e-69
+ Identities = 128/211 (60%), Positives = 159/211 (75%), Gaps = 2/211 (0%)
+ Frame = +2
+
+Query: 266 AITIDPTRVIQLSSKPRAFLYEGFLSYEECQHLIHLAKGKLRQSLVAAG--TGESVASKE 439
+             ++DPTR+ QLS  PRAFLY+GFLS EEC HLI LAKGKL +S+V A   +GES  S+
+Sbjct: 24  SFSVDPTRITQLSWTPRAFLYKGFLSDEECDHLIKLAKGKLEKSMVVADVDSGESEDSEV 83
+
+Query: 440 RTSTGMFLRKAQGKIVARIESRIAAWTFLPLDNGEPIQILRYENGQKYEPHFDFFQDPGN 619
+           RTS+GMFL K Q  IVA +E+++AAWTFLP +NGE +QIL YENGQKY+PHFD+F D   
+Sbjct: 84  RTSSGMFLTKRQDDIVANVEAKLAAWTFLPEENGEALQILHYENGQKYDPHFDYFYDKKA 143
+
+Query: 620 IAIGGHRIATILMYLSDVEKGGETVFPNSPVKLSEEEKGDLSECAXVGYGVRPKLGDALL 799
+             +GGHRIAT+LMYLS+V KGGETVFPN   K  + +    S+CA  GY V+P+ GDALL
+Sbjct: 144 LELGGHRIATVLMYLSNVTKGGETVFPNWKGKTPQLKDDSWSKCAKQGYAVKPRKGDALL 203
+
+Query: 800 FFSMNPNVTPDATSYHGSCPVIEGEKMVCTK 892
+           FF+++ N T D  S HGSCPVIEGEK   T+
+Sbjct: 204 FFNLHLNGTTDPNSLHGSCPVIEGEKWSATR 234
+</code></pre>
+</div>
+
+<h1 id="blast-programs">BLAST programs</h1>
+
+<p>BLAST has different programs to compare different kinds of sequences.</p>
+
+<ul>
+  <li>BLASTN compares a nucleotide sequence with a nucleotide database</li>
+  <li>BLASTP compares a protein sequence with a protein database</li>
+  <li>BLASTX compares the six translated frames of a nucleotide sequence with a protein database</li>
+  <li>TBLASTN compares a protein sequence with the six frame translation of a nucleotide database</li>
+  <li>TBLASTX compares a nucleotide sequence with a nucleotide database, but first it translates both</li>
+</ul>
+
+<h1 id="megablast">MEGABLAST</h1>
+
+<p>Megablast is an algorithm derived from BLAST.
+It is faster than BLAST although a little bit less sensitive.
+It will be faster than BLAST, but it will miss the match if the sequences are very different.</p>
+
+<h1 id="blast-2-sequences">BLAST 2 sequences</h1>
+
+<p>It uses the BLAST algorithm to do a pairwise alignment.
+It does not uses a database.</p>
+
+<p>It is a very fast way to get a rough alignment (not as good as a Smith and Waterman one).
+It has the advantage of trying to align both strands.</p>
+
+<h1 id="psi-blast-and-delta-blast">PSI-BLAST and DELTA-BLAST</h1>
+
+<p>PSI-BLAST and DELTA-BLAST are two alternative algorithms to blastp that are more sensitive.
+They can be used to find distant relatives in the sequences.</p>
+
+<p>PSI-BLAST (Position-Specific Iterated BLAST) is based on the use of <a href="https://en.wikipedia.org/wiki/Position_weight_matrix">Position-Specific Scoring Matrices</a> (PSSM).
+A PSSM summarizes the patterns found in several sequences.
+It calculates the frequency for each nucleotide or aminoacid in every position of a multiple alignment.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>seq1   A C T G   A T   G
+seq2   A C T A   A C   G
+
+PSSM A 1 0 0 0.5 1 0   0
+     C 0 1 0 0   0 0.5 0
+     G 0 0 0 0.5 0 0   1
+     T 0 0 1 0   0 0.5 0
+</code></pre>
+</div>
+
+<p>PSSMs describe the relevant features in the sequences and are usually used to describe conserved domains in the proteins or in the DNA.</p>
+
+<p>PSI-BLAST uses an iterative approach.
+In the first steps it runs a standard blastp search.
+With the significant results it creates a mutiple alignments and from the alignment it calculates a PSSM.
+In the second iteration PSI-BLAST is able to search the database by aligning the PSSM with the database sequences.
+The sequences found in this new search are used to create a new PSSM and the process is repeated again.</p>
+
+<p>DELTA-BLAST is similar to PSI-BLAST but in the first search it uses a Conserved Domain Database.
+With the results creates a PSSM and uses that to search in the protein database.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    
+
+  </body>
+
+</html>

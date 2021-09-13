@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Structural Annotation</title>
+  <meta name="description" content="Introduction to Bioinformatics for the Biotechnology degree.">
+
+  <link rel="stylesheet" href="/courses/biotech3/css/main.css">
+  <link rel="canonical" href="https://bioinf.comav.upv.es/courses/biotech3/theory/structural_annotation.html">
+  <link rel="alternate" type="application/rss+xml" title="Bioinformatics" href="https://bioinf.comav.upv.es/courses/biotech3/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/courses/biotech3/">Bioinformatics</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/alignment.html">Sequence Alignment Practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/assembly.html">Assembly</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/blast.html">Blast</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/blast.html">Blast Practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/covid.html">COVID19</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/databases.html">Biological Databases</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/emboss.html">Introduction to EMBOSS</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/entrez.html">Entrez and NCBI databases Practice</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/">Home</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/linux.html">Unix CLI</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/multiple.html">Multiple Sequence Alignment Practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/multiple.html">Multiple Sequence Alignment</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/norms.html">Norms</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/phylogeny.html">Phylogeny practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/phylogeny.html">Phylogeny and evolution</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/prev_knowledge.html">Previous Knowledge</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/sequence_alignment.html">Sequence Alignment</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/structural_annotation.html">Structural Annotation</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/structural_annotation.html">Structural Annotation</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Structural Annotation</h1>
+  </header>
+
+  <div class="post-content">
+    <p>A DNA sequence, for instance a genome sequence, has much more value if we can annotate were are the different features like promoters, exons, introns, CDSs, transposons, etc.
+The annotation of those regions in a sequence is the structural annotation.
+This structural annotation is usually acompanied by a further functional annotation that will try to show the functions for these different regions.
+These annotations are very helpful for the users of the genomic sequence.
+Let’s suppose that we link a disease to a region of a genome.
+If we have a poor annotation or we just have no annotation at all we won’t know which genes are located close to that region or even if we have any gene at all.
+Having a good quality annotation allow us to make sense of the region under study.</p>
+
+<p>We can base the structural annotation on experimental data, like ESTs, or we can do bioinformatic analyses in the sequence itself.
+These later annotations that start with just the sequence to be annotated are usually refered to as <em>ab initio</em> annotations.</p>
+
+<p>There are different bioinformatic analyses that we can use to predict the gene structure (promoter, exons and introns), the alternative splicing, the coded protein, etc.</p>
+
+<p>We have to take into account that we can have different degrees of confidence in these annotations.
+They can be supported by different amounts of experimental evidence and the methods used to create them can have different degrees of sensitivity and specificity.</p>
+
+<h1 id="restriction-maps">Restriction maps</h1>
+
+<p>A restriction map is a kind of physical map that shows the location of the restriction sites within a DNA sequence.</p>
+
+<p>To create a restriction map we need a database with the restriction enzyme sites.
+One popular option is to use <a href="http://rebase.neb.com/rebase/rebase.html">Rebase</a>.
+Then a software programe can be used to look for the restriction sites in the nucleotide sequence.
+<a href="http://emboss.sourceforge.net/apps/release/6.3/emboss/apps/remap.html">remap</a> from EMBOSS is one of the options.</p>
+
+<p><img src="../static/annotation/enzimas.png" alt="restriction map" /></p>
+
+<p>A restriction map can be used to map the sequences against a bigger physical map. Nowadays is quite common to use the maps created by the Bionano company for that porpose.</p>
+
+<h1 id="translating-a-dna-sequence">Translating a DNA sequence</h1>
+
+<p>Predicting which peptide can be encoded by a DNA sequence is quite straightforward.
+We need the DNA sequence, the genetic code and the location of the start codon.</p>
+
+<p>A DNA sequence is transcribed to RNA and translated to a peptide by using the genetic code.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>DNA AGG TTT ACA TGT AGA GGA TGA
+
+RNA AGG UUU ACA UGU AGA GGA UGA
+
+PROT Arg Phe Thr Cys Arg Ala Fin
+</code></pre>
+</div>
+
+<p>Although the RNA uses Uracil instead of Thymine it is very uncommon to have sequence files that correspond to RNA sequences with Us.
+The standard is to use in the sequence files T for both DNA and RNA.</p>
+
+<p>To translate a nucleotide sequence we need to decide which <a href="https://en.wikipedia.org/wiki/Genetic_code">genetic code</a> to use.
+All known life uses a very similar genetic code.
+The genetic code is said to be universal, but it is in fact almost universal, there are slight changes in the code.
+For instance, the human mithocondria uses a slight variation of the genetic code.</p>
+
+<p>A nucleotide sequence has six possible translations, three in the forward direction and six in the reverse and complementary strand.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    Forward
+    DNA:  AGGTTTACATGTAGAGGA
+    1fr:  ArgPheThrCysArgGly
+    2fr:   GlyLeuHisValGlu
+    3fr:    ValTyrMetAm*Arg
+
+    Reverse and complementary
+    DNA:  TCCTCTACATGTAAACCT
+    1fr:  SerSerThrCysLysPro
+    2fr:   ProLeuHisValAsn
+    3fr:    LeuTyrMetOc*Thr
+</code></pre>
+</div>
+
+<p>EMBOSS has two programs to get the six possible translations <a href="http://emboss.open-bio.org/rel/rel6/apps/transeq.html">transeq</a> and <a href="http://emboss.open-bio.org/rel/rel6/apps/sixpack.html">sixpack</a>.</p>
+
+<p><img src="../static/annotation/6_pautas.png" alt="six frames" /></p>
+
+<h2 id="backtranslation">Backtranslation</h2>
+
+<p>We can also backtranslate a peptide sequence to a nucleotide sequence.
+In this case, due the degeneracy of the genetic code we will get many nucleotide uncertanities.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>    &gt; peptide
+    ACDEFGHIKLMNPQRSTVWY*
+    &gt;reverse translation
+    gcntgygaygarttyggncayathaarytnatgaayccncarmgnwsnacngtntggtaytrr
+</code></pre>
+</div>
+
+<p>You can backtranslate a peptide sequence in EMBOSS with <a href="http://emboss.open-bio.org/rel/rel6/apps/backtranseq.html">backtranseq</a>.
+There is also the possibility of infering the most probable codons for the backtranslation by using a <a href="https://en.wikipedia.org/wiki/Codon_usage_bias">codon usage table</a>.
+EMBOSS can do it with the program <a href="http://emboss.open-bio.org/rel/rel6/apps/backtranambig.html">backtranambig</a></p>
+
+<h1 id="codon-usage-tables">Codon usage tables</h1>
+
+<p>There is a <a href="https://en.wikipedia.org/wiki/Codon_usage_bias">codon</a> usage bias, not all synonymous codons are used in the same frequency.
+Different organisms have different biases.
+They tend to prefer one codon over others to code for a particular aminoacid.</p>
+
+<p>By counting how many times an aminoacid is used in the proteins coded by an organism nucleotide sequences a Codon Usage Table can be compiled for every species.</p>
+
+<p><img src="../static/annotation/codones.png" alt="codon usage table" /></p>
+
+<p>There is a <a href="http://www.kazusa.or.jp/codon/">codon usage database</a> available on line.</p>
+
+<h1 id="orfs">ORFs</h1>
+
+<p>An <a href="https://en.wikipedia.org/wiki/Open_reading_frame">Open Reading Frame</a> (ORF) is the strecth of a reading frame that do not contain a stop codon.
+An AUG codon in a ORF might indicate the translation start.</p>
+
+<p><img src="../static/annotation/orfs.png" alt="orfs" /></p>
+
+<p>There is software in EMBOSS to show the ORFs (<a href="http://emboss.open-bio.org/rel/rel6/apps/plotorf.html">plotorf</a>) and to get their translations (<a href="http://emboss.open-bio.org/rel/rel6/apps/showorf.html">showorf</a>).</p>
+
+<h2 id="cds-prediction">CDS prediction</h2>
+
+<p>Long ORFs might indicate the presence of a <a href="https://en.wikipedia.org/wiki/Coding_region">coding sequence</a> and of a corresponding gene.
+In the procaryotes it is easier to detect long ORFs because they are not broken by the introns.
+In the eucaryotes the ORFs will be fragmented in multiple regions and they will be harder to detect.
+To be able to detect the CDSs in th eeucaryotes we need also to infer the gene structure, the location of exons and introns and the splicing variants.</p>
+
+<p>A nucleotide sequence can have several open reading frames.
+There are several confusing factors:</p>
+
+<ul>
+  <li>the start codon might be outside the sequence.</li>
+  <li>There might be sequencing errors that create artifactual stop codong or that shift the frame</li>
+</ul>
+
+<p><img src="../static/annotation/orfs.png" alt="orfs" /></p>
+
+<p>There are different hints that can point to the ORF that corresponds to the real CDS.</p>
+
+<p>The codon use table for the species can be used to detect the real CDS.
+The real CDS will tend to use the codond prefered by the species, while the other ORFs will use codons at random.
+From these fact the coding likelihood of all six frames of a nucleotide sequence can be calculated.</p>
+
+<p>Even if we don’t have the codon use table for the species we can still use the codon bias to help with the detection of the CDSs.
+The codon bias will create a bias in the nucleotide frequencies of the third base.
+We can plot the GC content of the third base of the codons along a window for all six possible frames and detect biases there.</p>
+
+<p><img src="../static/annotation/wobble.png" alt="third base bias" /></p>
+
+<p>Another hint that can be used to detect CDSs is the protein conservation.
+Most proteins have similar proteins from other organisms in the database.
+BLAST can translate the six frames and can do a search aginst the known proteins.
+A similarity in a fragment of a frame with a known protein is an indication that that fragment is part of a real CDS.</p>
+
+<p>Sequencing erros might produce frame shifts.
+Also, in the eucaryotes, the CDS will be split by the introns and can be divided in different jump.
+There are software that integrates the codon usage bias, the presence of start and stop codons and the sequences required by the splice sites to calculate a probability of any region of a nucleotide sequence being a coding region.
+One example of such software is <a href="http://exon.gatech.edu/GeneMark/">GeneMark</a>.</p>
+
+<p><img src="../static/annotation/genemark.png" alt="GeneMark result" /></p>
+
+<h1 id="promoter-prediction">Promoter prediction</h1>
+
+<p>It would be very valuable to locate the promoter union sites for the standard proteins of the transcription process and the union sites for the transcription factors.
+Locating a promoter region in a genomic sequence is not a straightforward task.
+Transcription factor targets have several characteristics that difficult their location, they are:</p>
+
+<ul>
+  <li>small</li>
+  <li>not very conserved</li>
+</ul>
+
+<p>Small sequences can be found just by chance locating such a sequence is not a guarantee that we have found a real transcription factor union site.
+Also their variability might let us think that there are many union sites, but most of them won’t be real.
+Just by looking at those small sequences will create a lot of false positives.</p>
+
+<p>Another factor that has been demonstrated to influence the gene expression is the histone location.
+A DNA region heavily coiled around the histones will have less chances to get accessed by the proteins involved in the transcription.
+Histone location can be influence by the DNA composition, by the methilation or by other factors that do not depend of the DNA sequences, so it is difficult to predict it.</p>
+
+<h2 id="typical-promoter-sequences">Typical promoter sequences</h2>
+
+<p>There are sequences that are typically found in most promoters.
+Their composition depend on the species.</p>
+
+<p>In bacteria there is a <a href="https://en.wikipedia.org/wiki/Pribnow_box">Pribnow box</a>.
+Its consensus sequence is TATAAT and it is located at -10 upstream of the transcription starting site.
+A similar sequence to this one will be found in most promoters, but the sequence might be slighty different in some of them.</p>
+
+<p>The Pribnow box has a similar function to the TATA box found in eucaryotes and archea, it is recognized by the RNA polimerase during the initiation of the transcription.</p>
+
+<p>There is also a TTGACA usually found at -35 in bacteria and other less conserved regions.</p>
+
+<p>In eucaryotes and archea the <a href="https://en.wikipedia.org/wiki/TATA_box">TATA box</a> is located usually between -20 or -35 relative to the transcription starting site.
+The TATA box has a core conserved core of TATAAA which is usually followed by three or more adenines.</p>
+
+<p>There are also in eucaryotes other sequences found that are not as conserved, like the CCAAT box and the GC box.
+The <a href="https://en.wikipedia.org/wiki/GC_box">GC box</a> is usually located 110 bases upstream of the transcription starting site and its consensus sequence is GGGCGG.</p>
+
+<p>The <a href="https://en.wikipedia.org/wiki/CAAT_box">CCAAT box</a> is usually located 60 to 100 bases upstream of the transcription starting site and its consensus sequence is GGCCAATCT.</p>
+
+<h2 id="transcription-factor-sites">Transcription factor sites</h2>
+
+<p>There are many DNA motifs recognized by the transcript factors.
+Each transcription factor recognizes some particular sequences different from the other ones.
+These sequences are usually small and the transcription factor, in most cases, can lock to them even if they chage a little, so they can ve more or less conserved between different promoters.</p>
+
+<p>Every gene is controlled by different transcription factors and the location of the sequences recognized by the factors can be quite variable and can be far appart from the transcrition initiation site.</p>
+
+<h2 id="describing-the-sites">Describing the sites</h2>
+
+<p>The sites which are binded by the transcription factors are variable, but we have to describe them.
+We can use different ways to describe those sites.</p>
+
+<p>We can use a consensus sequence.
+A consensus sequence shows the most abundant nucleotide for each position and ignores the rest of the variation.
+For instance, TATAAT is the consensus sequence for the Pribnow box, but that does not mean that all the Pribnow boxes have these sequence.</p>
+
+<p>Sequence patterns. We can show all possible nucleotides for each position.
+Like TATAAW or TATAA(A/T).
+These patterns will match with all Pribnow boxes.
+The problem with them is that they do not include information about the sequence.
+Maybe one of the alternative nucleotides is found many more times the others.
+It could be well the case that TATAAA is more common than TATAAT, but that information is lost in the sequence pattern.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Position_weight_matrix">Position-specific scoring matrix</a>. They include the frequency of all the residues for every position.</p>
+
+<p><img src="../static/annotation/pssm.png" alt="Scoring matrix" /></p>
+
+<p><img src="../static/multiple/sequence_logo.png" alt="Sequence logo" /></p>
+
+<h2 id="detecting-transcription-factor-sites">Detecting transcription factor sites</h2>
+
+<p>There are different computational methods to predict the biding sites for the transcription factors, but none of them can do highly accurate predictions.
+The best of them are capable of recognizing at most 60% of the promoters, and they product many false positives.
+There are several programs to do the transcription site an promoter detection like:
+<a href="http://emboss.sourceforge.net/apps/cvs/emboss/apps/tfscan.html">tfscan</a>, <a href="http://emboss.sourceforge.net/apps/cvs/emboss/apps/jaspscan.html">jaspscan</a> or <a href="http://compbio.ornl.gov/grailexp/">GrailEXP</a>.</p>
+
+<p><img src="../static/multiple/jaspscan.png" alt="jaspscan result" /></p>
+
+<p>We can also align the promoter regions from very close species.
+The sites binded by the transcription factors will tend to be more consereved than the rest of the promoter because they have more functional relevance.</p>
+
+<h1 id="gene-structure-prediction">Gene structure prediction</h1>
+
+<p>The gene structure prediction is the process of predicting the location of the genes in a genomic sequence as well as its elements like promoters, exons, introns and coding regions.</p>
+
+<p>These genes can be protein coding or RNA coding.</p>
+
+<h2 id="cdss-and-orfs">CDSs and ORFs</h2>
+
+<p>In procaryotes the problem of looking for protein coding genes is easier because the CDSs won’t be fragmented in pieces by the introns and the appearance of long ORFs will be a strong indication of their presence.
+In eucaryotes the problem is harder to solve because the introns split the CDSs and the ORFs won’t be as informative.
+Also, the size of the non-coding regions can be quite large, specially the introns.</p>
+
+<p>In locating genes that do not code for proteins we won’t be able to use any ORF hints.</p>
+
+<h2 id="alignment-with-ests-or-cdnas">Alignment with ESTs or cDNAs</h2>
+
+<p>We can use the information provided by the ESTs or cDNA to locate regions expressed in the genome. These regions will tend to be genes.
+We can also use this information to build the structure of the different mRNAs that a gene can produce.</p>
+
+<p>We can use the programs <a href="http://emboss.sourceforge.net/apps/cvs/emboss/apps/est2genome.html">est2genome</a> and <a href="http://emboss.sourceforge.net/apps/release/6.2/embassy/esim4/esim4.html">esim4</a> from EMBOSS to do these alignments.</p>
+
+<p><img src="../static/multiple/est2genome.png" alt="EST2genome result" /></p>
+
+<p>To be able to use these method of detecting genes we need to have transcriptomic sequence data.
+Even with these data at hand we should consider different limitations:</p>
+
+<ul>
+  <li>We can have low expressed genes that are not represented in our transcriptomic data</li>
+  <li>We could have some mRNAs not completely covered</li>
+  <li>We have to infer the mRNA structure from the fragmented ESTs and that is not a trivial task</li>
+  <li>We can have ESTs that correspond to spurious expression like non-mature mRNAs or transposable expression in the introns or intergenic regions.</li>
+</ul>
+
+<h2 id="comparison-with-proteins-from-other-species">Comparison with proteins from other species</h2>
+
+<p>We can compare our genome to a protein database by using BLAST.</p>
+
+<p>If we detect a match in a genome to a protein sequence from other species we have a hint that that genomic sequence might be part of a gene.
+Of course these method has also some limitations:</p>
+
+<ul>
+  <li>There might be no proteins similar to some of the genes in our species.</li>
+  <li>We can have pseudogenes that could match with some protein despite not being real genes.</li>
+</ul>
+
+<h1 id="combining-different-evidences">Combining different evidences</h1>
+
+<p>There are different programs that try to predict the gene structure by taking into account the different evidences.
+They take into account:</p>
+
+<ul>
+  <li>The codon usage</li>
+  <li>Splicing sites</li>
+  <li>ORFs</li>
+  <li>The GC content. Gene regions tend to have a higher GC content.</li>
+  <li>EST and cDNA alignment</li>
+  <li>Comparisons with sequence database</li>
+</ul>
+
+<p>Different programs will create different predictions even when the same evidence is considered.
+So the prediction will depend on the program and the evidence used.
+Of course, the more evidence and the higher quality that evidence is the easier will be to infer the real gene structure.</p>
+
+<p>Some of the software use is <a href="http://bioinf.uni-greifswald.de/augustus/">Augustus</a>, <a href="http://exon.gatech.edu/GeneMark/">GenaMark</a> and <a href="http://genes.mit.edu/GENSCANinfo.html">Genescan</a>.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    
+
+  </body>
+
+</html>

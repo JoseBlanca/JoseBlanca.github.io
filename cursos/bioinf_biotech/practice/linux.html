@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Unix CLI</title>
+  <meta name="description" content="Introduction to Bioinformatics for the Biotechnology degree.">
+
+  <link rel="stylesheet" href="/courses/biotech3/css/main.css">
+  <link rel="canonical" href="https://bioinf.comav.upv.es/courses/biotech3/practice/linux.html">
+  <link rel="alternate" type="application/rss+xml" title="Bioinformatics" href="https://bioinf.comav.upv.es/courses/biotech3/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/courses/biotech3/">Bioinformatics</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/alignment.html">Sequence Alignment Practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/assembly.html">Assembly</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/blast.html">Blast</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/blast.html">Blast Practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/covid.html">COVID19</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/databases.html">Biological Databases</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/emboss.html">Introduction to EMBOSS</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/entrez.html">Entrez and NCBI databases Practice</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/">Home</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/linux.html">Unix CLI</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/multiple.html">Multiple Sequence Alignment Practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/multiple.html">Multiple Sequence Alignment</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/norms.html">Norms</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/phylogeny.html">Phylogeny practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/phylogeny.html">Phylogeny and evolution</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/prev_knowledge.html">Previous Knowledge</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/sequence_alignment.html">Sequence Alignment</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/structural_annotation.html">Structural Annotation</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/structural_annotation.html">Structural Annotation</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Unix CLI</h1>
+  </header>
+
+  <div class="post-content">
+    <p>The objective of this practice is to get used to the Unix Comand Line.
+<a href="https://en.wikipedia.org/wiki/Unix">Unix</a> is a family of Operating Systems.
+<a href="https://en.wikipedia.org/wiki/Linux">Linux</a> and MacOS X are two examples of unix OSs.</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Unix#/media/File:Unix_history-simple.svg"><img src="../static/linux/unix_history.png" alt="Unix evolution" /></a></p>
+
+<p>The <a href="https://en.wikipedia.org/wiki/Command-line_interface">Shell</a>, or terminal, or Command Line Interpreter, is a software that will execute software in a computer by interpretring a text input from the user.</p>
+
+<p>The result of the software is usually shown by the operating system in the same text terminal.
+In the shell the interaction is very simple.
+The user writes a command, the Operating System executes the command and the result is shown in the same shell.</p>
+
+<p>CLI chacteristics:</p>
+
+<ul>
+  <li>Some software is written only with a CLI, so we have to use it in a shell</li>
+  <li>There is a lot of bioinformatic software that is only available via CLI</li>
+  <li>The terminal is more difficult to use because we have to know which command to write</li>
+  <li>CLI software tends to be more versatile</li>
+  <li>It is very easy to document what we have written in a CLI</li>
+  <li>CLI software is very easy to include in a script, so it is very easy to automate the tasks</li>
+  <li>CLI requires few resources.</li>
+  <li>It is very easy to interact via network with computers by using the CLI</li>
+</ul>
+
+<h1 id="the-prompt">The prompt</h1>
+
+<p>When a user starts a CLI session is shown a <a href="https://en.wikipedia.org/wiki/Command-line_interface#Command_prompt">prompt</a>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$
+</code></pre>
+</div>
+
+<p>The computer is showing the user that is waiting to recieve a written command.
+A command is in fact some software available in the computer ready to be executed.</p>
+
+<p>We might try to run the command <em>hello</em>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ hello
+</code></pre>
+</div>
+
+<p>The result would be something like:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bash: hello: command not found
+</code></pre>
+</div>
+
+<p>We can also run some command that do exist:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ ls
+</code></pre>
+</div>
+
+<h1 id="the-working-directory">The working directory</h1>
+
+<p>Whenever we are in a shell we have a working directory defined.
+This is the directory in which the files required by the commands exectued are to be found unless the computer is told otherwise.</p>
+
+<p>In a Linux system the default working directory is usually a subdirectory withing <em>/home</em>.
+If we are the use John our default working directory would be <em>/home/john</em>.</p>
+
+<p>It is also common to use the synonym <em>folder</em> to talk about directories.</p>
+
+<p>If we run the command <em>ls</em> to LiSt the files and subdirectories within a directory and we do not tell <em>ls</em> which directory to use, by default <em>ls</em> will get the list for the current working directory:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ ls
+</code></pre>
+</div>
+
+<p>We could instruct <em>ls</em> to list a different directory. For instance:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ ls /usr/
+</code></pre>
+</div>
+
+<p>It is very usual to talk about the working directory as a place in the computer.
+So you will hear instructions like: “Go to the /etc/ directory and excecute the <em>ls</em> command”</p>
+
+<p>Be aware that in most Unix systems the case matters.
+The directories /HOME and /home would be different.</p>
+
+<h1 id="how-to-stop-a-running-process">How to stop a running process</h1>
+
+<p>There a different ways to stop a running process, but the most simple one would be <em>ctrl + C</em>. Although this way won’t always work.</p>
+
+<h1 id="exit-from-a-terminal">Exit from a terminal</h1>
+
+<p>You can execute the command <em>exit</em>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ exit
+</code></pre>
+</div>
+
+<p>Or you can do <em>ctrl + D</em></p>
+
+<h1 id="unix-directory-hierarchy">Unix directory hierarchy</h1>
+
+<p>In unix the file system is hierarchycal.
+That means that a directory can include subdirectories.</p>
+
+<p>All directories are subdirectories of the special directory <em>root</em>.
+The <em>root</em> directory is represented in the unix terminal as <em>/</em>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ ls /
+</code></pre>
+</div>
+
+<p>There is a <a href="https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard">Filesystem Hierarchy Standard</a> defined for the Unix Operating Systems, but you will find some variations within the standard.</p>
+
+<p>Users have a subdirectory within <em>/home/</em> in which they can write.
+(In MacOS X it is within <em>/Users</em>).
+That directory is usually refered to as the $HOME directory.
+Users a not usually allowed to write outside their $HOME directory.</p>
+
+<p>Many times you will find your $HOME directory represented by <em>~</em>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ ls ~
+</code></pre>
+</div>
+
+<h2 id="paths">Paths</h2>
+
+<p>The <a href="https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FPath_%28computing%29">path</a> is the unique location of a file in a file system in a computer.
+A path points to a file by following the directory tree up to the point in with the file is.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/home/john/documents/notes.txt
+</code></pre>
+</div>
+
+<p>In Unix directories and subdirectories a separated by a forward slash <em>/</em>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/home/john/
+</code></pre>
+</div>
+
+<p>Note that other Operating Systems they use the backslach **.</p>
+
+<h3 id="absolute-vs-relative-paths">Absolute vs relative paths</h3>
+
+<p>An absolute path points to a file regardless of our current working directory.
+Imagine that we have the following directories and files.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>/home/john/
+/home/john/documents/
+/home/john/documents/notes.txt
+</code></pre>
+</div>
+
+<p>The absolute path to the notes.txt file would be: <em>/home/john/documents/notes.txt</em>.
+The absolute path points to the location of a file by starting from the <em>root</em> directory.</p>
+
+<p>If our current working directory is <em>/home/john</em> the relative path would be:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>documents/notes.txt
+</code></pre>
+</div>
+
+<p>Note that there is no slash at the begining, this is how relative and absolute paths are differentiated.</p>
+
+<p>The relative path depends on which is our current working directory.
+If we are in <em>/home/john/documents</em> the path to the notes.txt file would be:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>notes.txt
+</code></pre>
+</div>
+
+<p>And if we were in <em>/home</em> it would be:</p>
+
+<p>john/documents/notes.txt</p>
+
+<h2 id="file-name-advices">File name advices</h2>
+
+<p>Remember to take the case into account.
+Hello.txt, HELLO.TXT and hello.txt are three different files.</p>
+
+<p>Although you can use spaces in the file names everything will be easier if you don’t.
+Instead of spaces you can use underscores <em>_</em>.</p>
+
+<p>Also, try to avoid using non-english characters.
+They won’t be a problem if you are using the files within the same system, but if you send them to another system the named could end up mangled.</p>
+
+<h1 id="some-commands-to-work-with-files">Some commands to work with files</h1>
+
+<p>CoPy a file <em>cp</em>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$  cp file1.txt file2.txt
+</code></pre>
+</div>
+
+<p>ReMove (delete) a file, <em>rm</em>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ rm file1.txt
+</code></pre>
+</div>
+
+<p>MoVe or rename a file, <em>mv</em>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ mv file1.txt new_name.txt
+user@computer:~$ mv file1.txt another_dir/
+</code></pre>
+</div>
+
+<h1 id="some-commands-to-work-with-directories">Some commands to work with directories</h1>
+
+<p>Create a directory:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ mkdir some_directory
+user@computer:~$  ls
+</code></pre>
+</div>
+
+<p>Change the working directory:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ cd some_directory
+</code></pre>
+</div>
+
+<p>We could had also use an absolute path:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ cd /home/john/some_directory
+</code></pre>
+</div>
+
+<p>Print the current Working Directory:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ pwd
+</code></pre>
+</div>
+
+<p>The <em>cd</em> command run with no parameters will send us to our default working directory.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ pwd
+/home/john/some_directory
+user@computer:~$ cd
+user@computer:~$ pwd
+/home/john/
+</code></pre>
+</div>
+
+<p>Change to one directory up in the directory hierarchy.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ cd ..
+</code></pre>
+</div>
+
+<p>Remove a directory</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ rm -r some_directory
+</code></pre>
+</div>
+
+<p><em>rm</em>, the remove command can delete files and directories, but if we want to remove a directory we have to use the parameter <em>-r</em> because we want to remove recursively everything within the given directory.</p>
+
+<p>To copy a directory we also have to do it recursively</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ cp -r directory1 directory2
+</code></pre>
+</div>
+
+<p>Move (or rename) a file or a directory</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ mv directory1 directory2
+</code></pre>
+</div>
+
+<h1 id="commands-and-parameters">Commands and parameters</h1>
+
+<p>We can modify the behaviour of almost any command in the command line by using optional parameters.</p>
+
+<p>In the most common case these parameters will be componsed by a dash and a letter <em>-a</em> or two dashes and a word <em>–all</em>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ ls -a
+user@computer:~$ ls --all
+</code></pre>
+</div>
+
+<h1 id="directory-listings">Directory listings</h1>
+
+<p>The command <em>ls</em> LiSts the directory contents: files and subdirectories.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$  ls
+</code></pre>
+</div>
+
+<p>In the Unix systems, by convention, the files and directories that have a name that starts with a dot, like <em>.hidden</em>, will be considered hidden.
+That it is done to hide some files and directories that are usually not directly used by the user.
+The user can list them by using the parameter <em>-a</em>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$  ls -a
+</code></pre>
+</div>
+
+<p>We can ask <em>ls</em> to give us more information about a file.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$  ls -l
+</code></pre>
+</div>
+
+<h1 id="getting-help">Getting Help</h1>
+
+<p>Most Unix commands have a manual available in the terminal.
+We can access the manual using the command <em>man</em>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$ man ls
+</code></pre>
+</div>
+
+<p>Once we run the <em>man</em> command we enter in an interactive viewer and the prompt disapears.
+To leave the manual viewer press <em>q</em>.</p>
+
+<p>Another way to get a summary of the manual is to use the parameters <em>-h</em>, <em>–help</em>, <em>-help</em>.
+The exact syntax will depend on the command, although in most cases <em>-h</em> will show a brief help text and <em>–help</em> will show a lengthier text.</p>
+
+<h1 id="wildcards">Wildcards</h1>
+
+<p>We can refer to a group of files or directories instead of just one by using wildcards.</p>
+
+<p>The asterix * will be substituted by any character any number of times.
+For instance, if we want to delete all files that end with “.txt” we could do:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>user@computer:~$  rm *.txt
+</code></pre>
+</div>
+
+<h1 id="practice">Practice</h1>
+
+<ol>
+  <li>
+    <p>How many files and directories can you find in the “root” directory.
+And in our $HOME?</p>
+  </li>
+  <li>
+    <p>Create a directory named experiment</p>
+  </li>
+  <li>
+    <p>Copy the file /etc/passwd to the directory experiment</p>
+  </li>
+  <li>
+    <p>Rename the file as passwd.txt</p>
+  </li>
+  <li>
+    <p>Go back to your $HOME and from there list the files within the directory experiment.</p>
+  </li>
+  <li>
+    <p>Copy the file passwd.txt to passwd2.txt</p>
+  </li>
+  <li>
+    <p>Remove all files in the experiment directory that have a 2.</p>
+  </li>
+  <li>
+    <p>Copy the directory experiment to experiment2</p>
+  </li>
+  <li>
+    <p>Delete the directory experiment</p>
+  </li>
+  <li>
+    <p>Rename the directory experiment2 as experiment</p>
+  </li>
+</ol>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    
+
+  </body>
+
+</html>

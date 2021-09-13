@@ -1,0 +1,69 @@
+
+PREPARAR EL ENTORNO DE RUBY
+
+En en .bashrc
+export GEM_HOME=$HOME/.gem
+export PATH="$HOME/.gem/bin/:$PATH"
+
+REGENERAR LAS RUBY GEMS
+
+Si te da algún fallo con las dependencias de las gems una opción es regenerar todo el entorno
+
+$ gem env
+GEM PATHS:
+     - /home/jose/.gem
+     - /home/jose/.gem/ruby/2.5.0
+
+$ rm -r /home/jose/.gem
+
+Vuelve a instalarlo todo
+
+
+INSTALACIÓN JEKYLL
+
+Es mejor no utilizar el jekyll de ubuntu o debian porque suelen ser antiguos. Jekyll se instala con el bundler
+
+gem install bundler jekyll
+
+Puede que de un fallo por alguna dependencia antigua. Una opción es borrar las ruby gems
+
+Dentro del directorio en el que está la web hay que hacer un budle install
+
+bioinf_biotech/2020/web$ bundle install
+
+COMPILACIÓN
+
+$ jekyll build
+Ó
+jose@sagan:~/bioinf_biotech/2020/web$ bundle exec jekyll build
+
+TROUBLE SHOOTING
+
+jose@sagan:~/bioinf_biotech/2020/web$ jekyll build
+Traceback (most recent call last):
+	10: from /home/jose/.gem/bin/jekyll:23:in `<main>'
+	 9: from /home/jose/.gem/bin/jekyll:23:in `load'
+	 8: from /home/jose/.gem/gems/jekyll-4.1.1/exe/jekyll:11:in `<top (required)>'
+	 7: from /home/jose/.gem/gems/jekyll-4.1.1/lib/jekyll/plugin_manager.rb:52:in `require_from_bundler'
+	 6: from /usr/share/rubygems-integration/all/gems/bundler-1.17.3/lib/bundler.rb:107:in `setup'
+	 5: from /usr/share/rubygems-integration/all/gems/bundler-1.17.3/lib/bundler/runtime.rb:26:in `setup'
+	 4: from /usr/share/rubygems-integration/all/gems/bundler-1.17.3/lib/bundler/runtime.rb:26:in `map'
+	 3: from /usr/lib/ruby/2.5.0/forwardable.rb:229:in `each'
+	 2: from /usr/lib/ruby/2.5.0/forwardable.rb:229:in `each'
+	 1: from /usr/share/rubygems-integration/all/gems/bundler-1.17.3/lib/bundler/runtime.rb:31:in `block in setup'
+/usr/share/rubygems-integration/all/gems/bundler-1.17.3/lib/bundler/runtime.rb:319:in `check_for_activated_spec!': You have already activated jekyll-sass-converter 2.1.0, but your Gemfile requires jekyll-sass-converter 1.5.2. Prepending `bundle exec` to your command may solve this. (Gem::LoadError)
+
+Se arregla así:
+jose@sagan:~/bioinf_biotech/2020/web$ bundle exec jekyll build
+Configuration file: /home/jose/bioinf_biotech/2020/web/_config.yml
+            Source: /home/jose/bioinf_biotech/2020/web
+       Destination: /home/jose/bioinf_biotech/2020/web/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.463 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+
+
+PARA VER EN DIRECTO
+
+

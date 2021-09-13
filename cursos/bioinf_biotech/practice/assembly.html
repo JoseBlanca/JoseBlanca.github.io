@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Assembly</title>
+  <meta name="description" content="Introduction to Bioinformatics for the Biotechnology degree.">
+
+  <link rel="stylesheet" href="/courses/biotech3/css/main.css">
+  <link rel="canonical" href="https://bioinf.comav.upv.es/courses/biotech3/practice/assembly.html">
+  <link rel="alternate" type="application/rss+xml" title="Bioinformatics" href="https://bioinf.comav.upv.es/courses/biotech3/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/courses/biotech3/">Bioinformatics</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/alignment.html">Sequence Alignment Practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/assembly.html">Assembly</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/blast.html">Blast</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/blast.html">Blast Practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/covid.html">COVID19</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/databases.html">Biological Databases</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/emboss.html">Introduction to EMBOSS</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/entrez.html">Entrez and NCBI databases Practice</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/">Home</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/linux.html">Unix CLI</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/multiple.html">Multiple Sequence Alignment Practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/multiple.html">Multiple Sequence Alignment</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/norms.html">Norms</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/phylogeny.html">Phylogeny practice</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/phylogeny.html">Phylogeny and evolution</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/prev_knowledge.html">Previous Knowledge</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/sequence_alignment.html">Sequence Alignment</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/theory/structural_annotation.html">Structural Annotation</a>
+          
+        
+          
+          <a class="page-link" href="/courses/biotech3/practice/structural_annotation.html">Structural Annotation</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Assembly</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="práctica-de-ensamblaje">Práctica de ensamblaje</h1>
+
+<h2 id="cromatogramas">Cromatogramas</h2>
+
+<p>La información obtenida en los secuenciadores automáticos se guarda en ficheros binarios.</p>
+
+<p>Estos ficheros suelen incluir, además del cromatograma procesado (trace), la secuencia de nucleótidos obtenida y la calidad asociada a la misma.</p>
+
+<p>Los secuenciadores Sanger de Applied generan los datos en formato abi.</p>
+
+<p>Estos ficheros abi se pueden leer con distintos programas: chromas, el Sequence  Scanner (Win), FintchTV (Mac, PC, Linux) o el trev del paquete de análisis Staden (Mac, Pc, Linux).</p>
+
+<p>El formato utilizado por el Staden para guardar los cromatogramas es el scf.</p>
+
+<p>En el NCBI_ se pueden encontrar, por ejemplo en la sección EST, algunas secuencias que incluyen también el cromatograma original.</p>
+
+<h2 id="análisis-de-cromatogramas-con-el-trev">Análisis de cromatogramas con el Trev</h2>
+
+<p>Descargar los el fichero cromprimido de cromatogramas de <a href="../static/assembly/cromatogramas.zip">ejemplo</a>.</p>
+
+<p>Abrir los cromatogramas que habíamos descargado con el trev de uno en uno y comprobar su calidad.
+El trev denomina a la calidad confidence.
+Conviene pedir al trev que marque la calidad de la asignación de cada base (view -&gt; display confidence).</p>
+
+<p>Marcar las regiones de mala calidad del principio y el final de las secuencias (edit -&gt; left quality, edit -&gt; right quality).</p>
+
+<p>Evaluar para cada un de ellos:</p>
+
+<ul>
+  <li>
+    <p>¿Tiene señal? ¿Se ven bandas o es todo ruido?</p>
+  </li>
+  <li>
+    <p>¿Dónde comienza la región de buena calidad? ¿Dónde termina?</p>
+  </li>
+  <li>
+    <p>¿Acaba la región de mala calidad de forma brusca?</p>
+  </li>
+  <li>
+    <p>Posible diagnóstico de los problemas.</p>
+  </li>
+  <li>
+    <p>¿Hay bases mal interpretadas por el basecaller?</p>
+  </li>
+  <li>
+    <p>¿Hay mucho ruido de fondo?</p>
+  </li>
+  <li>
+    <p>Guardar la secuencia obtenida en texto plano.</p>
+  </li>
+</ul>
+
+<h2 id="análisis-de-cromatogramas-automático-con-el-pregap">Análisis de cromatogramas automático con el pregap</h2>
+
+<p>El PreGap puede analizar automáticamente la calidad y otros aspectos de los cromatogramas determinando las regiones de buena y mala calidad.</p>
+
+<p>Reanalizar con el PreGap los cromatogramas anteriores.</p>
+
+<p>El PreGap generará para cada archivo abi original un archivo de texto con extensión exp.
+En este archivo exp incluirá la secuencia, la calidad y los puntos que delimitan las regiones de buena calidad y las regiones que se corresponden con vector.</p>
+
+<p>Con el Trev abrir los ficheros analizados (.exp) y comparar los analisis manuales con el realizado por el PreGap.</p>
+
+<h2 id="alineamiento-manual">Alineamiento manual</h2>
+
+<p>Usando el Openoffice draw realiza un alineamiento manual con estas <a href="../static/assembly/reads.odp">lecturas</a>.
+Las letras y colores identifican secuencias similares en esa región. Obtén los contigs, pero recuerda que pueden aparecer problemas con el repetitivo, vectores, splicing alternativo, etc.</p>
+
+<p>Cuando lo tengas compara con este <a href="../static/assembly/manual_result.pdf">resultado</a>.</p>
+
+<h2 id="ensamblaje-de-ests-1">Ensamblaje de ESTs 1</h2>
+
+<p>Ahora vamos a realizar un proyecto de secuenciación a partir de varias lecturas generadas por Sanger.</p>
+
+<p>Descargar los cromatogramas del fichero cromprimido <a href="../static/assembly/secuencias1.zip">secuencias1</a>.</p>
+
+<p>Preanalizar las secuencias con el PreGap y utilizar los ficheros producidos para crear el proyecto con el Gap4.</p>
+
+<p>¿Cuántas secuencias se han introducido en la base de datos?</p>
+
+<p>¿Cuántos contigs se han producido?. ¿De cuantas lecturas?</p>
+
+<p>Ejecutar el editor de contigs y comprobar el contig producido, comprobar las incongruencias en las secuencias viendo los cromatogramas.</p>
+
+<p>Practicar con las diferentes opciones y análisis del programa Gap4</p>
+
+<p>Salvar los consensos en ficheros separados y en un único fichero</p>
+
+<h2 id="ensamblaje-de-ests-2">Ensamblaje de ESTs 2</h2>
+
+<p>Ahora vamos a realizar un proyecto de secuenciación a partir de lecturas de ESTs. Descargar el fichero comprimido <a href="../static/assembly/secuencias2.zip">secuencias2</a>.</p>
+
+<p>Una vez hayais obtenido los contigs con el Gap4:</p>
+
+<ul>
+  <li>
+    <p>Comprobar el número de contigs obtenido.</p>
+  </li>
+  <li>
+    <p>El número de secuencias por contigs</p>
+  </li>
+  <li>
+    <p>Buscar regiones similares en el interior del contig utilizando el análisis de Internal Join del Gap4.</p>
+  </li>
+  <li>
+    <p>¿Que sucede?.</p>
+  </li>
+</ul>
+
+<p>Editar alguna de los regiones encontradas.</p>
+
+<ul>
+  <li>¿Por qué el Gap4 no junta esos contigs?.</li>
+</ul>
+
+<p>Repetir todo el análisis pero ahora incluyendo las opciones de búsqueda de adaptadores y vector del PreGap4.</p>
+
+<ul>
+  <li>
+    <p>¿Cuantos contigs aparecen ahora?.</p>
+  </li>
+  <li>
+    <p>Comprueba si existen regiones similares internas y justifica su existencia</p>
+  </li>
+</ul>
+
+<h2 id="control-calidad-ensamblaje">Control calidad ensamblaje</h2>
+
+<p><a href="http://solgenomics.net/">SGN</a> ha secuenciado un borrador del genoma de <em>Nicotiana benthamiana</em>.</p>
+
+<p>El método de secuenciación ha sido el siguiente:
+A partir del ADN genómico, se han creado tres librerias para Illumina HiSeq-2000:</p>
+
+<ul>
+  <li>una paired end con un tamaño de inserto de 500 pb aprox (4 líneas)</li>
+  <li>a mate-pair libreria con un tamaño de inserto de 2Kb (1 línea</li>
+  <li>a mate pair libreria con un tamaño de inserto de 5Kb (1 línea)</li>
+</ul>
+
+<p>Se muestran las estadśiticas que corresponden a dos ensamblados distintos realizados con el SOAPdenovo.</p>
+
+<p>¿Cuál de los dos corresponder a la v0.3 y v0.42 del ensamblaje?</p>
+
+<p>¿Cuál prefieres?</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Statistic</th>
+      <th style="text-align: center">Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Sequence Count</td>
+      <td style="text-align: center">3,010,735 sequences</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Total Length</td>
+      <td style="text-align: center">2462490758 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Longest sequence</td>
+      <td style="text-align: center">208210 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Shortest sequence</td>
+      <td style="text-align: center">201 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Average length</td>
+      <td style="text-align: center">5336.26 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N95 length</td>
+      <td style="text-align: center">1564 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N95 index</td>
+      <td style="text-align: center">215459 sequences</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N90 length</td>
+      <td style="text-align: center">3403 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N90 index</td>
+      <td style="text-align: center">163811 sequences</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N75 length</td>
+      <td style="text-align: center">8068 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N75 index</td>
+      <td style="text-align: center">96046 sequences</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N50 length</td>
+      <td style="text-align: center">16480 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N50 index</td>
+      <td style="text-align: center">42984 sequences</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Statistic</th>
+      <th style="text-align: center">Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Sequence Count</td>
+      <td style="text-align: center">461,463 sequences</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Total Length</td>
+      <td style="text-align: center">2899410662 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Longest sequence</td>
+      <td style="text-align: center">103554 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Shortest sequence</td>
+      <td style="text-align: center">201 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Average length</td>
+      <td style="text-align: center">963.02 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N95 length</td>
+      <td style="text-align: center">233 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N95 index</td>
+      <td style="text-align: center">2338365 sequences</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N90 length</td>
+      <td style="text-align: center">274 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N90 index</td>
+      <td style="text-align: center">1763126 sequences</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N75 length</td>
+      <td style="text-align: center">619 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N75 index</td>
+      <td style="text-align: center">606395 sequences</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N50 length</td>
+      <td style="text-align: center">4140 bp</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">N50 index</td>
+      <td style="text-align: center">156329 sequences</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="comparación-de-ensamblajes">Comparación de ensamblajes</h2>
+
+<p>Se han utilizado varios ensambladores para ensamblar el cloroplasto de <em>N. benthamiana</em> (100Kb aprox).</p>
+
+<p>Se utilizaron 883811 Illumina pair-ends de un tamaño de 101pb y un tamaño de inserto de 400bp (cobertura 1700X). El SOAPdenovo se utilizó con todas las secuencias y con solo un subconjunto de estas.</p>
+
+<p>Los resultados del experimento realizado por el Dr Aureliano Bombarely fueron:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Assembler</th>
+      <th style="text-align: center">Total Scaffold Size (Kb)</th>
+      <th style="text-align: center">Number Scaffolds</th>
+      <th style="text-align: center">Scaffold Max. Len (b)</th>
+      <th style="text-align: center">Scaffold N50</th>
+      <th style="text-align: center">Total Contig Size (Kb)</th>
+      <th style="text-align: center">Number Contigs</th>
+      <th style="text-align: center">Contig Max. Length (b)</th>
+      <th style="text-align: center">Contigs N50</th>
+      <th style="text-align: center">Running Time (min)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">SOAP K63 cov &gt;255</td>
+      <td style="text-align: center">1019</td>
+      <td style="text-align: center">7712</td>
+      <td style="text-align: center">1,395</td>
+      <td style="text-align: center">127</td>
+      <td style="text-align: center">1024</td>
+      <td style="text-align: center">7790</td>
+      <td style="text-align: center">547</td>
+      <td style="text-align: center">127</td>
+      <td style="text-align: center">4.75</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">SOAP K63 subset</td>
+      <td style="text-align: center">134</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: center">110,468</td>
+      <td style="text-align: center">110,468</td>
+      <td style="text-align: center">133</td>
+      <td style="text-align: center">40</td>
+      <td style="text-align: center">35,718</td>
+      <td style="text-align: center">13,627</td>
+      <td style="text-align: center">0.5</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">SOAP K63 subset + GapCloser</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">133</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: center">109,638</td>
+      <td style="text-align: center">18,725</td>
+      <td style="text-align: center">1</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">ABySS</td>
+      <td style="text-align: center">170</td>
+      <td style="text-align: center">25</td>
+      <td style="text-align: center">61,293</td>
+      <td style="text-align: center">37,547</td>
+      <td style="text-align: center">170</td>
+      <td style="text-align: center">28</td>
+      <td style="text-align: center">57,534</td>
+      <td style="text-align: center">37,547</td>
+      <td style="text-align: center">20</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Velvet</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">-</td>
+      <td style="text-align: center">255</td>
+      <td style="text-align: center">1138</td>
+      <td style="text-align: center">2,445</td>
+      <td style="text-align: center">215</td>
+      <td style="text-align: center">2</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">Ray</td>
+      <td style="text-align: center">1327</td>
+      <td style="text-align: center">10418</td>
+      <td style="text-align: center">45,896</td>
+      <td style="text-align: center">116</td>
+      <td style="text-align: center">1325</td>
+      <td style="text-align: center">10423</td>
+      <td style="text-align: center">45,896</td>
+      <td style="text-align: center">116</td>
+      <td style="text-align: center">20</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>¿ Qué ensamblador utilizarías?</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+    
+
+  </body>
+
+</html>
