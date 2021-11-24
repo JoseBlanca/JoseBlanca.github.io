@@ -1,0 +1,34 @@
+site_name: Jose Blanca
+site_description: Página personal de Jose Blanca
+site_author: Jose Blanca
+copyright: © 2021, Jose Blanca
+nav:
+  - "sobre mí": index.md
+  - zen el explorador racional: zen_del_explorador_racional.md
+  - el oficio de la duda:
+    - 'sobre el libro': el_oficio_de_la_duda/index.md
+    - 'leer en la web': el_oficio_de_la_duda/leer/prefacio.html
+  - otros sitios:
+    - twitter: 'https://twitter.com/jblanca42'
+    - youtube: 'https://www.youtube.com/channel/UC7-bjPuStqjJqbDiv0pTI5g'
+    - laboratorio: https://bioinf.comav.upv.es/
+  - rincones de interés: rincones.md
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+  language: es
+markdown_extensions:
+  - attr_list
+copyright: Copyright &copy; Jose Blanca
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: 'https://twitter.com/jblanca42'
+      name: Jose Blanca en Twitter
+    - icon: fontawesome/brands/youtube
+      link: 'https://www.youtube.com/channel/UC7-bjPuStqjJqbDiv0pTI5g'
+      name: Jose Blanca en Youtube
+  generator: false
+plugins: []
