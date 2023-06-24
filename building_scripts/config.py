@@ -16,8 +16,8 @@ else:
     OFICIO_DUDA_DIR = Path("/Users/jose/libros/el_arte_de_la_duda/")
 OFICIO_DUDA_BUILD_SCRIPT = OFICIO_DUDA_DIR / "building_scripts/build_oficio.py"
 
-
 OFICIO_DUDA_MKDOC_DIR_SUBPATH = Path("docs/el_oficio_de_la_duda")
+OFICIO_DUDA_GITHUB_DIR = GITHUB_IO_DIR / "el_oficio_de_la_duda"
 OFICIO_DUDA_MKDOC_ONLINE_READ_DIR_SUBPATH = OFICIO_DUDA_MKDOC_DIR_SUBPATH / "leer"
 OFICIO_DUDA_FILES_DIR_SUBPTAH = OFICIO_DUDA_MKDOC_DIR_SUBPATH / "files"
 OFICIO_DUDA_MKDOC_EPUB_SUBPATH = (

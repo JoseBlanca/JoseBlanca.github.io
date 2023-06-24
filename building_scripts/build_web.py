@@ -25,6 +25,7 @@ def build_oficio_duda_online_book(web_path):
 if __name__ == "__main__":
     TMP_DIR = config.TMP_DIR
     TMP_DIR.mkdir(exist_ok=True)
+    build_oficio_duda = False
 
     with tempfile.TemporaryDirectory(
         dir=TMP_DIR, prefix="jblanca_mkdocs_source_"
@@ -34,37 +35,50 @@ if __name__ == "__main__":
             config.JBLANCA_MKDOCS_WEB_SOURCE_DIR, tmp_dir_path, dirs_exist_ok=True
         )
 
-        oficio_duda_files_dir = tmp_dir_path / config.OFICIO_DUDA_FILES_DIR_SUBPTAH
-        oficio_duda_files_dir.mkdir(exist_ok=True)
-        oficio_duda_mkdocs_epub_path = (
-            tmp_dir_path / config.OFICIO_DUDA_MKDOC_EPUB_SUBPATH
-        )
-        build_oficio_duda_epub(oficio_duda_mkdocs_epub_path)
+        if build_oficio_duda:
+            oficio_duda_files_dir = tmp_dir_path / config.OFICIO_DUDA_FILES_DIR_SUBPTAH
+            oficio_duda_files_dir.mkdir(exist_ok=True)
+            oficio_duda_mkdocs_epub_path = (
+                tmp_dir_path / config.OFICIO_DUDA_MKDOC_EPUB_SUBPATH
+            )
+            build_oficio_duda_epub(oficio_duda_mkdocs_epub_path)
 
-        oficio_duda_mkdocs_mobi_path = (
-            tmp_dir_path / config.OFICIO_DUDA_MKDOC_MOBI_SUBPATH
-        )
-        format_transformations.epub_to_mobi(
-            oficio_duda_mkdocs_epub_path, oficio_duda_mkdocs_mobi_path
-        )
+            oficio_duda_mkdocs_mobi_path = (
+                tmp_dir_path / config.OFICIO_DUDA_MKDOC_MOBI_SUBPATH
+            )
+            format_transformations.epub_to_mobi(
+                oficio_duda_mkdocs_epub_path, oficio_duda_mkdocs_mobi_path
+            )
 
-        oficio_duda_mkdocs_pdf_path = (
-            tmp_dir_path / config.OFICIO_DUDA_MKDOC_PDF_SUBPATH
-        )
-        format_transformations.epub_to_pdf(
-            oficio_duda_mkdocs_epub_path, oficio_duda_mkdocs_pdf_path
-        )
+            oficio_duda_mkdocs_pdf_path = (
+                tmp_dir_path / config.OFICIO_DUDA_MKDOC_PDF_SUBPATH
+            )
+            format_transformations.epub_to_pdf(
+                oficio_duda_mkdocs_epub_path, oficio_duda_mkdocs_pdf_path
+            )
 
-        oficio_duda_mkdocs_azw3_path = (
-            tmp_dir_path / config.OFICIO_DUDA_MKDOC_AZW3_SUBPATH
-        )
-        format_transformations.epub_to_azw3(
-            oficio_duda_mkdocs_epub_path, oficio_duda_mkdocs_azw3_path
-        )
+            oficio_duda_mkdocs_azw3_path = (
+                tmp_dir_path / config.OFICIO_DUDA_MKDOC_AZW3_SUBPATH
+            )
+            format_transformations.epub_to_azw3(
+                oficio_duda_mkdocs_epub_path, oficio_duda_mkdocs_azw3_path
+            )
 
-        oficio_duda_mkdocs_read_web_path = (
-            tmp_dir_path / config.OFICIO_DUDA_MKDOC_ONLINE_READ_DIR_SUBPATH
-        )
-        build_oficio_duda_online_book(oficio_duda_mkdocs_read_web_path)
+            oficio_duda_mkdocs_read_web_path = (
+                tmp_dir_path / config.OFICIO_DUDA_MKDOC_ONLINE_READ_DIR_SUBPATH
+            )
+            build_oficio_duda_online_book(oficio_duda_mkdocs_read_web_path)
+        else:
+            oficio_duda_github_io_dir = config.BUILT_WEB / config.OFICIO_DUDA_GITHUB_DIR
+            oficio_duda_mkdoc_dir_subpath = (
+                tmp_dir_path / config.OFICIO_DUDA_MKDOC_DIR_SUBPATH
+            )
+            print(oficio_duda_github_io_dir)
+            print(oficio_duda_mkdoc_dir_subpath)
+            shutil.copytree(
+                oficio_duda_github_io_dir,
+                oficio_duda_mkdoc_dir_subpath,
+                dirs_exist_ok=True,
+            )
 
         build_mkdocs_web(mkdocs_src_dir=tmp_src_dir, dest_dir=config.BUILT_WEB)
