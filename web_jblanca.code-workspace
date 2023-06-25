@@ -10,5 +10,10 @@
 			"path": "../arte_duda"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"[python]": {
+			"editor.defaultFormatter": "ms-python.black-formatter"
+		},
+		"python.formatting.provider": "none"
+	}
 }

@@ -16,10 +16,14 @@ Bibliography that I have enjoyed:
 - [Population genetics, a concise guide](https://books.google.es/books?id=3-o8NFIBNMoC&dq=inauthor:%22John+H.+Gillespie%22)
 - [A Primer of Population Genetics and Genomics](https://oxford.universitypressscholarship.com/view/10.1093/oso/9780198862291.001.0001/oso-9780198862291)
 
-## Next streaming, measuring diversities and distances
-
-[Streaming](https://youtu.be/Bw814vhChZc) live next friday, june 10th, at 9:00 UTC (11:00 spanish time) ([slides](https://drive.google.com/drive/folders/1s_fj8kuLZKcBuXmscWdFu6P15SKjALXO?usp=sharing) for the class).
-
 ## Course introduction and what is a population
 
-Course introduction, [slides](https://drive.google.com/drive/folders/1Do37JnvbVOqVEHQI0_XanJcF-edxNFBv?usp=sharing) and [video](https://youtu.be/9YsiFPXFj98).
+Course introduction, what is a population, and how do we define populations.
+
+[Video](https://youtu.be/9YsiFPXFj98), and [slides](https://drive.google.com/drive/folders/1Do37JnvbVOqVEHQI0_XanJcF-edxNFBv?usp=sharing).
+
+## Characterizing populations
+
+Measuring diversities, distances and Linkage Disequilibrium.
+
+[Video](https://youtu.be/5dC951jpULA), and [slides](https://drive.google.com/drive/folders/1s_fj8kuLZKcBuXmscWdFu6P15SKjALXO?usp=sharing).
