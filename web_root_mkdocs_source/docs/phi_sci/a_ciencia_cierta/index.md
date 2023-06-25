@@ -7,7 +7,7 @@ En estas tertulias han participado: [Antonio Rivera](@meteolp), [Valeriano Iranz
 
 ## Aristóteles
 
-[Aristótles](https://www.ivoox.com/aristoteles-a-ciencia-cierta-28-6-2017-audios-mp3_rf_19557094_1.html), es comúnmente conocido como filósofo, pero también fue un proto-científico del que, por ejemplo, quedan más textos suyos dedicados a la zoología que a cualquier otra cuestión. Además, su interés en el conocimiento del mundo natural le llevó a plantear una de las primeras filosofías de la ciencia de la historia. Una filosofía basada en la deducción que tuvo una influencia muy prominente hasta la época de Galileo.
+[Aristóteles](https://www.ivoox.com/aristoteles-a-ciencia-cierta-28-6-2017-audios-mp3_rf_19557094_1.html), es comúnmente conocido como filósofo, pero también fue un proto-científico del que, por ejemplo, quedan más textos suyos dedicados a la zoología que a cualquier otra cuestión. Además, su interés en el conocimiento del mundo natural le llevó a plantear una de las primeras filosofías de la ciencia de la historia. Una filosofía basada en la deducción que tuvo una influencia muy prominente hasta la época de Galileo.
 
 <iframe frameborder='0' allowfullscreen='' scrolling='no' height='200' style='width:100%;' src='https://www.ivoox.com/player_ej_19557094_6_1.html?c1=bd3d71' loading='lazy'></iframe>
 
