@@ -3,7 +3,7 @@
 [A ciencia cierta](@acienciacierta_) es un programa dedicado a la divulgación científica creado, dirigido y presentado por Antonio Ribera.
 A lo largo del tiempo se han tratado temas muy variados y uno de ellos ha sido la filosofía de la ciencia.
 
-En estas tertulias han participado, además de [Antonio Ribera](@meteolp), [Valeriano Iranzo](https://scholar.google.es/citations?user=jAxwC0AAAAAJ&hl=es), [Vicent Picó](@sientoquinse), [Cristian Saborido](https://www.cristiansaborido.com/) y [José Blanca](https://jblanca.net/).
+En estas tertulias han participado: [Antonio Ribera](@meteolp), [Valeriano Iranzo](https://scholar.google.es/citations?user=jAxwC0AAAAAJ&hl=es), [Vicent Picó](@sientoquinse), [Cristian Saborido](https://www.cristiansaborido.com/) y [José Blanca](https://jblanca.net/).
 
 ## Aristóteles
 
