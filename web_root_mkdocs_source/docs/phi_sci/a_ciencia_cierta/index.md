@@ -28,3 +28,9 @@ Suele asumirse que el conocimiento científico se construye utilizando [el méto
 La [metafísica](https://www.ivoox.com/ciencia-realidad-una-relacion-compleja-a-ciencia-audios-mp3_rf_105229820_1.html) se encarga del estudio de lo que existe y, por lo tanto, la ciencia tiene un componente metafísico fundamental. ¿Qué criterios se utilizan en ciencia para determinar qué existe y qué no? ¿Cómo evolucionan la metafísica científica, qué aspectos se conservan y cuáles son descartados entre teorías?
 
 <iframe frameborder='0' allowfullscreen='' scrolling='no' height='200' style='width:100%;' src='https://www.ivoox.com/player_ej_105229820_6_1.html?c1=bd3d71' loading='lazy'></iframe>
+
+## Ciencia y verdad
+
+Aristóteles planteó que son verdad aquellas de nuestras creencias que se corresponden con la realidad: es verdad que hay un café frente a mí si realmente hay un café en el mundo externo a mis ideas. Sin embargo, sólo tenemos acceso directo a nuestras ideas y percepciones, el mundo externo nos llega filtrado por ellas y, por lo tanto, existe una tensión irreconciliable, que distintas teorías sobre qué significa que algo sea verdad tratan de resolver de modos ligera o radicalmente diferentes.
+
+<iframe frameborder='0' allowfullscreen='' scrolling='no' height='200' style='width:100%;' src='https://www.ivoox.com/player_ej_111144362_6_1.html?c1=bd3d71' loading='lazy'></iframe>
