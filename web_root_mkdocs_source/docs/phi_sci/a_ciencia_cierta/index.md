@@ -34,3 +34,15 @@ La [metafísica](https://www.ivoox.com/ciencia-realidad-una-relacion-compleja-a-
 Aristóteles planteó que son verdad aquellas de nuestras creencias que se corresponden con la realidad: es verdad que hay un café frente a mí si realmente hay un café en el mundo externo a mis ideas. Sin embargo, sólo tenemos acceso directo a nuestras ideas y percepciones, el mundo externo nos llega filtrado por ellas y, por lo tanto, existe una tensión irreconciliable, que distintas teorías sobre qué significa que algo sea verdad tratan de resolver de modos ligera o radicalmente diferentes.
 
 <iframe frameborder='0' allowfullscreen='' scrolling='no' height='200' style='width:100%;' src='https://www.ivoox.com/player_ej_111144362_6_1.html?c1=bd3d71' loading='lazy'></iframe>
+
+## Karl Popper y el Falsacionismo
+
+Según Karl Popper, uno de los filósofos de la ciencia más famosos, una hipótesis es científica cuando puede ser falsada, es decir, cuando las observaciones pueden mostrar que es equivocada y, además, los científicos son críticos implacables. En este programa analizamos cuáles son las motivaciones y las limitaciones de estas ideas sobre la ciencia y los científicos.
+
+<iframe frameborder='0' allowfullscreen='' scrolling='no' height='200' style='width:100%;' src='https://www.ivoox.com/player_ej_116953085_6_1.html?c1=bd3d71' loading='lazy'></iframe>
+
+## Kuhn, paradigmas y revoluciones
+
+"La estructura de las revoluciones científicas" uno de los libros sobre filosofía más influyentes de la historia reciente, la obra en la que Thomas Khun nos habla de las revoluciones como cambios de paradigmas, pero ¿qué es exactamente un paradigma? Podría pensarse que está constituido por el conjunto de conceptos y teorías que forman parte de una propuesta científica, pero la propuesta de Kuhn fue mucho más radical y controvertida.
+
+<iframe frameborder='0' allowfullscreen='' scrolling='no' height='200' style='width:100%;' src='https://www.ivoox.com/player_ej_120854519_6_1.html?c1=bd3d71' loading='lazy'></iframe>
