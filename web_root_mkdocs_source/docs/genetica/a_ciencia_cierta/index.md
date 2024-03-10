@@ -16,6 +16,10 @@ A lo largo del tiempo se han tratado temas muy variados y uno de ellos ha sido l
 
 <iframe frameborder='0' allowfullscreen='' scrolling='no' height='200' style='width:100%;' src='https://www.ivoox.com/player_ej_30405295_6_1.html?c1=364568' loading='lazy'></iframe>
 
+## Más allá de Mendel: la genética de los caracteres complejos
+
+<iframe frameborder='0' allowfullscreen='' scrolling='no' height='200' style='width:100%;' src='https://www.ivoox.com/player_ej_122221962_6_1.html?c1=bd3d71' loading='lazy'></iframe>
+
 ## ¿Qué es un gen?
 
 <iframe frameborder='0' allowfullscreen='' scrolling='no' height='200' style='width:100%;' src='https://www.ivoox.com/player_ej_18265689_6_1.html?c1=364568' loading='lazy'></iframe>

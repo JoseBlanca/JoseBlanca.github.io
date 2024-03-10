@@ -46,3 +46,10 @@ Según Karl Popper, uno de los filósofos de la ciencia más famosos, una hipót
 "La estructura de las revoluciones científicas" uno de los libros sobre filosofía más influyentes de la historia reciente, la obra en la que Thomas Khun nos habla de las revoluciones como cambios de paradigmas, pero ¿qué es exactamente un paradigma? Podría pensarse que está constituido por el conjunto de conceptos y teorías que forman parte de una propuesta científica, pero la propuesta de Kuhn fue mucho más radical y controvertida.
 
 <iframe frameborder='0' allowfullscreen='' scrolling='no' height='200' style='width:100%;' src='https://www.ivoox.com/player_ej_120854519_6_1.html?c1=bd3d71' loading='lazy'></iframe>
+
+## Kuhn, paradigmas y revoluciones
+
+La probabilidad es una teoría matemáticas, cómo deberíamos interpretarla cuando la utilizamos para describir lo que sucede en el mundo.
+
+<iframe frameborder='0' allowfullscreen='' scrolling='no' height='200' style='width:100%;' src='https://www.ivoox.com/player_ej_125238585_6_1.html?c1=bd3d71' loading='lazy'></iframe>
+
