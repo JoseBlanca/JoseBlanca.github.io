@@ -35,6 +35,18 @@ Aristóteles planteó que son verdad aquellas de nuestras creencias que se corre
 
 <iframe frameborder='0' allowfullscreen='' scrolling='no' height='200' style='width:100%;' src='https://www.ivoox.com/player_ej_111144362_6_1.html?c1=bd3d71' loading='lazy'></iframe>
 
+## Ciencia y tecnología: el mundo antiguo
+
+En la actualidad ciencia y tecnología son dos actividades muy relacionadas, pero a lo largo de la historia el conocimiento práctico y teórico estaban más alejados y eran prácticados por diferentes personas. Recorremos esta relación utilizando el ejemplo de antiguas civilizaciones, como las mesopotámicas, griega y helénica.
+
+<iframe src="https://www.ivoox.com/player_ej_130715975_6_1.html?c1=bc3a6d" width="100%" height="200" frameborder="0" allowfullscreen="" scrolling="no" loading="lazy"></iframe>
+
+## Ciencia y tecnología: de la Edad Media a la Revolución Científica
+
+Podría considerarse que fue durante la Edad Moderna cuando surgió la ciencia. En este programa se discuten las características de la ciencia moderna y como esa nueva forma de generar conocimiento se relacionó con el conocimiento práctico de los artesanos, que durante este periodo gradualmente se fueron convirtiendo en ingenieros.
+
+<iframe src="https://www.ivoox.com/player_ej_133286516_6_1.html?c1=bc3a6d" width="100%" height="200" frameborder="0" allowfullscreen="" scrolling="no" loading="lazy"></iframe>
+
 ## Karl Popper y el Falsacionismo
 
 Según Karl Popper, uno de los filósofos de la ciencia más famosos, una hipótesis es científica cuando puede ser falsada, es decir, cuando las observaciones pueden mostrar que es equivocada y, además, los científicos son críticos implacables. En este programa analizamos cuáles son las motivaciones y las limitaciones de estas ideas sobre la ciencia y los científicos.
@@ -47,7 +59,7 @@ Según Karl Popper, uno de los filósofos de la ciencia más famosos, una hipót
 
 <iframe frameborder='0' allowfullscreen='' scrolling='no' height='200' style='width:100%;' src='https://www.ivoox.com/player_ej_120854519_6_1.html?c1=bd3d71' loading='lazy'></iframe>
 
-## Kuhn, paradigmas y revoluciones
+## Filosofía de la probabilidad
 
 La probabilidad es una teoría matemáticas, cómo deberíamos interpretarla cuando la utilizamos para describir lo que sucede en el mundo.
 
