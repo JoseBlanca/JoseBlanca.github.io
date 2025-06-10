@@ -53,6 +53,12 @@ La ciencia ha contribuido al progreso tecnológico, pero ¿cuáles han sido las 
 
 <iframe src="https://www.ivoox.com/player_ej_135313761_6_1.html?c1=bc3a6d" width="100%" height="200" frameborder="0" allowfullscreen="" scrolling="no" loading="lazy"></iframe>
 
+## Vida, Universo y Todo lo Demás
+
+La influencia social de la ciencia va más allá de la aplicación tecnológica. Por ejemplo, su modelo de búsqueda de conocimiento en una comunidad plural y abierta a la crítica influyó en la propuesta ilustrada: la promoción de una sociedad abierta en la que tuvise cabida un diálogo plural. Por otro lado, el éxito de la ciencia como generadora de conocimiento se convierte habitualmente en la idea equivocada de que la ciencia es el único modo válido de generar conocimiento y que puede dar respuesta a todas las preguntas, ignorando las contribuciones de otras disciplinas como la filosofía o la literatura.
+
+<iframe src="https://www.ivoox.com/player_ej_144914008_6_1.html?c1=bc3a6d" width="100%" height="200" frameborder="0" allowfullscreen="" scrolling="no" loading="lazy"></iframe>
+
 ## Karl Popper y el Falsacionismo
 
 Según Karl Popper, uno de los filósofos de la ciencia más famosos, una hipótesis es científica cuando puede ser falsada, es decir, cuando las observaciones pueden mostrar que es equivocada y, además, los científicos son críticos implacables. En este programa analizamos cuáles son las motivaciones y las limitaciones de estas ideas sobre la ciencia y los científicos.
