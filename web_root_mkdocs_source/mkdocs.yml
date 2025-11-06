@@ -5,6 +5,7 @@ copyright: © 2021-2025, Jose Blanca
 nav:
   - "sobre mí": index.md
   - Cursos y seminarios: edu/index.html
+  - Blog: blog/index.md
   - Filosofía de la ciencia:
     - en 'a ciencia cierta': phi_sci/a_ciencia_cierta/index.md
     - el oficio de la duda:
@@ -29,4 +30,5 @@ extra:
       link: 'https://www.youtube.com/channel/UC7-bjPuStqjJqbDiv0pTI5g'
       name: Jose Blanca en Youtube
   generator: false
-plugins: []
+plugins:
+  - blog
