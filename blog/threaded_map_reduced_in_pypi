@@ -1,0 +1,10 @@
+---
+date: 2025-11-30
+categories:
+  - English
+  - Python
+---
+
+# Threaded map reduce released
+
+I have published my first package in [pypi](https://pypi.org/project/threaded_map_reduce/), a threaded version of [map-reduce](https://github.com/JoseBlanca/threaded-map-reduce) that is quite performant for CPU-bound tasks in free-threaded Python.
