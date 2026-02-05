@@ -504,14 +504,17 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="population-delimitation-practice"><a class="toclink" href="../../2026/02/05/population-delimitation-practice/">Population delimitation practice</a></h2>
-<p>I have develop a <a href="https://plantgenomics.es/pop_lab/pop_delimit_practice/">population genetics practice</a> in which the students have to delimit genetic groups based on the genetic structure, the taxa and the country of origin of the individuals.
-The objective is to teach the students to that the genetic structure by itself is, in most cases, not enough to create populations.</p>
-<p>The practice is a web application hosted on our laboratory static site developed with [https://marimo.io/].
-Lot's of magic underly this result:</p>
+    <h2 id="population-delimitation-practice"><a class="toclink" href="../../2026/02/05/population-delimitation-practice/">Population Delimitation Practice</a></h2>
+<p>I have developed a <a href="https://plantgenomics.es/pop_lab/pop_delimit_practice/">population genetics practice</a> where students are tasked with delimiting genetic groups. They must do this by analyzing genetic structure alongside other variables, such as taxa and the country of origin.</p>
+<p>The primary objective is to teach students that genetic structure alone is often insufficient for defining populations; context and additional biological data are essential.</p>
+<p>The practice is a web application hosted on our laboratory’s static site and developed using <a href="https://marimo.io/">marimo</a>. There is quite a bit of "magic" happening under the hood to make this work seamlessly in the browser:</p>
 <ul>
-<li><a href="https://pyodide.org">pyodide</a>, the <a href="https://webassembly.org/">webasembly</a> Python interpreter.</li>
-<li>A <a href="https://pypi.org/project/scatter3d-anywidget/">3D scatter widget</a> that I have developed using Python and Typescript (My first ever serious Javascript code). I would have neven been able to create that without the AI help.</li>
+<li>
+<p><a href="https://pyodide.org/">Pyodide</a>: A Python interpreter compiled to <a href="https://webassembly.org/">WebAssembly</a>, allowing the logic to run entirely client-side.</p>
+</li>
+<li>
+<p><a href="https://pypi.org/project/scatter3d-anywidget/">3D Scatter Widget</a>: A custom widget I developed using Python and TypeScript. This was my first serious foray into JavaScript/TypeScript, and I honestly couldn't have built it without the help of AI tools.</p>
+</li>
 </ul>
     
   </div>
