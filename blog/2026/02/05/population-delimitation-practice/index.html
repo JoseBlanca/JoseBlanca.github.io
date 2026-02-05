@@ -13,10 +13,8 @@
       
       
       
-        <link rel="prev" href="../../../../2025/12/15/seminario-sobre-la-historia-del-tomate/">
+        <link rel="prev" href="../../04/reading-a-conflict-of-visions/">
       
-      
-        <link rel="next" href="../../../02/04/reading-a-conflict-of-visions/">
       
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
@@ -24,7 +22,7 @@
     
     
       
-        <title>Scatter 3D notebook widget - Jose Blanca</title>
+        <title>Population delimitation practice - Jose Blanca</title>
       
     
     
@@ -66,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scatter-3d-notebook-widget" class="md-skip">
+        <a href="#population-delimitation-practice" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -102,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scatter 3D notebook widget
+              Population delimitation practice
             
           </span>
         </div>
@@ -509,7 +507,7 @@
                     <li class="md-nav__item">
                       <div class="md-nav__link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2026-01-26 00:00:00" class="md-ellipsis">26 de enero de 2026</time>
+                        <time datetime="2026-02-05 00:00:00" class="md-ellipsis">5 de febrero de 2026</time>
                       </div>
                     </li>
                     
@@ -520,8 +518,8 @@
                           <span class="md-ellipsis">
                             en
                             
-                              <a href="../../../../category/english/">English</a>, 
-                              <a href="../../../../category/python/">Python</a></span>
+                              <a href="../../../../category/python/">Python</a>, 
+                              <a href="../../../../category/genetics/">Genetics</a></span>
                         </div>
                       </li>
                     
@@ -552,15 +550,15 @@
         
 
 
-<h1 id="scatter-3d-notebook-widget">Scatter 3D notebook widget</h1>
-<p>For the longest time I have needed a program to plot scatter plots in 3D with the ability of selecting points using a <a href="https://en.wikipedia.org/wiki/Lasso_tool">lasso tool</a>.
-For instance, I needed to select some individuals in a plot showing genetic distances in order to know its geographical origin.</p>
-<p>During a long time we used <a href="https://ics.hutton.ac.uk/curlywhirly/">CurlyWhirly</a>, but that software is not maintained anymore, then we moved to <a href="https://glueviz.org/">glue</a>, but I always found that software a little too cumbersome for my taste.
-Many times I've looked for alternatives, but I found none.</p>
-<p>Alas, I was resigned, but last december I heard about <a href="https://anywidget.dev/">anywidget</a> in the <a href="https://talkpython.fm/episodes/show/530/anywidget-jupyter-widgets-made-easy">Talk Python Podcast</a>, a library created to ease the development of <a href="https://marimo.io/">marimo</a> and jupyter notebook widgets.
-I have never programmed anything serious in Javascript, but I thought that maybe with the help of an AI tool and anywidget I could try to build a 3D scatterplot notebook widget to my liking, and I did it!</p>
-<p>You can download the widget from its <a href="https://github.com/JoseBlanca/any_scatter3d">GitHub</a> repository or from <a href="https://pypi.org/project/scatter3d-anywidget/">PyPI</a>.
-We have already used it in our research on the history of the tomato.</p>
+<h1 id="population-delimitation-practice">Population delimitation practice</h1>
+<p>I have develop a <a href="https://plantgenomics.es/pop_lab/pop_delimit_practice/">population genetics practice</a> in which the students have to delimit genetic groups based on the genetic structure, the taxa and the country of origin of the individuals.
+The objective is to teach the students to that the genetic structure by itself is, in most cases, not enough to create populations.</p>
+<p>The practice is a web application hosted on our laboratory static site developed with [https://marimo.io/].
+Lot's of magic underly this result:</p>
+<ul>
+<li><a href="https://pyodide.org">pyodide</a>, the <a href="https://webassembly.org/">webasembly</a> Python interpreter.</li>
+<li>A <a href="https://pypi.org/project/scatter3d-anywidget/">3D scatter widget</a> that I have developed using Python and Typescript (My first ever serious Javascript code). I would have neven been able to create that without the AI help.</li>
+</ul>
 
 
 
