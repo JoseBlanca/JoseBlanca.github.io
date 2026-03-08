@@ -483,6 +483,70 @@
     <div class="md-post__meta md-meta">
       <ul class="md-meta__list">
         <li class="md-meta__item">
+          <time datetime="2026-03-08 00:00:00">8 de marzo de 2026</time></li>
+        
+          <li class="md-meta__item">
+            en
+            
+              <a href="./" class="md-meta__link">English</a>, 
+              <a href="../coding/" class="md-meta__link">Coding</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              8 minutos de lectura
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="programming-what-to-learn"><a class="toclink" href="../../2026/03/08/programming-what-to-learn/">Programming, what to learn</a></h2>
+<p>When one starts learning how to program, one tends to think that the objective is to learn the syntax of a particular programming language, but that should never be the main learning objective. It is true that learning your first programming language will allow you to solve many problems, but programming is about ideas and complexity, so the real, deeper, learning objectives should be related to:</p>
+<ul>
+<li>Creating <em>mental models</em> about how software is built to be able to reason about the systems that we are working with.</li>
+<li>Developing the skills needed to program software.</li>
+</ul>
+<p>You don't just want to learn Python or any other language; what you really should aspire to is to think like a computer engineer capable of:</p>
+<ul>
+<li>learning new languages and software technologies,</li>
+<li>structuring code by dividing complex problems into many small, easy-to-solve tasks,</li>
+<li>reasoning about which solution could meet different constraints, such as performance and development time.</li>
+</ul>
+<h3 id="the-beginner"><a class="toclink" href="../../2026/03/08/programming-what-to-learn/#the-beginner">The beginner</a></h3>
+<h4 id="how-software-works"><a class="toclink" href="../../2026/03/08/programming-what-to-learn/#how-software-works">How software works</a></h4>
+<p>The fundamentals of programming are never the syntax of a particular language. That syntax is just a way of conveying how that language abstracts the deeper aspects of programming.</p>
+<p><em>Data and action</em>. We store data in computer memory, on disk, or in some other way. For instance, we could store a number or some text in memory.  Also, the computer carries out actions, like adding numbers or writing characters on the screen. These are two of the most fundamental programming concepts. When we program we should always think about data and action, about nouns and verbs.</p>
+<p><em>Types</em>. The data that we store always has a type; for instance, it could be an integer or a text string.</p>
+<p><em>Execution order</em>. A computer carries out its operations sequentially, one after another, so you will have to look for solutions that look like recipes or protocols that specify how to solve the problem by taking actions one after another on some data. Controlling the flow of execution, the order in which every single action is taken, is one of the fundamental tools of any programmer.</p>
+<p><em>Scopes</em>. Since a computer program acts by taking actions on data, a naive programmer could think that the ideal approach would be to allow any part of the code to act on any data available at any time, but that has proven to be a terrible idea. When a program is longer than a couple of dozen lines the complexity starts to creep in and our limited minds, capable of holding only a few pieces of information at a time, are not capable of reasoning about the whole program all at once. Thus, if we allow any part of the program to act on any data at any time, it will be very difficult to reason about how the software behaves. Let's imagine that we have an error, a bug, in our program: it is trying to add 1 plus 1, but we are getting 3 instead of 2, and we are trying to locate and fix the bug. If we have 5000 lines of code, where should we start looking for the bug? It is difficult to say. So any programming language imposes limitations on which data we can act on in a particular section of the codebase or at a particular time. In that way, for instance, looking for where the code responsible for the bug related to a particular result could be located becomes much simpler. If in your house you find a problem related to a knife, you'll go to the kitchen, not to the bedroom, the same idea applies to software.</p>
+<p><em>Memory management</em>. All computer programs store data in memory, but in different languages the memory management is carried out in different ways. In some, like in C, the programmer is responsible for reserving memory when it is needed and freeing it when it is no longer required. Other languages, like Python, let you forget about that drudgery, although at a performance cost. If you begin with a language like Python, you won't be aware of the problems related to memory management, and that's great, learning is not easy and not having to learn everything at once is nice, but at some point those problems might start to bite you, so being aware of the memory question is a good thing.</p>
+<h4 id="good-code"><a class="toclink" href="../../2026/03/08/programming-what-to-learn/#good-code">Good code</a></h4>
+<p><em>Readability</em>. Beginners tend to think that the objective of a program is to tell the computer what to do, but it is not. Code is written to be read by programmers, and programmers have limited minds. Will your future self be able to understand the piece of code that you are writing right now in a year? For example, if I multiply 'a' by 'b', my future self won't have any context; it is much better to calculate the area of a square by multiplying its width by its height. If a program is useful, we will have to add functionality, adapt it to new environments, and fix bugs (a bug is just an error). For all of that to work we need programmers to be able to understand the code. The only programs that are not read are the ones that are not used, and those are not of much interest. If a codebase is not understandable, it is a bad one, even if it solves the problem it is supposed to solve in a performant way. If a programmer can't reason about a program, it won't be possible for him to improve it, fix it or adapt it.</p>
+<p><em>Reliability</em>. We also want our software to behave in a reliable way, and that implies two questions: does the program work as intended, and will it continue to work in the future? Running very old programs, even very well-written ones, is hard. Think about how difficult it might be to run some twenty-year-old software. If you are not careful and take appropriate actions, the code that you write today might not run in six months from now, when you need to rerun it to include its results in your report or paper. This is not unusual; it is normal, and if you are a beginner, it is not something easy to solve, but if you depend on that code, you will need to think about it.</p>
+<p><em>Performance</em>. Yes, performance is also something to take into account. We want our programs to run as fast as we need them to run, and understanding how to achieve that performance is also important. However, performance is not as important as the novice programmer tends to think. That's why I have put this point last of all. Also, performance always comes at a cost. If you want maximum performance, your program will be more difficult to build, take longer to code, and be harder to understand. That's why programmers aim to build software that is performant enough, but no more than that. Performance is a constraint, but there are others.</p>
+<h3 id="the-professional"><a class="toclink" href="../../2026/03/08/programming-what-to-learn/#the-professional">The professional</a></h3>
+<p>These ideas might seem abstract to a new programmer; don't worry if you don't get all of them yet, you are at the start of a long and interesting journey, just try to remember that until you understand these ideas, you do not even have a real idea of what the journey is really about. Also, having a sense that there are still unknown unknowns could be useful. You don't need to know the whole path to take the first step, just remember that there's a whole path in front of you. Don't worry about understanding everything the first day, just remember that learning how to program goes much further than learning the syntax of one or two languages and that you will develop your skills little by little by practicing.</p>
+<h4 id="managing-complexity"><a class="toclink" href="../../2026/03/08/programming-what-to-learn/#managing-complexity">Managing complexity</a></h4>
+<p>Developing software is about solving complex problems while being able to manage the inherent complexity. Writing software consists mainly of two tasks: 1) <em>creating small pieces</em> that are easy to understand, decoupled, reusable, and well-behaved, and 2) <em>putting those pieces together</em> to solve particular problems. Underneath any computing task, even the simplest one, there are millions of lines of code; the reason we can create complex programs is that other people have built the foundations upon which we can create new software. A good piece of code is one that is capable of abstracting a lot of complexity while presenting a simple interface. Think about the Google search toolbar: you write what you want to search for and you get a result, but you don't need to think about how to organize and retrieve all the data required to perform the search; that's a good abstraction. Not needing to know is liberating, we can't hold all the pieces in our minds at once, so being able to ignore most of them at a particular time is extremely useful. Computing tasks are very complex and no programmer's mind could ever understand all that complexity, so the way forward is to divide the tasks into pieces. Each piece should be easy to understand and should have an interface on which we can rely. Also, to be truly reusable, it has to be as decoupled as possible from other pieces; it has to be able to run independently of them. Programming is akin to building with Lego pieces or structuring a long text into easy-to-find sections and subsections. Acquiring the skill to organize a complex software project takes years of practice; it is not something that you can achieve in a couple of weeks. In professional software circles, you will hear a lot of talk about modularity, abstraction (hiding the inner workings of a piece), and related terms.</p>
+<h4 id="community-and-culture"><a class="toclink" href="../../2026/03/08/programming-what-to-learn/#community-and-culture">Community and culture</a></h4>
+<p>Software is created by people organized in different communities, like the community of Python web developers or the community of Linux programmers, and the artifacts that they create, the languages, technologies and libraries, as well as the way in which they interact with each other comprise their culture. Experienced programmers know that when they learn a new language, syntax is the least of their concerns; the most important thing is to learn the culture around that language. Which are the recommended libraries, the podcasts to listen to, the blogs to follow, and the conferences to attend? Without culture and community, a language is just a dead set of terms to be studied by historians.</p>
+<h4 id="solutions-constraints-and-compromises"><a class="toclink" href="../../2026/03/08/programming-what-to-learn/#solutions-constraints-and-compromises">Solutions, constraints and compromises</a></h4>
+<p>Engineering is about getting solutions for a problem given a set of constraints. Learning what the constraints are, like performance, development time, future maintainability, and developing the ability to judge how to balance those constraints in a particular situation is a key requirement of the art of programming. Good software development is not just about solving problems, that is only part of it. Nowadays many programming tasks can be solved by generative AIs, meaning that they can write code that solves the problem at hand. But that's not what a good software developer aims to do. The key is to understand whether a piece of code satisfies the constraints at hand: performance, reliability, maintainability, etc. And in order to do that, the software developer has to develop some criteria, some judgment. Some of these constraints are performance vs maintainability, or cost vs reliability.</p>
+<p>If you're a beginner, don't worry right now about all these details, just enjoy solving problems adequate to your current skill and knowledge. However, don't forget that you won't be an experienced professional until you have experience with all these topics.</p>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
           <time datetime="2026-03-07 00:00:00">7 de marzo de 2026</time></li>
         
           <li class="md-meta__item">
