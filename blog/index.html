@@ -432,6 +432,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../nerd_heaven/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nerd Heaven Publishing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="https://github.com/JoseBlanca/" class="md-nav__link">
         
   
@@ -529,6 +549,42 @@
     <h2 id="ciencia-y-responsabilidad-moral-en-a-ciencia-cierta"><a class="toclink" href="2026/04/20/ciencia-y-responsabilidad-moral-en-a-ciencia-cierta/">Ciencia y responsabilidad moral en a ciencia cierta</a></h2>
 <p>Los científicos generan conocimiento que, en muchos casos, acaba transformándo el mundo de formas inesperadas y profundas.
 En este programa sobre <a href="https://www.ivoox.com/de-prometeo-a-frankenstein-son-responsables-cientificos-audios-mp3_rf_172231500_1.html">ciencia y responsabilidad moral</a> Cristian Saborido, Vicent Picó, Antonio Ribera y yo nos planteamos qué circunstancias hacen más o menos responsables a los científicos de las consecuencias de sus descubrimientos y creaciones.</p>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2026-04-20 00:00:00">20 de abril de 2026</time></li>
+        
+          <li class="md-meta__item">
+            en
+            
+              <a href="category/english/" class="md-meta__link">English</a>, 
+              <a href="category/ai/" class="md-meta__link">AI</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              1 minuto de lectura
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="nerd-heaven-the-editorial-experiment"><a class="toclink" href="2026/04/20/nerd-heaven-the-editorial-experiment/">Nerd Heaven: the editorial experiment</a></h2>
+<p>A couple of weeks ago, I thought of an experiment: could a system powered exclusively by LLM-based artificial intelligence tools write a book that I would find interesting? The experiment would serve two purposes. First, it would help me practise writing AI skills and learn how to work with AI agents. Second, it might produce a book worth reading.</p>
+<p>I started by creating a set of <a href="https://github.com/JoseBlanca/myth_editorial/tree/main/skills">skills</a> that, taken together, would form an editorial <a href="https://github.com/JoseBlanca/myth_editorial/blob/main/RUNBOOK.md">pipeline</a>: beginning with initial research on a topic, continuing with the design of a chapter outline, and finally researching and writing each chapter. You can follow both the editorial evolution and the steps involved in producing each book in the editorial <a href="https://github.com/JoseBlanca/myth_editorial/tree/main">GitHub repository</a>.</p>
+<p>I am now reading the first book, <em>The Myths of Sumer</em>, produced by this peculiar editorial project, which I have named “Nerd Heaven Publishing,” and I am loving it. So yes, the experiment has been a complete success: I now have an editorial house producing books for my own pleasure.</p>
+<p>If you are curious, go ahead and <a href="../nerd_heaven/">read</a> the first one.</p>
     
   </div>
 </article>
@@ -845,7 +901,8 @@ My idea is to teach it to PhD student's and scientists that are already using Py
           <li class="md-meta__item">
             en
             
-              <a href="category/python/" class="md-meta__link">Python</a></li>
+              <a href="category/python/" class="md-meta__link">Python</a>, 
+              <a href="category/english/" class="md-meta__link">English</a></li>
         
         
           
@@ -862,49 +919,6 @@ My idea is to teach it to PhD student's and scientists that are already using Py
   <div class="md-post__content md-typeset">
     <h2 id="iterables-and-iterators"><a class="toclink" href="2026/02/10/iterables-and-iterators/">Iterables and iterators</a></h2>
 <p>I've created a <a href="https://plantgenomics.es/courses/iterables_and_iterators/">tutorial</a> about iterables, iterators and generators in Python.</p>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2026-02-05 00:00:00">5 de febrero de 2026</time></li>
-        
-          <li class="md-meta__item">
-            en
-            
-              <a href="category/python/" class="md-meta__link">Python</a>, 
-              <a href="category/genetics/" class="md-meta__link">Genetics</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              1 minuto de lectura
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="population-delimitation-practice"><a class="toclink" href="2026/02/05/population-delimitation-practice/">Population Delimitation Practice</a></h2>
-<p>I have developed a <a href="https://plantgenomics.es/pop_lab/pop_delimit_practice/">population genetics practice</a> where students are tasked with delimiting genetic groups. They must do this by analyzing genetic structure alongside other variables, such as taxa and the country of origin.</p>
-<p>The primary objective is to teach students that genetic structure alone is often insufficient for defining populations; context and additional biological data are essential.</p>
-<p>The practice is a web application hosted on our laboratory’s static site and developed using <a href="https://marimo.io/">marimo</a>. There is quite a bit of "magic" happening under the hood to make this work seamlessly in the browser:</p>
-<ul>
-<li>
-<p><a href="https://pyodide.org/">Pyodide</a>: A Python interpreter compiled to <a href="https://webassembly.org/">WebAssembly</a>, allowing the logic to run entirely client-side.</p>
-</li>
-<li>
-<p><a href="https://pypi.org/project/scatter3d-anywidget/">3D Scatter Widget</a>: A custom widget I developed using Python and TypeScript. This was my first serious foray into JavaScript/TypeScript, and I honestly couldn't have built it without the help of AI tools.</p>
-</li>
-</ul>
     
   </div>
 </article>
