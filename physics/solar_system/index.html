@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar System Simulation</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="sim"></canvas>
+
+  <aside id="panel">
+    <h1>Solar System</h1>
+    <p class="subtitle">Newtonian gravity · velocity-Verlet integration</p>
+
+    <section class="block">
+      <h2>Simulation</h2>
+      <div class="row">
+        <button id="playPause">Pause</button>
+        <button id="resetAll">Reset all</button>
+      </div>
+      <label>Speed: <span id="speedLabel">10 days/s</span>
+        <input id="speed" type="range" min="0.1" max="200" step="0.1" value="10">
+      </label>
+      <label>Zoom: <span id="zoomLabel">1.00×</span>
+        <input id="zoom" type="range" min="-2" max="2" step="0.01" value="0">
+      </label>
+      <div class="row">
+        <button data-view="inner">Inner</button>
+        <button data-view="all">Full</button>
+        <label class="check"><input type="checkbox" id="showTrails" checked> Trails</label>
+        <label class="check"><input type="checkbox" id="showOrbits" checked> Orbits</label>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Edit body</h2>
+      <label>Body
+        <select id="bodySelect"></select>
+      </label>
+      <label>Mass (kg)
+        <input id="massInput" type="number" step="any" min="0">
+      </label>
+      <label>Speed magnitude (m/s)
+        <input id="speedInput" type="number" step="any" min="0">
+      </label>
+      <p class="hint">Direction is preserved. Mass changes apply instantly.</p>
+      <div class="row">
+        <button id="applyEdit">Apply</button>
+        <button id="resetBody">Reset body</button>
+      </div>
+    </section>
+
+    <section class="block info">
+      <h2>Tip</h2>
+      <p>Hover a planet to see its position and velocity vector. Scroll to zoom, drag the canvas to pan.</p>
+    </section>
+  </aside>
+
+  <div id="tooltip" class="hidden"></div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
