@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+    background: #f4f6f8;
+    color: #1f2933;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(135deg, #c41e3a 0%, #f1bf00 100%);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    font-size: 1rem;
+    opacity: 0.95;
+}
+
+main {
+    flex: 1;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.control label {
+    font-weight: 600;
+    color: #486581;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+select {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #d9e2ec;
+    border-radius: 8px;
+    background: white;
+    color: #1f2933;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+}
+
+select:hover {
+    border-color: #9fb3c8;
+}
+
+select:focus {
+    outline: none;
+    border-color: #c41e3a;
+    box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.15);
+}
+
+.non-personal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background: white;
+    padding: 1.25rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.np-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.25rem;
+}
+
+.np-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #829ab1;
+    font-weight: 600;
+}
+
+.np-value {
+    font-size: 1.1rem;
+    color: #1f2933;
+    font-weight: 500;
+}
+
+.conjugation {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+}
+
+.conjugation h2 {
+    color: #c41e3a;
+    margin-bottom: 0.25rem;
+    font-size: 1.5rem;
+}
+
+.tense-german {
+    color: #627d98;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #f0f4f8;
+    font-size: 1.05rem;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+td.person {
+    color: #627d98;
+    font-weight: 500;
+    width: 40%;
+    font-size: 0.95rem;
+}
+
+td.form {
+    color: #1f2933;
+    font-weight: 500;
+}
+
+tr:hover {
+    background: #f7fafc;
+}
+
+.legend {
+    background: #e6f0fa;
+    border-left: 4px solid #4098d7;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    color: #334e68;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #829ab1;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .controls {
+        grid-template-columns: 1fr;
+    }
+
+    .non-personal {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .np-item {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    td {
+        padding: 0.6rem 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    td.person {
+        font-size: 0.85rem;
+    }
+
+    main {
+        padding: 1rem 0.75rem;
+    }
+}

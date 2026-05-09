@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanische Verben konjugieren</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Spanische Verben konjugieren</h1>
+        <p class="subtitle">Konjugationstabellen f&uuml;r den Spanischunterricht</p>
+    </header>
+
+    <main>
+        <section class="controls">
+            <div class="control">
+                <label for="verb-select">Verb</label>
+                <select id="verb-select"></select>
+            </div>
+            <div class="control">
+                <label for="tense-select">Zeitform</label>
+                <select id="tense-select"></select>
+            </div>
+        </section>
+
+        <section class="non-personal" id="non-personal">
+            <div class="np-item">
+                <span class="np-label">Infinitiv</span>
+                <span class="np-value" id="np-infinitivo"></span>
+            </div>
+            <div class="np-item">
+                <span class="np-label">Gerundium</span>
+                <span class="np-value" id="np-gerundio"></span>
+            </div>
+            <div class="np-item">
+                <span class="np-label">Partizip</span>
+                <span class="np-value" id="np-participio"></span>
+            </div>
+        </section>
+
+        <section class="conjugation">
+            <h2 id="tense-title"></h2>
+            <p class="tense-german" id="tense-german"></p>
+            <table id="conjugation-table">
+                <tbody id="conjugation-body"></tbody>
+            </table>
+        </section>
+
+        <section class="legend">
+            <p><strong>Hinweis:</strong> Die Personen sind im Spanischen <em>yo</em> (ich), <em>t&uacute;</em> (du), <em>&eacute;l/ella/usted</em> (er/sie/Sie), <em>nosotros</em> (wir), <em>vosotros</em> (ihr) und <em>ellos/ellas/ustedes</em> (sie/Sie Pl.).</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>F&uuml;r den Spanischunterricht in der Sekundarstufe</p>
+    </footer>
+
+    <script src="js/verbs.js"></script>
+    <script src="js/conjugator.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
