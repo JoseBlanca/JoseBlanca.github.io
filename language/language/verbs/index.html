@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanische Verben &uuml;ben</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Spanische Verben &uuml;ben</h1>
+        <p class="subtitle">Konjugationstraining f&uuml;r den Spanischunterricht</p>
+    </header>
+
+    <main>
+        <section class="controls">
+            <div class="control">
+                <label for="verb-select">Verb</label>
+                <select id="verb-select"></select>
+            </div>
+            <div class="control">
+                <label for="tense-select">Zeitform</label>
+                <select id="tense-select"></select>
+            </div>
+        </section>
+
+        <section class="prompt">
+            <div class="prompt-verb" id="prompt-verb"></div>
+            <div class="prompt-tense" id="prompt-tense"></div>
+        </section>
+
+        <section class="accent-bar" aria-label="Sonderzeichen einf&uuml;gen">
+            <button type="button" class="accent" data-char="&aacute;">&aacute;</button>
+            <button type="button" class="accent" data-char="&eacute;">&eacute;</button>
+            <button type="button" class="accent" data-char="&iacute;">&iacute;</button>
+            <button type="button" class="accent" data-char="&oacute;">&oacute;</button>
+            <button type="button" class="accent" data-char="&uacute;">&uacute;</button>
+            <button type="button" class="accent" data-char="&ntilde;">&ntilde;</button>
+            <button type="button" class="accent" data-char="&uuml;">&uuml;</button>
+        </section>
+
+        <form id="practice-form" class="practice" autocomplete="off">
+            <div id="practice-rows"></div>
+
+            <div class="actions">
+                <button type="submit" class="btn primary">Korrigieren</button>
+                <button type="button" class="btn" id="show-solution">L&ouml;sung zeigen</button>
+                <button type="button" class="btn" id="reset">Zur&uuml;cksetzen</button>
+            </div>
+
+            <div id="score" class="score" hidden></div>
+        </form>
+
+        <section class="legend">
+            <p><strong>Tipp:</strong> Akzente kannst du selbst tippen oder oben &uuml;ber die Kn&ouml;pfe einf&uuml;gen. Mit <kbd>Enter</kbd> wird die Eingabe sofort korrigiert. Antworten <em>fast</em> richtig (nur Akzente fehlen) werden gelb angezeigt.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>F&uuml;r den Spanischunterricht in der Sekundarstufe</p>
+    </footer>
+
+    <script src="js/verbs.js"></script>
+    <script src="js/conjugator.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
