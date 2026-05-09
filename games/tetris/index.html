@@ -8,6 +8,47 @@
 </head>
 <body>
   <canvas id="game"></canvas>
-  <script src="game.js" defer></script>
+
+  <div id="menu" class="menu">
+    <div class="menu-card">
+      <h1 class="menu-title">TETRIS</h1>
+
+      <section class="menu-step" data-step="mode">
+        <p class="menu-subtitle">Choose a mode</p>
+        <div class="mode-buttons">
+          <button class="mode-btn" data-mode="solo">
+            <span class="mode-name">SOLO</span>
+            <span class="mode-desc">Just you and the falling blocks. Best score is saved.</span>
+          </button>
+          <button class="mode-btn" data-mode="versus">
+            <span class="mode-name">VERSUS</span>
+            <span class="mode-desc">Head-to-head. Multi-line clears send garbage to your friend.</span>
+          </button>
+          <button class="mode-btn" data-mode="coop">
+            <span class="mode-name">CO-OP</span>
+            <span class="mode-desc">Share one board. Take turns dropping pieces. Score together.</span>
+          </button>
+        </div>
+        <p class="footer-note">Multiplayer uses peer-to-peer WebRTC via <a href="https://oxism.com/trystero/" target="_blank" rel="noreferrer">Trystero</a>.</p>
+      </section>
+
+      <section class="menu-step hidden" data-step="lobby">
+        <p class="menu-subtitle"><span id="mode-label">VERSUS</span> · room code</p>
+        <div class="room-row">
+          <input id="room-code" type="text" maxlength="40" autocomplete="off" spellcheck="false" />
+          <button id="copy-room">COPY</button>
+        </div>
+        <p class="hint">Share this code with your friend, or paste theirs and press Enter.</p>
+        <p id="lobby-status" class="status">Connecting…</p>
+        <p id="lobby-peer" class="peer-line"></p>
+        <div class="lobby-buttons">
+          <button id="lobby-back">BACK</button>
+          <button id="lobby-ready" disabled>READY</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script type="module" src="game.js"></script>
 </body>
 </html>
