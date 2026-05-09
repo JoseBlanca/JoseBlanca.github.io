@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spanische Verben konjugieren</title>
+    <title>Spanische Verben &uuml;ben</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Spanische Verben konjugieren</h1>
-        <p class="subtitle">Konjugationstabellen f&uuml;r den Spanischunterricht</p>
+        <h1>Spanische Verben &uuml;ben</h1>
+        <p class="subtitle">Konjugationstraining f&uuml;r den Spanischunterricht</p>
     </header>
 
     <main>
@@ -24,31 +24,35 @@
             </div>
         </section>
 
-        <section class="non-personal" id="non-personal">
-            <div class="np-item">
-                <span class="np-label">Infinitiv</span>
-                <span class="np-value" id="np-infinitivo"></span>
-            </div>
-            <div class="np-item">
-                <span class="np-label">Gerundium</span>
-                <span class="np-value" id="np-gerundio"></span>
-            </div>
-            <div class="np-item">
-                <span class="np-label">Partizip</span>
-                <span class="np-value" id="np-participio"></span>
-            </div>
+        <section class="prompt">
+            <div class="prompt-verb" id="prompt-verb"></div>
+            <div class="prompt-tense" id="prompt-tense"></div>
         </section>
 
-        <section class="conjugation">
-            <h2 id="tense-title"></h2>
-            <p class="tense-german" id="tense-german"></p>
-            <table id="conjugation-table">
-                <tbody id="conjugation-body"></tbody>
-            </table>
+        <section class="accent-bar" aria-label="Sonderzeichen einf&uuml;gen">
+            <button type="button" class="accent" data-char="&aacute;">&aacute;</button>
+            <button type="button" class="accent" data-char="&eacute;">&eacute;</button>
+            <button type="button" class="accent" data-char="&iacute;">&iacute;</button>
+            <button type="button" class="accent" data-char="&oacute;">&oacute;</button>
+            <button type="button" class="accent" data-char="&uacute;">&uacute;</button>
+            <button type="button" class="accent" data-char="&ntilde;">&ntilde;</button>
+            <button type="button" class="accent" data-char="&uuml;">&uuml;</button>
         </section>
+
+        <form id="practice-form" class="practice" autocomplete="off">
+            <div id="practice-rows"></div>
+
+            <div class="actions">
+                <button type="submit" class="btn primary">Korrigieren</button>
+                <button type="button" class="btn" id="show-solution">L&ouml;sung zeigen</button>
+                <button type="button" class="btn" id="reset">Zur&uuml;cksetzen</button>
+            </div>
+
+            <div id="score" class="score" hidden></div>
+        </form>
 
         <section class="legend">
-            <p><strong>Hinweis:</strong> Die Personen sind im Spanischen <em>yo</em> (ich), <em>t&uacute;</em> (du), <em>&eacute;l/ella/usted</em> (er/sie/Sie), <em>nosotros</em> (wir), <em>vosotros</em> (ihr) und <em>ellos/ellas/ustedes</em> (sie/Sie Pl.).</p>
+            <p><strong>Tipp:</strong> Akzente kannst du selbst tippen oder oben &uuml;ber die Kn&ouml;pfe einf&uuml;gen. Mit <kbd>Enter</kbd> wird die Eingabe sofort korrigiert. Antworten <em>fast</em> richtig (nur Akzente fehlen) werden gelb angezeigt.</p>
         </section>
     </main>
 
