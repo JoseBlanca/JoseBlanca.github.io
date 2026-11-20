@@ -15,17 +15,18 @@
         <link rel="canonical" href="https://jblanca.net/blog/2026/03/08/programming-what-to-learn/">
       
       
+      
         <link rel="prev" href="../../07/the-art-of-learning-in-the-ai-age/">
       
       
         <link rel="next" href="../../26/qu%C3%A9-es-la-ciencia-c%C3%B3mo-funciona-y-por-qu%C3%A9-merece-la-pena/">
       
       
-        <link rel="alternate" type="application/rss+xml" title="Fuente RSS" href="../../../../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="Fuente RSS de contenido actualizado" href="../../../../../feed_rss_updated.xml">
+        
+      
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
+      <meta name="generator" content="zensical-0.1.2">
     
     
       
@@ -33,7 +34,15 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.06209087.min.css">
+      
+        
+      
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/modern/main.ebb7f775.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/modern/palette.b60ce83d.min.css">
       
       
 
@@ -47,34 +56,37 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
     
       
 
     
     
-    
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
+    <label class="md-overlay" for="__drawer" aria-hidden="true"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#programming-what-to-learn" class="md-skip">
-          Saltar a contenido
-        </a>
-      
+      <a href="#__skip" class="md-skip">
+        Saltar a contenido
+      </a>
     </div>
     <div data-md-component="announce">
       
@@ -90,12 +102,13 @@
     <a href="../../../../.." title="Jose Blanca personal page" class="md-header__button md-logo" aria-label="Jose Blanca personal page" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+      <span class="md-visually-hidden">Navegación</span>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -114,12 +127,64 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun-moon" viewBox="0 0 24 24"><path d="M12 2v2M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715M16 12a4 4 0 0 0-4-4M19 5l-1.256 1.256M20 12h2"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Usar el modo del sistema"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Usar el modo del sistema" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span class="md-visually-hidden">Buscar</span>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Buscar">
+  <button type="button" class="md-search__button">
+    Buscar
+  </button>
+</div>
+      
     
+    <div class="md-header__source">
+      
+    </div>
   </nav>
   
 </header>
@@ -150,7 +215,7 @@
     <a href="../../../../.." title="Jose Blanca personal page" class="md-nav__button md-logo" aria-label="Jose Blanca personal page" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 5v16M20.001 19A2 2 0 0 0 22 17V5a2 2 0 0 0-1.999-2L16 3.002A5 5 0 0 0 12 5a5 5 0 0 0-4-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 1.999 2H8a5 5 0 0 1 4 2 5 5 0 0 1 4-2z"/></svg>
 
     </a>
     Jose Blanca personal page
@@ -168,9 +233,15 @@
       <a href="../../../../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    sobre mí
+    
+  
+  sobre mí
+
+    
   </span>
+  
   
 
       </a>
@@ -185,12 +256,18 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../edu/index.html" class="md-nav__link">
+      <a href="../../../../../edu/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Cursos y seminarios
+    
+  
+  Cursos y seminarios
+
+    
   </span>
+  
   
 
       </a>
@@ -204,20 +281,158 @@
   
     
   
-  
-    
   
   
     <li class="md-nav__item md-nav__item--active">
-      <a href="../../../../" class="md-nav__link">
+      
+      
+      
+      
         
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
   
   <span class="md-ellipsis">
-    Blog
+    
+  
+  Blog
+
+    
   </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="../../../../" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  Blog
+
+    
+  </span>
+  
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-beginner" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The beginner
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The beginner">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-software-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        How software works
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Good code
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-professional" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        The professional
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The professional">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#managing-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Managing complexity
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-and-culture" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Community and culture
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solutions-constraints-and-compromises" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Solutions, constraints and compromises
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -228,6 +443,15 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
     
     
     
@@ -244,51 +468,58 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../phi_sci/a_ciencia_cierta/" class="md-nav__link ">
+              
+  
   
   <span class="md-ellipsis">
-    Filosofía de la ciencia
+    
+  
+  Filosofía de la ciencia
+
+    
   </span>
   
+  
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            Filosofía de la ciencia
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+            </a>
             
               
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../phi_sci/a_ciencia_cierta/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    en 'a ciencia cierta'
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
             
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  Filosofía de la ciencia
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+              
+                
+                  
   
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
     
     
     
@@ -302,47 +533,45 @@
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
-            
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../phi_sci/el_oficio_de_la_duda/" class="md-nav__link ">
+              
+  
   
   <span class="md-ellipsis">
-    el oficio de la duda
+    
+  
+  el oficio de la duda
+
+    
   </span>
   
+  
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_2">
-            <span class="md-nav__icon md-icon"></span>
-            el oficio de la duda
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
+            </a>
             
               
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../../phi_sci/el_oficio_de_la_duda/index.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    sobre el oficio de la duda
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
             
+          </div>
+        
+        
+          <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+            <label class="md-nav__title" for="__nav_4_2">
+              <span class="md-nav__icon md-icon"></span>
+              
+  
+  el oficio de la duda
+
+            </label>
+            <ul class="md-nav__list" data-md-scrollfix>
               
                 
+              
+                
+                  
   
   
   
@@ -351,27 +580,35 @@
       <a href="../../../../../phi_sci/el_oficio_de_la_duda/leer/prefacio.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    leer en la web
+    
+  
+  leer en la web
+
+    
   </span>
+  
   
 
       </a>
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
 
+                
               
-            
-          </ul>
-        </nav>
+            </ul>
+          </nav>
+        
       
     </li>
   
@@ -387,9 +624,15 @@
       <a href="../../../../../genetica/a_ciencia_cierta/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Genética en a ciencia cierta
+    
+  
+  Genética en a ciencia cierta
+
+    
   </span>
+  
   
 
       </a>
@@ -407,9 +650,15 @@
       <a href="https://bioinfcomav.github.io/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Laboratorio
+    
+  
+  Laboratorio
+
+    
   </span>
+  
   
 
       </a>
@@ -427,9 +676,15 @@
       <a href="../../../../../nerd_heaven/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Nerd Heaven Publishing
+    
+  
+  Nerd Heaven Publishing
+
+    
   </span>
+  
   
 
       </a>
@@ -447,9 +702,15 @@
       <a href="https://github.com/JoseBlanca/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    GitHub
+    
+  
+  GitHub
+
+    
   </span>
+  
   
 
       </a>
@@ -467,9 +728,15 @@
       <a href="../../../../../rincones/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Rincones de interés
+    
+  
+  Rincones de interés
+
+    
   </span>
+  
   
 
       </a>
@@ -489,8 +756,22 @@
               
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
                   <div class="md-sidebar__inner">
                     
+
 
 <nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
   
@@ -508,7 +789,9 @@
         <li class="md-nav__item">
   <a href="#the-beginner" class="md-nav__link">
     <span class="md-ellipsis">
-      The beginner
+      <span class="md-typeset">
+        The beginner
+      </span>
     </span>
   </a>
   
@@ -518,7 +801,9 @@
           <li class="md-nav__item">
   <a href="#how-software-works" class="md-nav__link">
     <span class="md-ellipsis">
-      How software works
+      <span class="md-typeset">
+        How software works
+      </span>
     </span>
   </a>
   
@@ -527,7 +812,9 @@
           <li class="md-nav__item">
   <a href="#good-code" class="md-nav__link">
     <span class="md-ellipsis">
-      Good code
+      <span class="md-typeset">
+        Good code
+      </span>
     </span>
   </a>
   
@@ -541,7 +828,9 @@
         <li class="md-nav__item">
   <a href="#the-professional" class="md-nav__link">
     <span class="md-ellipsis">
-      The professional
+      <span class="md-typeset">
+        The professional
+      </span>
     </span>
   </a>
   
@@ -551,7 +840,9 @@
           <li class="md-nav__item">
   <a href="#managing-complexity" class="md-nav__link">
     <span class="md-ellipsis">
-      Managing complexity
+      <span class="md-typeset">
+        Managing complexity
+      </span>
     </span>
   </a>
   
@@ -560,7 +851,9 @@
           <li class="md-nav__item">
   <a href="#community-and-culture" class="md-nav__link">
     <span class="md-ellipsis">
-      Community and culture
+      <span class="md-typeset">
+        Community and culture
+      </span>
     </span>
   </a>
   
@@ -569,7 +862,9 @@
           <li class="md-nav__item">
   <a href="#solutions-constraints-and-compromises" class="md-nav__link">
     <span class="md-ellipsis">
-      Solutions, constraints and compromises
+      <span class="md-typeset">
+        Solutions, constraints and compromises
+      </span>
     </span>
   </a>
   
@@ -597,7 +892,8 @@
             <div class="md-post__back">
               <div class="md-nav__title md-nav__container">
                 <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
                   <span class="md-ellipsis">
                     Regresar al índice
                   </span>
@@ -616,15 +912,17 @@
                   <ul class="md-nav__list">
                     <li class="md-nav__item">
                       <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2026-03-08 00:00:00" class="md-ellipsis">8 de marzo de 2026</time>
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-calendar-days" viewBox="0 0 24 24"><path d="M8 2v3M16 2v3"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18M8 13h.01M12 13h.01M16 13h.01M8 17h.01M12 17h.01M16 17h.01"/></svg>
+                        <time datetime="2026-03-08 00:00:00+00:00" class="md-ellipsis">8 de marzo de 2026</time>
                       </div>
                     </li>
                     
                     
                       <li class="md-nav__item">
                         <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-library" viewBox="0 0 24 24"><path d="m16 6 4 14M12 6v14M8 8v12M4 4v16"/></svg>
                           <span class="md-ellipsis">
                             en
                             
@@ -637,7 +935,8 @@
                       
                       <li class="md-nav__item">
                         <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                           <span class="md-ellipsis">
                             
                               8 minutos de lectura
@@ -650,17 +949,19 @@
                 </nav>
               </li>
             </ul>
+            
           </nav>
           
         </div>
       </div>
     </div>
     <article class="md-content__inner md-typeset">
+      <a id="__skip" tabindex="-1"></a>
       
         
 
 
-<h1 id="programming-what-to-learn">Programming, what to learn</h1>
+<h1 id="programming-what-to-learn">Programming, what to learn<a class="headerlink" href="#programming-what-to-learn" title="Permanent link">&para;</a></h1>
 <p>When one starts learning how to program, one tends to think that the objective is to learn the syntax of a particular programming language, but that should never be the main learning objective. It is true that learning your first programming language will allow you to solve many problems, but programming is about ideas and complexity, so the real, deeper, learning objectives should be related to:</p>
 <ul>
 <li>Creating <em>mental models</em> about how software is built to be able to reason about the systems that we are working with.</li>
@@ -672,27 +973,31 @@
 <li>structuring code by dividing complex problems into many small, easy-to-solve tasks,</li>
 <li>reasoning about which solution could meet different constraints, such as performance and development time.</li>
 </ul>
-<h2 id="the-beginner">The beginner</h2>
-<h3 id="how-software-works">How software works</h3>
+<h2 id="the-beginner">The beginner<a class="headerlink" href="#the-beginner" title="Permanent link">&para;</a></h2>
+<h3 id="how-software-works">How software works<a class="headerlink" href="#how-software-works" title="Permanent link">&para;</a></h3>
 <p>The fundamentals of programming are never the syntax of a particular language. That syntax is just a way of conveying how that language abstracts the deeper aspects of programming.</p>
 <p><em>Data and action</em>. We store data in computer memory, on disk, or in some other way. For instance, we could store a number or some text in memory.  Also, the computer carries out actions, like adding numbers or writing characters on the screen. These are two of the most fundamental programming concepts. When we program we should always think about data and action, about nouns and verbs.</p>
 <p><em>Types</em>. The data that we store always has a type; for instance, it could be an integer or a text string.</p>
 <p><em>Execution order</em>. A computer carries out its operations sequentially, one after another, so you will have to look for solutions that look like recipes or protocols that specify how to solve the problem by taking actions one after another on some data. Controlling the flow of execution, the order in which every single action is taken, is one of the fundamental tools of any programmer.</p>
 <p><em>Scopes</em>. Since a computer program acts by taking actions on data, a naive programmer could think that the ideal approach would be to allow any part of the code to act on any data available at any time, but that has proven to be a terrible idea. When a program is longer than a couple of dozen lines the complexity starts to creep in and our limited minds, capable of holding only a few pieces of information at a time, are not capable of reasoning about the whole program all at once. Thus, if we allow any part of the program to act on any data at any time, it will be very difficult to reason about how the software behaves. Let's imagine that we have an error, a bug, in our program: it is trying to add 1 plus 1, but we are getting 3 instead of 2, and we are trying to locate and fix the bug. If we have 5000 lines of code, where should we start looking for the bug? It is difficult to say. So any programming language imposes limitations on which data we can act on in a particular section of the codebase or at a particular time. In that way, for instance, looking for where the code responsible for the bug related to a particular result could be located becomes much simpler. If in your house you find a problem related to a knife, you'll go to the kitchen, not to the bedroom, the same idea applies to software.</p>
 <p><em>Memory management</em>. All computer programs store data in memory, but in different languages the memory management is carried out in different ways. In some, like in C, the programmer is responsible for reserving memory when it is needed and freeing it when it is no longer required. Other languages, like Python, let you forget about that drudgery, although at a performance cost. If you begin with a language like Python, you won't be aware of the problems related to memory management, and that's great, learning is not easy and not having to learn everything at once is nice, but at some point those problems might start to bite you, so being aware of the memory question is a good thing.</p>
-<h3 id="good-code">Good code</h3>
+<h3 id="good-code">Good code<a class="headerlink" href="#good-code" title="Permanent link">&para;</a></h3>
 <p><em>Readability</em>. Beginners tend to think that the objective of a program is to tell the computer what to do, but it is not. Code is written to be read by programmers, and programmers have limited minds. Will your future self be able to understand the piece of code that you are writing right now in a year? For example, if I multiply 'a' by 'b', my future self won't have any context; it is much better to calculate the area of a square by multiplying its width by its height. If a program is useful, we will have to add functionality, adapt it to new environments, and fix bugs (a bug is just an error). For all of that to work we need programmers to be able to understand the code. The only programs that are not read are the ones that are not used, and those are not of much interest. If a codebase is not understandable, it is a bad one, even if it solves the problem it is supposed to solve in a performant way. If a programmer can't reason about a program, it won't be possible for him to improve it, fix it or adapt it.</p>
 <p><em>Reliability</em>. We also want our software to behave in a reliable way, and that implies two questions: does the program work as intended, and will it continue to work in the future? Running very old programs, even very well-written ones, is hard. Think about how difficult it might be to run some twenty-year-old software. If you are not careful and take appropriate actions, the code that you write today might not run in six months from now, when you need to rerun it to include its results in your report or paper. This is not unusual; it is normal, and if you are a beginner, it is not something easy to solve, but if you depend on that code, you will need to think about it.</p>
 <p><em>Performance</em>. Yes, performance is also something to take into account. We want our programs to run as fast as we need them to run, and understanding how to achieve that performance is also important. However, performance is not as important as the novice programmer tends to think. That's why I have put this point last of all. Also, performance always comes at a cost. If you want maximum performance, your program will be more difficult to build, take longer to code, and be harder to understand. That's why programmers aim to build software that is performant enough, but no more than that. Performance is a constraint, but there are others.</p>
-<h2 id="the-professional">The professional</h2>
+<h2 id="the-professional">The professional<a class="headerlink" href="#the-professional" title="Permanent link">&para;</a></h2>
 <p>These ideas might seem abstract to a new programmer; don't worry if you don't get all of them yet, you are at the start of a long and interesting journey, just try to remember that until you understand these ideas, you do not even have a real idea of what the journey is really about. Also, having a sense that there are still unknown unknowns could be useful. You don't need to know the whole path to take the first step, just remember that there's a whole path in front of you. Don't worry about understanding everything the first day, just remember that learning how to program goes much further than learning the syntax of one or two languages and that you will develop your skills little by little by practicing.</p>
-<h3 id="managing-complexity">Managing complexity</h3>
+<h3 id="managing-complexity">Managing complexity<a class="headerlink" href="#managing-complexity" title="Permanent link">&para;</a></h3>
 <p>Developing software is about solving complex problems while being able to manage the inherent complexity. Writing software consists mainly of two tasks: 1) <em>creating small pieces</em> that are easy to understand, decoupled, reusable, and well-behaved, and 2) <em>putting those pieces together</em> to solve particular problems. Underneath any computing task, even the simplest one, there are millions of lines of code; the reason we can create complex programs is that other people have built the foundations upon which we can create new software. A good piece of code is one that is capable of abstracting a lot of complexity while presenting a simple interface. Think about the Google search toolbar: you write what you want to search for and you get a result, but you don't need to think about how to organize and retrieve all the data required to perform the search; that's a good abstraction. Not needing to know is liberating, we can't hold all the pieces in our minds at once, so being able to ignore most of them at a particular time is extremely useful. Computing tasks are very complex and no programmer's mind could ever understand all that complexity, so the way forward is to divide the tasks into pieces. Each piece should be easy to understand and should have an interface on which we can rely. Also, to be truly reusable, it has to be as decoupled as possible from other pieces; it has to be able to run independently of them. Programming is akin to building with Lego pieces or structuring a long text into easy-to-find sections and subsections. Acquiring the skill to organize a complex software project takes years of practice; it is not something that you can achieve in a couple of weeks. In professional software circles, you will hear a lot of talk about modularity, abstraction (hiding the inner workings of a piece), and related terms.</p>
-<h3 id="community-and-culture">Community and culture</h3>
+<h3 id="community-and-culture">Community and culture<a class="headerlink" href="#community-and-culture" title="Permanent link">&para;</a></h3>
 <p>Software is created by people organized in different communities, like the community of Python web developers or the community of Linux programmers, and the artifacts that they create, the languages, technologies and libraries, as well as the way in which they interact with each other comprise their culture. Experienced programmers know that when they learn a new language, syntax is the least of their concerns; the most important thing is to learn the culture around that language. Which are the recommended libraries, the podcasts to listen to, the blogs to follow, and the conferences to attend? Without culture and community, a language is just a dead set of terms to be studied by historians.</p>
-<h3 id="solutions-constraints-and-compromises">Solutions, constraints and compromises</h3>
+<h3 id="solutions-constraints-and-compromises">Solutions, constraints and compromises<a class="headerlink" href="#solutions-constraints-and-compromises" title="Permanent link">&para;</a></h3>
 <p>Engineering is about getting solutions for a problem given a set of constraints. Learning what the constraints are, like performance, development time, future maintainability, and developing the ability to judge how to balance those constraints in a particular situation is a key requirement of the art of programming. Good software development is not just about solving problems, that is only part of it. Nowadays many programming tasks can be solved by generative AIs, meaning that they can write code that solves the problem at hand. But that's not what a good software developer aims to do. The key is to understand whether a piece of code satisfies the constraints at hand: performance, reliability, maintainability, etc. And in order to do that, the software developer has to develop some criteria, some judgment. Some of these constraints are performance vs maintainability, or cost vs reliability.</p>
 <p>If you're a beginner, don't worry right now about all these details, just enjoy solving problems adequate to your current skill and knowledge. However, don't forget that you won't be an experienced professional until you have experience with all these topics.</p>
+
+  
+
+
 
 
 
@@ -715,12 +1020,62 @@
   </div>
 
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Volver al principio
+</button>
         
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../../07/the-art-of-learning-in-the-ai-age/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: The Art of Learning in the AI Age">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                The Art of Learning in the AI Age
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../26/qu%C3%A9-es-la-ciencia-c%C3%B3mo-funciona-y-por-qu%C3%A9-merece-la-pena/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: ¿Qué es la ciencia, cómo funciona y por qué merece la pena?">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                ¿Qué es la ciencia, cómo funciona y por qué merece la pena?
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -733,14 +1088,15 @@
   
 </div>
       
-        <div class="md-social">
+        
+<div class="md-social">
   
     
     
     
     
     <a href="https://www.youtube.com/channel/UC7-bjPuStqjJqbDiv0pTI5g" target="_blank" rel="noopener" title="Jose Blanca en Youtube" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305m-317.51 213.508V175.185l142.739 81.205z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
     </a>
   
     
@@ -748,7 +1104,7 @@
     
     
     <a href="https://jblanca.net/feed_rss_created.xml" target="_blank" rel="noopener" title="RSS Feed" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm32 104c0-13.3 10.7-24 24-24 137 0 248 111 248 248 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200-13.3 0-24-10.7-24-24m0 96c0-13.3 10.7-24 24-24 83.9 0 152 68.1 152 152 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104-13.3 0-24-10.7-24-24m0 120a32 32 0 1 1 64 0 32 32 0 1 1-64 0"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2026 Fonticons, Inc.--><path fill="currentColor" d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm32 104c0-13.3 10.7-24 24-24 137 0 248 111 248 248 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-110.5-89.5-200-200-200-13.3 0-24-10.7-24-24m0 96c0-13.3 10.7-24 24-24 83.9 0 152 68.1 152 152 0 13.3-10.7 24-24 24s-24-10.7-24-24c0-57.4-46.6-104-104-104-13.3 0-24-10.7-24-24m0 120a32 32 0 1 1 64 0 32 32 0 1 1-64 0"/></svg>
     </a>
   
 </div>
@@ -758,15 +1114,22 @@
 </footer>
       
     </div>
-    <div class="md-dialog" data-md-component="dialog">
+    <div class="md-dialog" data-md-component="dialog" role="status" aria-atomic="true">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.sections"], "search": "../../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+      
+      
+      
+      
+        
+        
+      <script id="__config" type="application/json">{"annotate":null,"base":"../../../../..","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.top","navigation.tracking","search.highlight"],"redirect":null,"search":"../../../../../assets/javascripts/workers/search.719e0d91.min.js","tags":null,"translations":{"clipboard.copied":"Copiado al portapapeles","clipboard.copy":"Copiar al portapapeles","clipboard.error":"Could not copy to clipboard","search.result.more.one":"1 más en esta página","search.result.more.other":"# más en esta página","search.result.none":"No se encontraron documentos","search.result.one":"1 documento encontrado","search.result.other":"# documentos encontrados","search.result.placeholder":"Teclee para comenzar búsqueda","search.result.term.missing":"Falta","select.version":"Seleccionar versión"},"version":null}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.3cb411a8.min.js"></script>
       
     
   </body>
