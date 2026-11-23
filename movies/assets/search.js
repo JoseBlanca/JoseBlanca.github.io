@@ -8,7 +8,7 @@
   const items = Array.from(grid.children);   // page order: oldest first
   const byId = new Map(items.map((li) => [li.dataset.id, li]));
   const $ = (id) => document.getElementById(id);
-  const q = $("q"), fTheme = $("f-theme");
+  const q = $("q"), fTheme = $("f-theme"), fScope = $("f-scope");
   const count = $("count"), empty = $("empty");
   const more = $("more"), moreSummary = $("more-summary"), gridMore = $("grid-more");
 
@@ -32,7 +32,13 @@
     })
     .catch(() => { /* search unavailable: the theme filter still works */ });
 
-  const themeOk = (li) => !(fTheme && fTheme.value) || li.dataset.themes.split("|").includes(fTheme.value);
+  // Scope tokens on each card: gp genetics plot theme, gm genetics mention, eu eugenics, nn nature vs nurture, fo forensics.
+  const SCOPE_TOKENS = { ge: ["gp", "eu"], gp: ["gp"], g: ["gp", "gm"], eu: ["eu"], nn: ["nn"], fo: ["fo"] };
+  const scopeOk = (li) => {
+    const want = SCOPE_TOKENS[fScope ? fScope.value : "ge"];
+    return !want || li.dataset.scope.split(" ").some((t) => want.includes(t));
+  };
+  const themeOk = (li) => scopeOk(li) && (!(fTheme && fTheme.value) || li.dataset.themes.split("|").includes(fTheme.value));
   const plural = (n) => (n === 1 ? "1 title" : `${n} titles`);
 
   function place(target, list) {
@@ -66,14 +72,18 @@
     const params = new URLSearchParams();
     if (query) params.set("q", query);
     if (fTheme && fTheme.value) params.set("theme", fTheme.value);
+    if (fScope && fScope.value !== "ge") params.set("show", fScope.value);
     const qs = params.toString();
     history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
   }
+
+  function validScope(v) { return v === "all" || v in SCOPE_TOKENS; }
 
   // Restore state from the URL, so searches can be shared and survive "back".
   const params = new URLSearchParams(location.search);
   if (params.has("q")) q.value = params.get("q");
   if (fTheme && params.has("theme")) fTheme.value = params.get("theme");
+  if (fScope && params.has("show") && validScope(params.get("show"))) fScope.value = params.get("show");
 
   let timer, lastQuery = q.value.trim();
   q.addEventListener("input", () => {
@@ -86,5 +96,6 @@
     }, 120);
   });
   if (fTheme) fTheme.addEventListener("change", update);
+  if (fScope) fScope.addEventListener("change", update);
   update();
 })();

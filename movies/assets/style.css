@@ -15,6 +15,7 @@
   --c-neu: #8a8984;
   --c-na: #d6d5d0;
   --c-bar: #2a78d6;
+  --c-nat: #2a78d6; --c-nur: #8a5cd0;
   /* Badge text: darker steps of the same hues for 4.5:1 text contrast. */
   --t-pos: #006b00; --t-mix: #8a5a00; --t-neg: #b3302f; --t-neu: #52514e; --t-na: #6f6e69;
   --radius: 10px;
@@ -39,6 +40,7 @@
     --c-neu: #8a8984;
     --c-na: #4a4a46;
     --c-bar: #3987e5;
+    --c-nat: #3987e5; --c-nur: #a47ee6;
     --t-pos: #5cc99c; --t-mix: #e8b44a; --t-neg: #f08a86; --t-neu: #c3c2b7; --t-na: #9a998f;
   }
 }
@@ -152,6 +154,8 @@ main, .site-header, .site-footer { max-width: var(--maxw); margin: 0 auto; paddi
 .r-neg { fill: var(--c-neg); background: var(--c-neg); }
 .r-neu { fill: var(--c-neu); background: var(--c-neu); }
 .r-na  { fill: var(--c-na);  background: var(--c-na); }
+.r-nat { fill: var(--c-nat); background: var(--c-nat); }
+.r-nur { fill: var(--c-nur); background: var(--c-nur); }
 .legend { list-style: none; margin: 0; padding: 0; font-size: 0.85rem; max-width: 16rem; }
 .legend li { display: grid; grid-template-columns: 0.8rem 1fr auto; align-items: center; gap: 0.5rem; padding: 0.12rem 0; }
 .swatch { width: 0.8rem; height: 0.8rem; border-radius: 3px; }
@@ -184,6 +188,9 @@ main, .site-header, .site-footer { max-width: var(--maxw); margin: 0 auto; paddi
 
 /* ---------- statistics dashboard ---------- */
 .theme-filter { margin: 0 0 2rem; }
+.scope-row { display: flex; gap: 0.6rem; align-items: center; margin: 0 0 0.8rem; }
+.scope-row label { font-weight: 600; }
+.scope-row select { font: inherit; padding: 0.35rem 0.5rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text); }
 .filter-help { font-size: 0.9rem; margin: 0 0 0.6rem; }
 .theme-badges { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .theme-badge { font: inherit; font-size: 0.85rem; cursor: pointer; border-radius: 999px; padding: 0.2rem 0.7rem;
@@ -213,6 +220,9 @@ main, .site-header, .site-footer { max-width: var(--maxw); margin: 0 auto; paddi
 .line.l-neg { stroke: var(--c-neg); } .dot.l-neg { fill: var(--c-neg); }
 .line.l-mix { stroke: var(--c-mix); } .dot.l-mix { fill: var(--c-mix); }
 .line.l-pos { stroke: var(--c-pos); } .dot.l-pos { fill: var(--c-pos); }
+.line.l-nat { stroke: var(--c-nat); } .dot.l-nat { fill: var(--c-nat); }
+.line.l-nur { stroke: var(--c-nur); } .dot.l-nur { fill: var(--c-nur); }
+.line.l-neu { stroke: var(--c-neu); } .dot.l-neu { fill: var(--c-neu); }
 .hover-col { fill: transparent; }
 .hover-col:hover { fill: var(--accent-soft); fill-opacity: 0.5; }
 .legend-inline { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; max-width: none; margin-bottom: 0.6rem; }

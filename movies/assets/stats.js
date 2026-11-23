@@ -1,6 +1,8 @@
 // Statistics dashboard: theme badges select a subset of titles; every chart is redrawn for that subset.
 // Records come from build_site.py (stats_records): y year, th themes, g genres, p overall portrayal,
-// o intervention outcome, h harm present, v villain present, pr [[framing, affiliations, aims], ...].
+// o intervention outcome, h harm present, v villain present, pr [[framing, affiliations, aims], ...] (p, o, h, v
+// only for evaluated titles: genetics plot themes and eugenics), s scope tokens (gp genetics plot theme, gm genetics
+// mention, eu eugenics, nn nature vs nurture, fo forensics), nn what a nature-vs-nurture story favours.
 (function () {
   "use strict";
   const DATA = JSON.parse(document.getElementById("stats-data").textContent);
@@ -17,6 +19,9 @@
   const FRAMING = [["hero", "Hero", "pos"], ["neutral", "Neutral", "neu"], ["ambivalent", "Ambivalent", "mix"], ["villain", "Villain", "neg"]];
   const AFFILIATION = { corporation: "Corporation", government: "Government", military: "Military", academia: "Academia",
     independent: "Independent", criminal: "Criminal", medical: "Medical", religious: "Religious", other: "Other", unknown: "Unknown" };
+  const NN = [["nature", "Nature", "nat"], ["both", "Both", "neu"], ["nurture", "Nurture", "nur"]];
+  const PORTRAYAL_NA = [...PORTRAYAL, ["na", "Not rated", "na"]];
+  const SCOPE_TOKENS = { ge: ["gp", "eu"], gp: ["gp"], g: ["gp", "gm"], eu: ["eu"], nn: ["nn"], fo: ["fo"] };
   const PIES = [
     ["h", "Does genetics cause harm?", YESNO],
     ["v", "Is there a villainous geneticist?", YESNO],
@@ -193,7 +198,9 @@
   // ---------- state ----------
   const badges = Array.from(document.querySelectorAll(".theme-badge"));
   const selected = new Set();
-  const matches = (r) => !selected.size || r.th.some((t) => selected.has(t));
+  const fScope = $("f-scope");
+  const inScope = (r) => { const want = SCOPE_TOKENS[fScope.value]; return !want || r.s.some((t) => want.includes(t)); };
+  const matches = (r) => inScope(r) && (!selected.size || r.th.some((t) => selected.has(t)));
 
   function render() {
     const recs = DATA.filter(matches);
@@ -201,7 +208,7 @@
     for (const b of badges) {
       const on = selected.has(b.dataset.theme);
       b.setAttribute("aria-pressed", String(on));
-      b.querySelector(".badge-n").textContent = DATA.filter((r) => r.th.includes(b.dataset.theme)).length;
+      b.querySelector(".badge-n").textContent = DATA.filter((r) => inScope(r) && r.th.includes(b.dataset.theme)).length;
     }
     $("sel-count").textContent = selected.size ? `${titles(n)} with ${[...selected].map((t) => t.replace(/_/g, " ")).join(" or ")}.`
       : `All ${titles(n)}.`;
@@ -218,7 +225,15 @@
     $("neutral-note").textContent = nNeutral
       ? `Neutral portrayals (${titles(nNeutral)}) are not shown.` : "";
 
-    $("c-pies").replaceChildren(...PIES.map(([f, title, order]) => pie(title, recs.map((r) => r[f]), order)));
+    const rated = recs.filter((r) => r.p);
+    $("eval-note").hidden = rated.length === n;
+    $("eval-note").textContent = `Only titles where genetics is a plot theme, and eugenics titles, are rated: ${titles(rated.length)} of the ${titles(n)} selected.`;
+    $("c-pies").replaceChildren(...PIES.map(([f, title, order]) => pie(title, rated.map((r) => r[f]), order)));
+    const nnRecs = recs.filter((r) => r.nn);
+    $("b-nn").hidden = !nnRecs.length;
+    $("c-nn").replaceChildren(pie("What the story favours", nnRecs.map((r) => r.nn), NN));
+    lineChart($("c-nn-decades"), NN.map(([k, label, role]) => (
+      { label, role, values: perDecade((r) => r.nn === k) })), "Nature versus nurture stories per decade, by what they favour");
 
     const framingBy = (idx, labels) => {
       const rows = Object.entries(labels).map(([k, label]) => ({ key: k, label, counts: {} }));
@@ -232,13 +247,14 @@
     const genreRows = Object.keys(GENRES).filter((g) => g !== "documentary").map((g) => {
       const counts = {};
       let count = 0;
-      for (const r of recs) if (r.g.includes(g)) { count++; counts[r.p] = (counts[r.p] || 0) + 1; }
+      for (const r of recs) if (r.g.includes(g)) { count++; const k = r.p || "na"; counts[k] = (counts[k] || 0) + 1; }
       return { label: GENRES[g], count, counts };
     }).sort((a, b) => b.count - a.count);
-    stackedCounts($("c-genres"), genreRows, PORTRAYAL, recs.filter((r) => r.g.length).length);
+    stackedCounts($("c-genres"), genreRows, rated.length === n ? PORTRAYAL : PORTRAYAL_NA, recs.filter((r) => r.g.length).length);
 
     const params = new URLSearchParams(location.search);
     if (selected.size) params.set("themes", [...selected].join(",")); else params.delete("themes");
+    if (fScope.value !== "ge") params.set("show", fScope.value); else params.delete("show");
     const qs = params.toString();
     history.replaceState(null, "", qs ? `?${qs}` : location.pathname);
   }
@@ -250,6 +266,9 @@
   });
   $("clear").addEventListener("click", () => { selected.clear(); render(); });
 
+  fScope.addEventListener("change", render);
+  const show = new URLSearchParams(location.search).get("show");
+  if (show && (show === "all" || show in SCOPE_TOKENS)) fScope.value = show;
   const fromUrl = new URLSearchParams(location.search).get("themes");
   if (fromUrl) for (const t of fromUrl.split(",")) if (badges.some((b) => b.dataset.theme === t)) selected.add(t);
   render();
